@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MultiPrinterSettingActivity"
+    android:orientation="horizontal"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:background="@drawable/multi_printer_bg">
+
+        <ListView android:id="@+id/lvPrinter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></ListView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/multi_printer_bg"
+        android:layout_marginLeft="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/multi_printer_bg"
+            android:padding="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout android:id="@+id/layoutDeleteRefresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="invisible">
+
+                <ImageButton android:id="@+id/btnDelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/trash"
+                    android:background="@drawable/border_gray_button"
+                    android:padding="10dp"/>
+
+                <ImageButton android:id="@+id/btnRefresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/refresh2"
+                    android:background="@drawable/border_gray_button"
+                    android:padding="10dp"
+                    android:layout_marginLeft="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_gravity="center">
+
+                <customfont.ArialButton android:id="@+id/btnPrintTest"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Test Print"
+                    android:textColor="@color/colorPrimary"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/button_text_size_large"
+                    android:background="@drawable/border_orange_button"/>
+
+                <customfont.ArialButton android:id="@+id/btnSave"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Save"
+                    android:textColor="@color/colorPrimary"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/button_text_size_large"
+                    android:background="@drawable/border_blue_button"
+                    android:layout_marginLeft="10dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp">
+
+                <LinearLayout android:id="@+id/vPrinterName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <customfont.ArialTextView
+                        style="@style/stylePrinterSettingTextView"
+                        android:text="Printer Name"/>
+
+                    <customfont.ArialEditText android:id="@+id/etPrinterName"
+                        style="@style/stylePrinterSettingEditText"/>
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/vPrinterModel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <customfont.ArialTextView
+                        style="@style/stylePrinterSettingTextView"
+                        android:text="Printer Model"/>
+
+                    <Spinner android:id="@+id/spPrinterModel"
+                        style="@style/stylePrinterSettingSpinner"/>
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/vInterface"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <customfont.ArialTextView
+                        style="@style/stylePrinterSettingTextView"
+                        android:text="Interface"/>
+
+                    <Spinner android:id="@+id/spInterface"
+                        style="@style/stylePrinterSettingSpinner"/>
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/vEthernet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <customfont.ArialTextView
+                        style="@style/stylePrinterSettingTextView"
+                        android:text="Printer IP-address"/>
+
+                    <customfont.ArialEditText android:id="@+id/etPrinterIP"
+                        style="@style/stylePrinterSettingEditText"/>
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/vBlueTooth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <customfont.ArialTextView
+                        style="@style/stylePrinterSettingTextView"
+                        android:text="Bluetooth printer"/>
+
+                    <customfont.ArialEditText android:id="@+id/etBluetoothPrinter"
+                        style="@style/stylePrinterSettingEditText"
+                        android:enabled="false"/>
+
+                    <customfont.ArialButton android:id="@+id/btnSearch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Search"
+                        android:textColor="@color/colorFirstPri"
+                        android:textSize="@dimen/button_text_size_large"
+                        android:textAllCaps="false"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"/>
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/vUSB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <customfont.ArialTextView
+                        style="@style/stylePrinterSettingTextView"
+                        android:text="USB printer"/>
+
+                    <customfont.ArialEditText android:id="@+id/etPrinterUSB"
+                        style="@style/stylePrinterSettingEditText"/>
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/vPaperWidth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <customfont.ArialTextView
+                        style="@style/stylePrinterSettingTextView"
+                        android:text="Paper width"/>
+
+                    <Spinner android:id="@+id/spPaperWidth"
+                        style="@style/stylePrinterSettingSpinner"/>
+                </LinearLayout>
+
+                <CheckBox android:id="@+id/chkIsReceipt"
+                    android:text="Receipt"
+                    style="@style/stylePrinterSettingTextView"/>
+
+                <LinearLayout android:id="@+id/vPrintCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <customfont.ArialTextView
+                        style="@style/stylePrinterSettingTextView"
+                        android:text="Print Count"/>
+
+                    <Spinner android:id="@+id/spPrintCount"
+                        style="@style/stylePrinterSettingSpinner"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

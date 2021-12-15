@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:background="@color/colorWhite">
+
+    <customfont.ArialEditText android:id="@+id/etQty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorFirstPri"
+        android:textSize="@dimen/textbox_text_size"
+        android:textStyle="bold"
+        android:background="@color/colorGray"
+        android:padding="10dp"
+        android:focusable="false"
+        android:layout_marginTop="5dp"
+        android:drawableRight="@mipmap/backspace"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:singleLine="true"/>
+
+    <ImageButton android:id="@+id/btnBackspace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:src="@mipmap/backspace"
+        android:background="@drawable/calculator_button"
+        android:visibility="gone"/>
+
+
+    <TableLayout android:id="@+id/layoutNumberr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:layout_marginTop="5dp">
+
+        <TableRow android:layout_height="wrap_content">
+
+            <customfont.ArialButton android:id="@+id/btnOne"
+                style="@style/styleCalculatorButton"
+                android:text="1"/>
+
+            <customfont.ArialButton android:id="@+id/btnTwo"
+                style="@style/styleCalculatorButton"
+                android:text="2"/>
+
+            <customfont.ArialButton android:id="@+id/btnThree"
+                style="@style/styleCalculatorButton"
+                android:text="3"/>
+
+            <customfont.ArialButton android:id="@+id/btnFour"
+                style="@style/styleCalculatorButton"
+                android:text="4"/>
+
+
+        </TableRow>
+
+        <TableRow android:layout_height="wrap_content">
+
+            <customfont.ArialButton android:id="@+id/btnFive"
+                style="@style/styleCalculatorButton"
+                android:text="5"/>
+
+            <customfont.ArialButton android:id="@+id/btnSix"
+                style="@style/styleCalculatorButton"
+                android:text="6"/>
+
+            <customfont.ArialButton android:id="@+id/btnSeven"
+                style="@style/styleCalculatorButton"
+                android:text="7"/>
+
+            <customfont.ArialButton android:id="@+id/btnEight"
+                style="@style/styleCalculatorButton"
+                android:text="8"/>
+
+
+        </TableRow>
+
+
+        <TableRow android:layout_height="wrap_content">
+
+            <customfont.ArialButton android:id="@+id/btnNine"
+                style="@style/styleCalculatorButton"
+                android:text="9"/>
+
+            <customfont.ArialButton android:id="@+id/btnZero"
+                style="@style/styleCalculatorButton"
+                android:text="0"/>
+
+            <customfont.ArialButton android:id="@+id/btnPoint"
+                style="@style/styleCalculatorButton"
+                android:text="."/>
+
+            <customfont.ArialButton android:id="@+id/btnClear"
+                style="@style/styleCalculatorButton"
+                android:text="C"/>
+
+        </TableRow>
+    </TableLayout>
+    <customfont.ArialButton android:id="@+id/btnOK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/button_text_size_large"
+        android:textStyle="bold"
+        android:background="@drawable/blue_button"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_marginTop="5dp"/>
+
+</LinearLayout>

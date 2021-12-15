@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.bosictsolution.waiterone.ChangeTableActivity">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorSecondPri">
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <customfont.ArialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Occupied Table"
+            android:textSize="@dimen/label_text_size_small"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:padding="5dp"/>
+
+            <Spinner android:id="@+id/spOcpTableType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorGray"
+                android:popupBackground="@color/colorGray"
+                android:layout_marginLeft="20dp"
+                android:padding="5dp"></Spinner>
+
+            <ImageButton android:id="@+id/btnOcpReload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/reload"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/gray_button"
+                android:layout_gravity="center"
+                android:padding="10dp"/>
+
+        </LinearLayout>
+
+        <GridView android:id="@+id/gvOccupiedTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="3"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"></GridView>
+
+    </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorGray"></View>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <customfont.ArialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Empty Table"
+            android:textSize="@dimen/label_text_size_small"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:padding="5dp"/>
+
+            <Spinner android:id="@+id/spEmpTableType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorGray"
+                android:popupBackground="@color/colorGray"
+                android:layout_marginLeft="20dp"
+                android:padding="5dp"></Spinner>
+
+            <ImageButton android:id="@+id/btnEmpReload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/reload"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/gray_button"
+                android:layout_gravity="center"
+                android:padding="10dp"/>
+
+            </LinearLayout>
+
+        <GridView android:id="@+id/gvEmptyTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="3"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"></GridView>
+
+    </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

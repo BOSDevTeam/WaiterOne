@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:background="@color/colorWhite">
+
+        <RelativeLayout  android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <customfont.ArialTextView android:id="@+id/tvLabelChooseWaiter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/colorFirstPri"
+                android:padding="5dp"
+                android:text="Choose Waiter"
+                android:textSize="@dimen/label_text_size_large" />
+
+            <customfont.ArialCheckBox android:id="@+id/chkAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:layout_alignParentRight="true"
+                android:padding="10dp"
+                android:textSize="@dimen/label_text_size_large"></customfont.ArialCheckBox>
+
+        </RelativeLayout>
+
+        <LinearLayout  android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorFirstPri">
+        </LinearLayout>
+
+        <LinearLayout  android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+           <ListView android:id="@+id/lvWaiter"
+               android:layout_height="0dp"
+               android:layout_weight="1"
+               android:layout_width="match_parent"></ListView>
+
+            <customfont.ArialButton android:id="@+id/btnOk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blue_button"
+                android:text="View All"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:textSize="@dimen/button_text_size_large"
+                android:padding="10dp"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+    </LinearLayout>

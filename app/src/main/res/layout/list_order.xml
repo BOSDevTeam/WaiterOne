@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp">
+
+        <ImageView android:id="@+id/ivItemImage"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:visibility="gone"
+            android:layout_marginRight="5dp"/>
+
+        <customfont.BOSTextView android:id="@+id/tvItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/label_text_size_large"
+            android:typeface="monospace"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"/>
+
+        <customfont.BOSTextView android:id="@+id/tvTaste"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/label_text_size_small"
+            android:textColor="@color/colorFirstPri"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <Button android:id="@+id/btnPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:text="0"
+        android:textSize="@dimen/button_text_size_small"/>
+
+        <customfont.BOSTextView android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/label_text_size_small"
+            android:textColor="@color/colorFirstPri"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:text="10:00 AM"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <LinearLayout android:id="@+id/layoutQtyTaste"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center|left">
+
+            <ImageButton android:id="@+id/imgbtnMinus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/minus"
+                android:background="@drawable/transparent_button"/>
+
+            <customfont.ArialEditText android:id="@+id/etQuantity"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textbox_text_size"
+                android:text="@string/qty_default_text"
+                android:textColor="@color/colorFirstPri"
+                android:gravity="center"
+                android:focusable="false"
+                android:textStyle="bold"
+                android:inputType="number"/>
+
+            <ImageButton android:id="@+id/imgbtnPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/add"
+                android:background="@drawable/transparent_button"/>
+
+            <ImageButton android:id="@+id/imgbtnCalculator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/transparent_button"
+                android:src="@mipmap/calculator"/>
+
+            <ImageButton android:id="@+id/imgbtnTaste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/transparent_button"
+                android:src="@mipmap/taste"/>
+        </LinearLayout>
+
+        <ImageButton android:id="@+id/imgbtnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/delete"
+            android:background="@drawable/transparent_button"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

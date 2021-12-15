@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bosictsolution.waiterone.ReportListActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <customfont.ArialTextView android:id="@+id/tvLabelFromDate"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="From Date"
+            android:gravity="center"
+            android:textSize="@dimen/label_text_size_large"
+            android:textColor="@color/colorFirstPri"
+            android:textStyle="bold"/>
+
+        <customfont.ArialButton android:id="@+id/btnFromDate"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="From Date"
+            android:background="@drawable/blue_button"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/button_text_size_large"
+            android:visibility="gone"/>
+
+        <customfont.ArialButton android:id="@+id/btnFromDate2"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="From Date"
+            android:background="@drawable/blue_button"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/button_text_size_large"/>
+
+        <customfont.ArialTextView android:id="@+id/tvLabelToDate"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="To Date"
+            android:gravity="center"
+            android:textSize="@dimen/label_text_size_large"
+            android:textColor="@color/colorFirstPri"
+            android:textStyle="bold"/>
+
+        <customfont.ArialButton android:id="@+id/btnToDate"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="To Date"
+            android:background="@drawable/blue_button"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/button_text_size_large"
+            android:visibility="gone"/>
+
+        <customfont.ArialButton android:id="@+id/btnToDate2"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="To Date"
+            android:background="@drawable/blue_button"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/button_text_size_large" />
+
+
+    </LinearLayout>
+
+    <ListView android:id="@+id/lvReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
+</LinearLayout>

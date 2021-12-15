@@ -1,0 +1,105 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout android:id="@+id/layoutRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@drawable/start_border_bg">
+
+        <customfont.ArialTextView android:id="@+id/tvTitleRegister"
+            android:text="Setup Register Key"
+            style="@style/styleTitleInStart"/>
+
+        <customfont.ArialEditText android:id="@+id/etMacAddress"
+            style="@style/styleEditTextInStart"
+            android:enabled="false"
+            android:layout_marginTop="10dp"/>
+
+        <customfont.ArialEditText android:id="@+id/etRegisterKey"
+            android:layout_marginTop="10dp"
+            style="@style/styleEditTextInStart"
+            android:hint="Register Key"/>
+
+            <customfont.ArialButton android:id="@+id/btnRegister"
+                android:background="@drawable/blue_button"
+                android:text="Register"
+                android:layout_marginTop="20dp"
+                style="@style/styleButtonInStart"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/layoutShopName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@drawable/start_border_bg"
+        android:visibility="gone">
+
+        <customfont.BOSEditText android:id="@+id/etShopName"
+            style="@style/styleEditTextInStart"
+            android:hint="Enter Shop Name"/>
+
+        <CheckBox android:id="@+id/chkUseMultiPrinter"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"/>
+
+        <customfont.ArialButton android:id="@+id/btnOK"
+            android:background="@drawable/blue_button"
+            android:text="OK"
+            android:layout_marginTop="20dp"
+            style="@style/styleButtonInStart"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/layoutUserSetup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+        <customfont.ArialButton android:id="@+id/btnCreateUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CREATE USER"
+            android:padding="10dp"
+            android:background="@drawable/blue_button"
+            android:textSize="@dimen/button_text_size_large"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"/>
+
+        <customfont.ArialButton android:id="@+id/btnContinue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CONTINUE"
+            android:padding="10dp"
+            android:background="@drawable/gray_button"
+            android:textSize="@dimen/button_text_size_large"
+            android:textColor="@color/colorFirstPri"
+            android:layout_marginLeft="20dp"
+            android:drawableRight="@mipmap/right_arrow2"
+            android:drawablePadding="10dp"
+            android:textStyle="bold"/>
+            </LinearLayout>
+
+        <ListView android:id="@+id/lvUser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"></ListView>
+
+    </LinearLayout>
+</LinearLayout>

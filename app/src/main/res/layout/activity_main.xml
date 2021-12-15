@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bosictsolution.waiterone.MainActivity"
+    android:orientation="horizontal"
+    android:paddingTop="30dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <LinearLayout android:id="@+id/layoutSale"
+        style="@style/styleMainLayout">
+        <ImageView style="@style/styleMainImageView"
+            android:src="@mipmap/sale"/>
+        <customfont.ArialTextView android:id="@+id/tvSale"
+            style="@style/styleMainTextView"
+            android:text="SALE"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/layoutOpenOrder"
+        style="@style/styleMainLayout"
+        android:visibility="gone">
+        <ImageView style="@style/styleMainImageView"
+            android:src="@mipmap/openorder"/>
+        <customfont.ArialTextView android:id="@+id/tvOpenOrder"
+            style="@style/styleMainTextView"
+            android:text="OPEN ORDER"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/layoutReport"
+        style="@style/styleMainLayout">
+        <ImageView style="@style/styleMainImageView"
+            android:src="@mipmap/report"/>
+        <customfont.ArialTextView android:id="@+id/tvReport"
+            style="@style/styleMainTextView"
+            android:text="REPORT"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/layoutSystem"
+        style="@style/styleMainLayout">
+        <ImageView style="@style/styleMainImageView"
+            android:src="@mipmap/system"/>
+        <customfont.ArialTextView android:id="@+id/tvSystem"
+            style="@style/styleMainTextView"
+            android:text="SYSTEM"/>
+    </LinearLayout>
+</LinearLayout>

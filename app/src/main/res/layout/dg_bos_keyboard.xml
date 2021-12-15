@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:padding="5dp">
+
+    <EditText android:id="@+id/etText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="@color/colorWhite"
+    android:textSize="17sp"
+    android:textStyle="bold"
+    android:background="@color/colorDarkGray"
+    android:padding="10dp"
+    android:focusable="false"
+    android:layout_marginTop="5dp"
+    android:gravity="center"
+    android:singleLine="true"/>
+
+    <TableLayout android:id="@+id/layoutBOSKey1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:layout_marginTop="5dp">
+
+        <TableRow android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <Button android:id="@+id/btnSaLain"
+                style="@style/styleBOSKeyboardButton"
+                android:text="§"/>
+            <Button android:id="@+id/btnTaWinPu"
+                style="@style/styleBOSKeyboardButton"
+                android:text="±"/>
+            <Button android:id="@+id/btnNaNgal"
+                style="@style/styleBOSKeyboardButton"
+                android:text="Ì"/>
+            <Button android:id="@+id/btnMa"
+                style="@style/styleBOSKeyboardButton"
+                android:text="º"/>
+            <Button android:id="@+id/btnAa"
+                style="@style/styleBOSKeyboardButton"
+                android:text="Â"/>
+            <Button android:id="@+id/btnPaSaut"
+                style="@style/styleBOSKeyboardButton"
+                android:text="¶"/>
+            <Button android:id="@+id/btnKaKyi"
+                style="@style/styleBOSKeyboardButton"
+                android:text="¡"/>
+            <Button android:id="@+id/btnNga"
+                style="@style/styleBOSKeyboardButton"
+                android:text="¥"/>
+            <Button android:id="@+id/btnTha"
+                style="@style/styleBOSKeyboardButton"
+                android:text="¿"/>
+            <Button android:id="@+id/btnSaLone"
+                style="@style/styleBOSKeyboardButton"
+                android:text="¦"/>
+            <ImageButton android:id="@+id/btnBackspace1"
+                android:src="@mipmap/backspace2"
+                android:layout_gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@drawable/transparent_button"/>
+
+        </TableRow>
+        <TableRow android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <Button android:id="@+id/btnThaWayHtoe"
+                style="@style/styleBOSKeyboardButton"
+                android:text="ေ"/>
+            <Button android:id="@+id/btnYaPin"
+                style="@style/styleBOSKeyboardButton"
+                android:text="--်"/>
+            <Button android:id="@+id/btnLoneKyiTin"
+                style="@style/styleBOSKeyboardButton"
+                android:text="--ိ"/>
+            <Button android:id="@+id/btnShaeHtoe"
+                style="@style/styleBOSKeyboardButton"
+                android:text="--္"/>
+            <Button android:id="@+id/btnYayChaShal"
+                style="@style/styleBOSKeyboardButton"
+                android:text="ါ"/>
+            <Button android:id="@+id/btnOutKaMyint"
+                style="@style/styleBOSKeyboardButton"
+                android:text="--့"/>
+            <Button android:id="@+id/btnYaYitThay"
+                style="@style/styleBOSKeyboardButton"
+                android:text="ျ"/>
+            <Button android:id="@+id/btnTaChaungNginTo"
+                style="@style/styleBOSKeyboardButton"
+                android:text="--ု"/>
+            <Button android:id="@+id/btnNaChaungNginTo"
+                style="@style/styleBOSKeyboardButton"
+                android:text="--ူ"/>
+            <Button android:id="@+id/btnYayChaTo"
+                style="@style/styleBOSKeyboardButton"
+                android:text="-ာ"/>
+            <Button android:id="@+id/btnWitSanPaut"
+                style="@style/styleBOSKeyboardButton"
+                android:text="း"/>
+
+        </TableRow>
+        <TableRow android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <Button android:id="@+id/btnPhaOHtot"
+                style="@style/styleBOSKeyboardButton"
+                android:text="ဖ"/>
+            <Button android:id="@+id/btnHtaSinHtoo"
+                style="@style/styleBOSKeyboardButton"
+                android:text="²"/>
+            <Button android:id="@+id/btnKhaKway"
+                style="@style/styleBOSKeyboardButton"
+                android:text="¢"/>
+            <Button android:id="@+id/btnLa"
+                style="@style/styleBOSKeyboardButton"
+                android:text="½"/>
+            <Button android:id="@+id/btnBaGone"
+                style="@style/styleBOSKeyboardButton"
+                android:text="¹"/>
+            <Button android:id="@+id/btnNya"
+                style="@style/styleBOSKeyboardButton"
+                android:text="«"/>
+            <Button android:id="@+id/btnYaPatLat"
+                style="@style/styleBOSKeyboardButton"
+                android:text="»"/>
+            <Button android:id="@+id/btnYaKaut"
+                style="@style/styleBOSKeyboardButton"
+                android:text="¼"/>
+            <Button android:id="@+id/btnDaDway"
+                style="@style/styleBOSKeyboardButton"
+                android:text="³"/>
+            <Button android:id="@+id/btnHa"
+                style="@style/styleBOSKeyboardButton"
+                android:text="À"/>
+            <ImageButton android:id="@+id/btnChange1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@drawable/transparent_button"
+                android:src="@mipmap/top_arrow"
+                android:layout_gravity="center"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout android:id="@+id/layoutBOSKey2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:layout_marginTop="5dp"
+        android:visibility="gone">
+
+        <TableRow android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <Button android:id="@+id/btnYaPinHaHtoe"
+                style="@style/styleBOSKeyboardButton"
+                android:text="-ွ်"/>
+            <Button android:id="@+id/btnYaPinWaSwalHaHtoe"
+                style="@style/styleBOSKeyboardButton"
+                android:text="-ၽႊ"
+                android:background="#b73636"/>
+            <Button android:id="@+id/btnNaTo"
+                style="@style/styleBOSKeyboardButton"
+                android:text="ႏ"/>
+            <Button android:id="@+id/btnYaPinWaSwal"
+                style="@style/styleBOSKeyboardButton"
+                android:text="-ၽြ"
+                android:background="#b73636"/>
+            <Button android:id="@+id/btnWaSwalHaHtoe"
+                style="@style/styleBOSKeyboardButton"
+                android:text="--ႊ"
+                android:background="#b73636"/>
+            <Button android:id="@+id/btnYwae"
+                style="@style/styleBOSKeyboardButton"
+                android:text="™"/>
+            <Button android:id="@+id/btnEee"
+                style="@style/styleBOSKeyboardButton"
+                android:text="˜"/>
+            <Button android:id="@+id/btnHaHtoeChaungKhaing"
+                style="@style/styleBOSKeyboardButton"
+                android:text="--ႈ"/>
+            <Button android:id="@+id/btnU"
+                style="@style/styleBOSKeyboardButton"
+                android:text="ဥ"/>
+            <Button android:id="@+id/btnNaKyi"
+                style="@style/styleBOSKeyboardButton"
+                android:text="ဏ"/>
+            <ImageButton android:id="@+id/btnBackspace2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@drawable/transparent_button"
+                android:src="@mipmap/backspace2"
+                android:layout_gravity="center"/>
+
+        </TableRow>
+        <TableRow android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <Button android:id="@+id/btnBaLaChait"
+                style="@style/styleBOSKeyboardButton"
+                android:text="ဗ"/>
+            <Button android:id="@+id/btnHaHtoe"
+                style="@style/styleBOSKeyboardButton"
+                android:text="-ွ"/>
+            <Button android:id="@+id/btnLoneKyiTinSanKhat"
+                style="@style/styleBOSKeyboardButton"
+                android:text="-ီ"/>
+            <Button android:id="@+id/btnNgaThat"
+                style="@style/styleBOSKeyboardButton"
+                android:text="-ၤ"/>
+            <Button android:id="@+id/btnWaSwal"
+                style="@style/styleBOSKeyboardButton"
+                android:background="#b73636"
+                android:text="-ြ"/>
+            <Button android:id="@+id/btnThayThayTin"
+                style="@style/styleBOSKeyboardButton"
+                android:text="-ံ"/>
+            <Button android:id="@+id/btnNautPyit"
+                style="@style/styleBOSKeyboardButton"
+                android:text="-ဲ"/>
+            <Button android:id="@+id/btnTaChaungNginShal"
+                style="@style/styleBOSKeyboardButton"
+                android:text="-ဳ"/>
+            <Button android:id="@+id/btnNaChaungNginShal"
+                style="@style/styleBOSKeyboardButton"
+                android:text="-ဴ"/>
+            <Button android:id="@+id/btnDaOutChait"
+                style="@style/styleBOSKeyboardButton"
+                android:text="ဓ"/>
+            <Button android:id="@+id/btnA"
+                style="@style/styleBOSKeyboardButton"
+                android:text="Þ"/>
+
+        </TableRow>
+        <TableRow android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <Button android:id="@+id/btnZaKwal"
+                style="@style/styleBOSKeyboardButton"
+                android:text="ဇ"/>
+            <Button android:id="@+id/btnHtaWinBal"
+                style="@style/styleBOSKeyboardButton"
+                android:text="ဌ"
+                android:background="@color/colorPrimary"/>
+            <Button android:id="@+id/btnGaKyi"
+                style="@style/styleBOSKeyboardButton"
+                android:text="ဃ"/>
+            <Button android:id="@+id/btnLaKyi"
+                style="@style/styleBOSKeyboardButton"
+                android:text="ဠ"/>
+            <Button android:id="@+id/btnYaYitKyi"
+                style="@style/styleBOSKeyboardButton"
+                android:background="@color/colorPrimary"
+                android:text="ၾ"/>
+            <Button android:id="@+id/btnYaYitKyiPyat"
+                style="@style/styleBOSKeyboardButton"
+                android:background="@color/colorPrimary"
+                android:text="ႀ"/>
+            <Button android:id="@+id/btnYaYitThayPyat"
+                style="@style/styleBOSKeyboardButton"
+                android:background="@color/colorPrimary"
+                android:text="ၿ"/>
+            <Button android:id="@+id/btnWa"
+                style="@style/styleBOSKeyboardButton"
+                android:text="၀"/>
+            <Button android:id="@+id/btnGaNgal"
+                style="@style/styleBOSKeyboardButton"
+                android:text="ဂ"/>
+            <Button android:id="@+id/btnYayChaShalHtoe"
+                style="@style/styleBOSKeyboardButton"
+                android:text="-ၚ"/>
+            <ImageButton android:id="@+id/btnChange2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@drawable/transparent_button"
+                android:src="@mipmap/top_arrow"
+                android:layout_gravity="center"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <TableRow android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:visibility="gone">
+        <Button android:id="@+id/btnZaMyintZwe"
+            style="@style/styleCalculatorButton"
+            android:text="©"/>
+        <Button android:id="@+id/btnTaTaLinChait"
+            style="@style/styleCalculatorButton"
+            android:text="¬"/>
+        <Button android:id="@+id/btnDaYinKaut"
+            style="@style/styleCalculatorButton"
+            android:text="®"/>
+        <Button android:id="@+id/btnDaYinMhot"
+            style="@style/styleCalculatorButton"
+            android:text="¯"/>
+        <Button android:id="@+id/btnThreeTha"
+            style="@style/styleCalculatorButton"
+            android:text="Ý"/>
+        <Button android:id="@+id/btnEeeKyi"
+            style="@style/styleCalculatorButton"
+            android:text="š"/>
+        <Button android:id="@+id/btnNhait"
+            style="@style/styleCalculatorButton"
+            android:text="›"/>
+    </TableRow>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <Button android:id="@+id/btnCancel"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gray_button"
+            android:text="Cancel"
+            android:textColor="@color/colorFirstPri"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:padding="10dp"/>
+
+        <Button android:id="@+id/btnOK"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_button"
+            android:text="OK"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:padding="10dp"
+            android:layout_marginLeft="5dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

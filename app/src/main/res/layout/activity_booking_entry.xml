@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bosictsolution.waiterone.BookingEntryActivity">
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorSecondPri">
+    </LinearLayout>
+
+        <customfont.BOSTextView android:id="@+id/tvWaiterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waiter"
+            android:textSize="@dimen/label_text_size_large"
+            android:textColor="@color/colorWhite"
+            android:padding="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <customfont.ArialTextView android:id="@+id/tvLabelDate"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Booking Date"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/label_text_size_large"
+                    android:textStyle="bold"
+                    android:padding="10dp"/>
+
+                <customfont.ArialButton android:id="@+id/btnDate"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:background="@drawable/gray_button"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/button_text_size_large"
+                    android:padding="10dp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <customfont.BOSEditText android:id="@+id/etGuestName"
+                style="@style/styleBookingEntryEditText"
+                android:hint="Guest Name"
+                android:layout_marginTop="10dp"/>
+
+            <customfont.BOSEditText android:id="@+id/etPhone"
+                style="@style/styleBookingEntryEditText"
+                android:hint="Phone Number"
+                android:layout_marginTop="10dp"
+                android:inputType="phone"/>
+
+            <customfont.BOSEditText android:id="@+id/etRemark"
+                style="@style/styleBookingEntryEditText"
+                android:hint="Remark"
+                android:layout_marginTop="10dp"
+                android:singleLine="false"
+                android:minHeight="100dp"
+                android:gravity="top"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <customfont.ArialTextView android:id="@+id/tvLabelTime"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Arrival Time"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/label_text_size_large"
+                    android:textStyle="bold"
+                    android:padding="10dp"/>
+
+                <customfont.ArialButton android:id="@+id/btnTime"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Time"
+                    android:background="@drawable/gray_button"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/button_text_size_large"
+                    android:textStyle="bold"
+                    android:padding="10dp"/>
+
+            </LinearLayout>
+
+            <customfont.BOSEditText android:id="@+id/etTotalPeople"
+                style="@style/styleBookingEntryEditText"
+                android:hint="Total People"
+                android:inputType="number"
+                android:layout_marginTop="10dp"/>
+
+            <customfont.BOSEditText android:id="@+id/etPurpose"
+                style="@style/styleBookingEntryEditText"
+                android:hint="Purpose eg. wedding,birthday..."
+                android:layout_marginTop="10dp"/>
+
+            <customfont.BOSButton android:id="@+id/btnChooseTable"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="Choose Table"
+                android:background="@drawable/gray_button"
+                android:textColor="@color/colorFirstPri"
+                android:textSize="@dimen/button_text_size_large"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
+    <customfont.ArialButton android:id="@+id/btnBookingNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book Now"
+        android:background="@drawable/blue_button"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/button_text_size_large"
+        android:padding="20dp"
+        android:textStyle="bold"
+        android:textAllCaps="false"/>
+        </LinearLayout>
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorGray">
+
+        <customfont.BOSTextView android:id="@+id/tvListVoucher"
+            style="@style/styleReportListTextViewRatio"
+            android:textColor="@color/colorReportGroupFirstPri"
+            android:padding="5dp"/>
+
+        <customfont.BOSTextView android:id="@+id/tvListDate"
+            style="@style/styleReportListTextViewRatio"
+            android:textColor="@color/colorReportGroupFirstPri"
+            android:padding="5dp"/>
+
+        <customfont.BOSTextView android:id="@+id/tvListWaiter"
+            style="@style/styleReportListTextViewRatio"
+            android:textColor="@color/colorReportGroupFirstPri"
+            android:padding="5dp"/>
+
+        <customfont.BOSTextView android:id="@+id/tvListTable"
+            style="@style/styleReportListTextViewRatio"
+            android:textColor="@color/colorReportGroupFirstPri"
+            android:padding="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <customfont.BOSTextView android:id="@+id/tvListItemName"
+            style="@style/styleReportListTextViewRatio"
+            android:textColor="@color/colorPrimary" />
+        <customfont.BOSTextView android:id="@+id/tvListQty"
+            style="@style/styleReportListTextViewRatio"
+            android:textColor="@color/colorPrimary" />
+        <customfont.BOSTextView android:id="@+id/tvListPrice"
+            style="@style/styleReportListTextViewRatio"
+            android:textColor="@color/colorPrimary" />
+        <customfont.BOSTextView android:id="@+id/tvListAmount"
+            style="@style/styleReportListTextViewRatio"
+            android:textColor="@color/colorPrimary" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <customfont.ArialTextView android:id="@+id/tvListSubTotal"
+            style="@style/styleReportListTextViewRatio"
+            android:textColor="@color/colorReportGroupSecondPri" />
+
+        <customfont.ArialTextView android:id="@+id/tvListTax"
+            style="@style/styleReportListTextViewRatio"
+            android:textColor="@color/colorReportGroupSecondPri" />
+
+        <customfont.ArialTextView android:id="@+id/tvListCharges"
+            style="@style/styleReportListTextViewRatio"
+            android:textColor="@color/colorReportGroupSecondPri" />
+
+        <customfont.ArialTextView android:id="@+id/tvListDiscount"
+            style="@style/styleReportListTextViewRatio"
+            android:textColor="@color/colorReportGroupSecondPri" />
+
+        <customfont.ArialTextView android:id="@+id/tvListGrandTotal"
+            style="@style/styleReportListTextViewRatio"
+            android:textColor="@color/colorReportGroupSecondPri" />
+
+    </LinearLayout>
+
+</LinearLayout>

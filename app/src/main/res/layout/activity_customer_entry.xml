@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/colorSecondPri">
+        </LinearLayout>
+
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+            <customfont.BOSTextView android:id="@+id/tvWaiterName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorFirstPri"
+                android:textSize="@dimen/label_text_size_large"
+                android:layout_alignParentLeft="true"
+                android:textStyle="bold"/>
+
+            <customfont.ArialButton android:id="@+id/btnGetCustomerData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_edit_customerinfo"
+                android:textColor="@color/colorFirstPri"
+                android:textSize="@dimen/button_text_size_large"
+                android:background="@drawable/gray_button"
+                android:layout_alignParentRight="true"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:textAllCaps="false"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+            <LinearLayout android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <customfont.ArialTextView android:id="@+id/tvLabelTable"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Table:"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/label_text_size_large"
+                        android:textStyle="bold" />
+
+                    <customfont.BOSButton android:id="@+id/btnChooseTable"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:hint="Choose Table"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/button_text_size_large"
+                        android:shadowDx="1.2"
+                        android:shadowDy="1.2"
+                        android:shadowRadius="3"
+                        android:shadowColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:background="@drawable/gray_button"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <customfont.ArialTextView android:id="@+id/tvLabelDate"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Date:"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/label_text_size_large"
+                        android:textStyle="bold" />
+
+                    <customfont.ArialButton android:id="@+id/btnDate"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:hint="Date"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/button_text_size_large"
+                        android:shadowDx="1.2"
+                        android:shadowDy="1.2"
+                        android:shadowRadius="3"
+                        android:shadowColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:background="@drawable/gray_button"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <customfont.ArialTextView android:id="@+id/tvLabelTime"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Time:"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/label_text_size_large"
+                        android:textStyle="bold" />
+
+                    <customfont.ArialButton android:id="@+id/btnTime"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:hint="Time"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/button_text_size_large"
+                        android:shadowDx="1.2"
+                        android:shadowDy="1.2"
+                        android:shadowRadius="3"
+                        android:shadowColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:background="@drawable/gray_button"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <customfont.ArialTextView android:id="@+id/tvLabelMan"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Man:"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/label_text_size_large"
+                        android:textStyle="bold"/>
+
+                    <customfont.ArialEditText android:id="@+id/etMan"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/textbox_text_size"
+                        android:inputType="number"
+                        android:background="@color/colorGray"
+                        android:padding="10dp" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+                    <customfont.ArialTextView android:id="@+id/tvLabelWomen"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Women:"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/label_text_size_large"
+                        android:textStyle="bold" />
+
+                    <customfont.ArialEditText android:id="@+id/etWomen"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/textbox_text_size"
+                        android:inputType="number"
+                        android:background="@color/colorGray"
+                        android:padding="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+                    <customfont.ArialTextView android:id="@+id/tvLabelChild"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Child:"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/label_text_size_large"
+                        android:textStyle="bold" />
+
+                    <customfont.ArialEditText android:id="@+id/etChild"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/textbox_text_size"
+                        android:inputType="number"
+                        android:background="@color/colorGray"
+                        android:padding="10dp"  />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+
+                <customfont.ArialButton android:id="@+id/btnConfirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CONFIRM"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/button_text_size_large"
+                    android:background="@drawable/blue_button"
+                    android:textStyle="bold"
+                    android:padding="20dp"/>
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorFirstPri">
+
+        <customfont.ArialTextView android:id="@+id/tvFromDate"
+            style="@style/styleReportDateText"
+            android:text="From Date" />
+
+        <customfont.ArialTextView android:id="@+id/tvToDate"
+            style="@style/styleReportDateText"
+            android:text="To Date" />
+
+        <customfont.ArialTextView android:id="@+id/tvToday"
+            style="@style/styleReportTodayLabel"
+            android:text="(Today)"
+            android:visibility="gone">
+        </customfont.ArialTextView>
+
+        <customfont.ArialButton android:id="@+id/btnPrint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorFirstPri"
+            android:textSize="@dimen/button_text_size_large"
+            android:text="PRINT"
+            android:background="@drawable/gray_button"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:padding="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <customfont.ArialTextView android:id="@+id/tvNumberOFItems"
+            style="@style/styleSummaryItemTotal"
+            android:text="No. of Items"/>
+        <customfont.ArialTextView android:id="@+id/tvTotalQty"
+            style="@style/styleSummaryItemTotal"
+            android:text="Total Qty" />
+        <customfont.ArialTextView android:id="@+id/tvTotalAmount"
+            style="@style/styleSummaryItemTotal"
+            android:text="Total Amount"/>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/colorReportListHeader">
+
+                <customfont.ArialTextView android:id="@+id/tvHeaderItem"
+                    style="@style/styleReportHeaderTextViewRatio"
+                    android:text="Item"
+                    android:layout_weight="2"/>
+                <customfont.ArialTextView android:id="@+id/tvHeaderQty"
+                    style="@style/styleReportHeaderTextViewRatio"
+                    android:text="Sale Qty"
+                    android:layout_weight="1"
+                    android:gravity="right"/>
+                <customfont.ArialTextView android:id="@+id/tvHeaderPrice"
+                    style="@style/styleReportHeaderTextViewRatio"
+                    android:text="Price"
+                    android:layout_weight="2"
+                    android:gravity="right"/>
+                <customfont.ArialTextView android:id="@+id/tvHeaderAmount"
+                    style="@style/styleReportHeaderTextViewRatio"
+                    android:text="Amount"
+                    android:layout_weight="2"
+                    android:gravity="right"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/layoutReportSummaryItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                </LinearLayout>
+
+        </LinearLayout>
+
+    <LinearLayout android:id="@+id/layoutSummaryItemPrint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingRight="19dp"
+        android:background="@color/colorWhite"
+        android:visibility="invisible">
+
+        <customfont.BOSTextView android:id="@+id/tvPrintTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Summary Item Report"
+            android:textColor="@color/colorPrimaryDark"
+            android:padding="5dp"/>
+        <customfont.BOSTextView android:id="@+id/tvPrintFromDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From Date"
+            android:textColor="@color/colorPrimaryDark"
+            android:padding="5dp" />
+        <customfont.BOSTextView android:id="@+id/tvPrintToDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To Date"
+            android:textColor="@color/colorPrimaryDark"
+            android:padding="5dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <customfont.BOSTextView android:id="@+id/tvPrintHeaderItem"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="Item"
+                android:textColor="@color/colorPrimaryDark"
+                android:padding="5dp" />
+            <customfont.BOSTextView android:id="@+id/tvPrintHeaderQty"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Qty"
+                android:textColor="@color/colorPrimaryDark"
+                android:padding="5dp"
+                android:gravity="right"/>
+            <customfont.BOSTextView android:id="@+id/tvPrintHeaderPrice"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:textColor="@color/colorPrimaryDark"
+                android:padding="5dp"
+                android:gravity="right"/>
+            <customfont.BOSTextView android:id="@+id/tvPrintHeaderAmount"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="Amount"
+                android:textColor="@color/colorPrimaryDark"
+                android:padding="5dp"
+                android:gravity="right"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimaryDark">
+        </LinearLayout>
+        <LinearLayout android:id="@+id/layoutPrintList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+    </LinearLayout>
+        </LinearLayout>
+</LinearLayout>
+</ScrollView>

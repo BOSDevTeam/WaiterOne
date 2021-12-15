@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:gravity="center">
+
+    <customfont.BOSTextView android:id="@+id/tvListTaste"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="100dp"
+        android:textSize="@dimen/label_text_size_small"
+        android:textColor="@color/colorFirstPri"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@color/colorGray"/>
+</LinearLayout>
+

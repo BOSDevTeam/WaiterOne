@@ -1,0 +1,218 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TableActivity"
+    android:orientation="vertical">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorSecondPri"></LinearLayout>
+
+    <LinearLayout  android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"  >
+
+        <LinearLayout android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorFirstPri">
+
+            <ListView android:id="@+id/lvTableType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></ListView>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <customfont.BOSTextView android:id="@+id/tvTableTypeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/label_text_size_large"
+                    android:textColor="@color/colorFirstPri"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"/>
+
+                <ImageView android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@color/colorOccupiedTable"
+                    android:layout_toLeftOf="@+id/tvLabelOccupiedTable"
+                    android:layout_marginRight="5dp"/>
+
+                <customfont.ArialTextView android:id="@+id/tvLabelOccupiedTable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/label_text_size_small"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:layout_toLeftOf="@+id/imgBookingTable"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/lbl_using_tables"/>
+
+                <ImageView android:id="@+id/imgBookingTable"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@color/colorBookingTable"
+                    android:layout_toLeftOf="@+id/tvLabelBookingTable"
+                    android:layout_marginRight="5dp"/>
+
+                <customfont.ArialTextView android:id="@+id/tvLabelBookingTable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/label_text_size_small"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:layout_toLeftOf="@+id/imgEmptyTable"
+                    android:layout_marginRight="10dp"
+                    android:text="Booking Table"/>
+
+                <ImageView android:id="@+id/imgEmptyTable"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@color/colorEmptyTable"
+                    android:layout_toLeftOf="@+id/tvLabelEmptyTable"
+                    android:layout_marginRight="5dp"/>
+
+                <customfont.ArialTextView android:id="@+id/tvLabelEmptyTable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/label_text_size_small"
+                    android:fontFamily="Arial Narrow"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/lbl_free_tables"/>
+
+            </RelativeLayout>
+            
+            <LinearLayout android:id="@+id/layoutMultiTbBill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <Switch android:id="@+id/swtMultiTbBill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Multi Table Bill"
+                    android:textColor="@color/colorFirstPri"
+                    android:textSize="@dimen/label_text_size_small"
+                    android:gravity="center" />
+
+                <LinearLayout android:id="@+id/layoutTarget"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:padding="10dp"
+                    android:background="@drawable/login_layout_bg">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <customfont.BOSTextView android:id="@+id/tvTargetTable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@color/colorFirstPri"
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/textbox_text_size"
+                        android:hint="Main Table"
+                        android:textColorHint="@color/colorGray"
+                        android:gravity="center"/>
+
+                    <customfont.BOSTextView android:id="@+id/tvCombineTable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:background="@color/colorSecondPri"
+                        android:textColor="@color/colorWhite"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/textbox_text_size"
+                        android:layout_marginLeft="10dp"
+                        android:hint="Other Tables"
+                        android:textColorHint="@color/colorGray"
+                        android:gravity="center"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <ImageButton android:id="@+id/btnOk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ok"
+                        android:background="@drawable/transparent_button"
+                        android:layout_gravity="center"
+                        android:padding="10dp"/>
+
+                    <ImageButton android:id="@+id/btnClear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/clear"
+                        android:background="@drawable/transparent_button"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:padding="10dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ScrollView android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout android:id="@+id/tableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <GridView android:id="@+id/gvOccupiedTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="5"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:columnWidth="100dp"
+                        android:scrollbars="none"></GridView>
+
+                    <GridView android:id="@+id/gvBookingTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="5"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:columnWidth="100dp"
+                        android:scrollbars="none"></GridView>
+
+                    <GridView android:id="@+id/gvEmptyTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="5"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:columnWidth="100dp"
+                        android:scrollbars="none"></GridView>
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

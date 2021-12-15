@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <customfont.BOSTextView android:id="@+id/tvShopName"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Shop Name"
+        android:textSize="@dimen/label_text_size_large"
+        android:textColor="@color/colorWhite"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:textStyle="bold"/>
+
+    <customfont.ArialTextView android:id="@+id/tvPrinterMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/label_text_size_small"
+        android:textColor="@color/colorFirstPri"
+        android:gravity="center"
+        android:text="message"
+        android:layout_toLeftOf="@+id/btnConnect"
+        android:textStyle="bold"/>
+
+    <customfont.ArialButton android:id="@+id/btnConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/button_text_size_small"
+        android:textColor="@color/colorFirstPri"
+        android:gravity="center"
+        android:text="Connect"
+        android:background="@drawable/gray_button"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

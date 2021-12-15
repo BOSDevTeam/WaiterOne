@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="5dp">
+
+    <customfont.ArialTextView
+        android:id="@+id/tvPrinterName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/label_text_size_large"
+        android:padding="10dp"
+        android:textColor="@color/colorFirstPri"
+        android:textStyle="bold"/>
+
+    <customfont.ArialTextView
+        android:id="@+id/tvModel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/label_text_size_small"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:textColor="#666666"
+        android:textStyle="bold"/>
+</LinearLayout>
+
+
+

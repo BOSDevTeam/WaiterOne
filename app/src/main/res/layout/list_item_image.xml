@@ -1,0 +1,119 @@
+<!--<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/ivItemImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_default_image" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tvItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item Name"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"/>
+
+    <TextView android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorFirstPri"
+        android:textSize="16sp"
+        android:text="Price"
+        android:layout_marginTop="10dp" />
+
+        </LinearLayout>
+
+    <Button android:id="@+id/btnOrder"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:text="Order"
+        android:textSize="@dimen/button_text_size_small"
+        android:textColor="@color/colorWhite"
+        android:textAllCaps="false"
+        android:background="@drawable/accent_button"/>
+
+    </LinearLayout>
+
+</LinearLayout>-->
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="0dp"
+    android:background="@drawable/login_layout_bg">
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="0dp"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/ivItemImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_default_image" />
+
+    <TextView
+        android:id="@+id/tvItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item Name"
+        android:layout_below="@+id/ivItemImage"
+        android:layout_marginTop="-5dp"
+        android:textSize="16sp"
+        android:paddingLeft="5dp"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorFirstPri"
+        android:textSize="15sp"
+        android:text="Price"
+        android:layout_below="@+id/tvItemName"
+        android:paddingLeft="5dp"
+        android:layout_marginTop="5dp"/>
+
+</RelativeLayout>
+
+    <Button android:id="@+id/btnOrder"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:text="Order"
+        android:textSize="@dimen/button_text_size_small"
+        android:textColor="@color/colorWhite"
+        android:textAllCaps="false"
+        android:layout_gravity="right|top"
+        android:background="@drawable/accent_button"
+        android:layout_margin="2dp"/>
+
+</FrameLayout>
+
+
+
+
+

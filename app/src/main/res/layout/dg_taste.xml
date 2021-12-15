@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/taste_dialog_bg"
+    android:padding="10dp">
+
+    <LinearLayout  android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <customfont.BOSTextView android:id="@+id/tvTaste"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="@dimen/label_text_size_large"
+            android:hint="Taste" />
+
+        <customfont.ArialButton android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:textColor="@color/colorSecondPri"
+            android:textStyle="bold"
+            android:textSize="@dimen/button_text_size_large"
+            android:background="@drawable/gray_button"
+            android:text="Clear"
+            android:layout_marginLeft="10dp"></customfont.ArialButton>
+    </LinearLayout>
+
+    <GridView android:id="@+id/gvTaste"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:numColumns="5"
+        android:layout_marginTop="5dp"></GridView>
+
+    <LinearLayout  android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <customfont.BOSEditText android:id="@+id/etCustomTaste"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="@dimen/label_text_size_large"
+            android:hint="Custom Taste"
+            android:background="@color/colorDarkGray"/>
+
+        <customfont.ArialButton android:id="@+id/btnTasteAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="@dimen/button_text_size_large"
+            android:background="@drawable/gray_button"
+            android:text="Add"
+            android:layout_marginLeft="10dp"></customfont.ArialButton>
+    </LinearLayout>
+
+    <LinearLayout  android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <customfont.ArialButton android:id="@+id/btnOK"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:textSize="@dimen/button_text_size_large"
+            android:background="@drawable/blue_button"
+            android:text="OK"></customfont.ArialButton>
+
+        <customfont.ArialButton android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/colorFirstPri"
+            android:textStyle="bold"
+            android:textSize="@dimen/button_text_size_large"
+            android:background="@drawable/gray_button"
+            android:text="Cancel"
+            android:layout_marginLeft="10dp"></customfont.ArialButton>
+
+    </LinearLayout>
+</LinearLayout>

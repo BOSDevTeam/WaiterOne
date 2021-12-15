@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#232323</color>
+    <color name="colorPrimaryDark">#161515</color>
+    <color name="colorAccent">#2fbed7</color>
+
+    <color name="colorFirstPri">#0084B9</color>
+    <color name="colorSecondPri">#d6963e</color>
+
+    <color name="colorReportListHeader">#056a93</color>
+    <color name="colorReportGroupFirstPri">#196583</color>
+    <color name="colorReportGroupSecondPri">#c47f20</color>
+
+    <color name="colorTransparent">@android:color/transparent</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGray">#EBEBEB</color>
+    <color name="colorDarkGray">#dcdada</color>
+    <color name="colorHint">#cccccc</color>
+    <color name="colorDarkHint">#aca9a9</color>
+
+    <color name="colorOccupiedTable">#1b54af</color>
+    <color name="colorBookingTable">#962e35</color>
+    <color name="colorEmptyTable">#aea32e</color>
+
+    <color name="colorSuccess">#81e6af</color>
+    <color name="colorWarning">#efe9b0</color>
+    <color name="colorError">#e6a19e</color>
+    <color name="colorInfo">#90bede</color>
+
+</resources>

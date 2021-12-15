@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <customfont.BOSTextView android:id="@+id/tvListDate"
+        style="@style/styleReportListTextView"
+        android:textColor="@color/colorPrimary"/>
+    <customfont.BOSTextView android:id="@+id/tvListWaiter"
+        style="@style/styleReportListTextView"
+        android:textColor="@color/colorPrimary"/>
+    <customfont.BOSTextView android:id="@+id/tvListTable"
+        style="@style/styleReportListTextView"
+        android:textColor="@color/colorPrimary"/>
+    <customfont.BOSTextView android:id="@+id/tvListCustomerNumber"
+        style="@style/styleReportListTextView"
+        android:textColor="@color/colorPrimary"/>
+    <customfont.BOSTextView android:id="@+id/tvListSubTotal"
+        style="@style/styleReportListTextView"
+        android:textColor="@color/colorPrimary"/>
+    <customfont.BOSTextView android:id="@+id/tvListTax"
+        style="@style/styleReportListTextView"
+        android:textColor="@color/colorPrimary"/>
+    <customfont.BOSTextView android:id="@+id/tvListCharges"
+        style="@style/styleReportListTextView"
+        android:textColor="@color/colorPrimary"/>
+    <customfont.BOSTextView android:id="@+id/tvListDiscount"
+        style="@style/styleReportListTextView"
+        android:textColor="@color/colorPrimary"/>
+    <customfont.BOSTextView android:id="@+id/tvListGrandTotal"
+        style="@style/styleReportListTextView"
+        android:textColor="@color/colorPrimary"/>
+
+</LinearLayout>

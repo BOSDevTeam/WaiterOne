@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@color/colorWhite">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <Spinner  android:id="@+id/spMainMenu"
+        style="@style/styleSetupDialogSpinner"/>
+
+    <Spinner  android:id="@+id/spSubMenu"
+        style="@style/styleSetupDialogSpinner"
+        android:layout_marginTop="10dp"/>
+
+    <Spinner  android:id="@+id/spSType"
+        style="@style/styleSetupDialogSpinner"
+        android:layout_marginTop="10dp"/>
+
+    <customfont.BOSEditText android:id="@+id/etItemID"
+        style="@style/styleSetupDialogEditText"
+        android:hint="ItemID"
+        android:inputType="text"
+        android:imeOptions="actionNext"/>
+
+    <customfont.BOSEditText  android:id="@+id/etItemName"
+        style="@style/styleSetupDialogEditText"
+        android:hint="Name"
+        android:inputType="text"
+        android:imeOptions="actionNext"/>
+
+    <customfont.ArialEditText  android:id="@+id/etPrice"
+        style="@style/styleSetupDialogEditText"
+        android:hint="Price"
+        android:inputType="numberDecimal"
+        android:imeOptions="actionDone"/>
+
+    <LinearLayout android:id="@+id/layoutItemImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/login_layout_bg"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+        <ImageView android:id="@+id/ivItemImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/colorGray"/>
+
+            <ImageButton android:id="@+id/btnImageDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_delete"
+                android:background="@drawable/transparent_button"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <ImageButton android:id="@+id/btnImageBrowse"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:background="@drawable/gray_round_button"
+            android:src="@drawable/ic_add_photo"/>
+
+    </LinearLayout>
+
+    <customfont.ArialCheckBox android:id="@+id/chkOutOfOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Out of Order"
+        android:textSize="@dimen/label_text_size_large"
+        android:textColor="@color/colorPrimary"
+        android:background="@color/colorWhite"/>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <customfont.ArialButton android:id="@+id/btnSave"
+            style="@style/styleSetupDialogSaveButton"/>
+
+        <customfont.ArialButton android:id="@+id/btnClose"
+            style="@style/styleSetupDialogCloseButton"/>
+
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorFirstPri">
+
+        <customfont.ArialTextView android:id="@+id/tvFromDate"
+            style="@style/styleReportDateText"
+            android:text="From Date" />
+
+        <customfont.ArialTextView android:id="@+id/tvToDate"
+            style="@style/styleReportDateText"
+            android:text="To Date" />
+
+        <customfont.ArialTextView android:id="@+id/tvToday"
+            style="@style/styleReportTodayLabel"
+            android:text="(Today)"
+            android:visibility="gone">
+        </customfont.ArialTextView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorReportListHeader">
+
+        <customfont.ArialTextView android:id="@+id/tvHeaderSubMenu"
+            style="@style/styleReportHeaderTextViewRatio"
+            android:text="Sub Menu"/>
+        <customfont.ArialTextView android:id="@+id/tvHeaderMainMenu"
+            style="@style/styleReportHeaderTextViewRatio"
+            android:text="Main Menu"/>
+        <customfont.ArialTextView android:id="@+id/tvHeaderQty"
+            style="@style/styleReportHeaderTextViewRatio"
+            android:text="Sale Qty"/>
+
+    </LinearLayout>
+
+    <ListView android:id="@+id/lvReportBottomSaleMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
+
+</LinearLayout>

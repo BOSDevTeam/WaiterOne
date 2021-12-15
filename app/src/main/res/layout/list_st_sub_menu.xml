@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/styleSetupListLayout">
+
+    <customfont.BOSTextView android:id="@+id/tvSubMenuName"
+        style="@style/styleSetupListTextView"/>
+
+    <customfont.BOSTextView android:id="@+id/tvMainMenuName"
+        style="@style/styleSetupListTextView2"/>
+
+    <customfont.BOSTextView android:id="@+id/tvSortCode"
+        style="@style/styleSetupListTextView"/>
+
+    <ImageButton android:id="@+id/btnEdit"
+        style="@style/styleSetupListImageEditButton"/>
+
+    <ImageButton android:id="@+id/btnDelete"
+        style="@style/styleSetupListImageDeleteButton"/>
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menuChange"
+        android:title="@string/menu_change_table"
+        app:showAsAction="always"
+        android:icon="@mipmap/confirm"/>
+
+</menu>

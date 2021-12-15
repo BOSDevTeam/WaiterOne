@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorFirstPri">
+
+        <customfont.ArialTextView android:id="@+id/tvFromDate"
+            style="@style/styleReportDateText"
+            android:text="From Date" />
+
+        <customfont.ArialTextView android:id="@+id/tvToDate"
+            style="@style/styleReportDateText"
+            android:text="To Date" />
+
+        <customfont.ArialTextView android:id="@+id/tvToday"
+            style="@style/styleReportTodayLabel"
+            android:text="(Today)"
+            android:visibility="gone">
+        </customfont.ArialTextView>
+
+    </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/colorReportListHeader">
+
+                <customfont.ArialTextView android:id="@+id/tvHeaderDate"
+                    style="@style/styleReportHeaderTextViewRatio"
+                    android:text="Date" />
+                <customfont.ArialTextView android:id="@+id/tvHeaderTable"
+                    style="@style/styleReportHeaderTextViewRatio"
+                    android:text="Table" />
+                <customfont.ArialTextView android:id="@+id/tvHeaderCustomer"
+                    style="@style/styleReportHeaderTextViewRatio"
+                    android:text="Customer" />
+                <customfont.ArialTextView android:id="@+id/tvHeaderGrandTotal"
+                    style="@style/styleReportHeaderTextViewRatio"
+                    android:text="Grand Total"/>
+
+            </LinearLayout>
+
+            <ListView android:id="@+id/lvReportSaleByWaiter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></ListView>
+
+</LinearLayout>

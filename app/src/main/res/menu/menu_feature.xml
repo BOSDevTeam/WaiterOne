@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuDeleteFeature"
+        android:title="Delete Feature"/>
+
+    <item
+        android:id="@+id/menuDeleteMasterSale"
+        android:title="Delete Master Sale"/>
+
+    <item
+        android:id="@+id/menuDeleteTranSale"
+        android:title="Delete Tran Sale"/>
+
+</menu>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customfont.ArialTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvEmpty"
+    android:layout_width="match_parent"
+    android:textSize="@dimen/label_text_size_small"
+    android:textColor="@color/colorWhite"
+    android:background="@android:color/transparent"
+    android:gravity="left|center_vertical"
+    android:paddingLeft="10dip"
+    android:paddingRight="2dp"
+    android:layout_height="40dp"
+    android:textStyle="bold"/>

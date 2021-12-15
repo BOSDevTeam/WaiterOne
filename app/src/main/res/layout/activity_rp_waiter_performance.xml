@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorFirstPri">
+
+            <customfont.ArialTextView android:id="@+id/tvFromDate"
+                style="@style/styleReportDateText"
+                android:text="From Date" />
+
+            <customfont.ArialTextView android:id="@+id/tvToDate"
+                style="@style/styleReportDateText"
+                android:text="To Date" />
+
+            <customfont.ArialTextView android:id="@+id/tvToday"
+                style="@style/styleReportTodayLabel"
+                android:text="(Today)"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorReportListHeader">
+
+            <customfont.ArialTextView android:id="@+id/tvHeaderWaiterName"
+                style="@style/styleReportWaiterPerformanceHeader"
+                android:text="Waiter" />
+            <customfont.ArialTextView android:id="@+id/tvHeaderSaledTableCount"
+                style="@style/styleReportWaiterPerformanceHeader"
+                android:text="Sale Table Count" />
+            <customfont.ArialTextView android:id="@+id/tvHeaderSaledCustomerNumber"
+                style="@style/styleReportWaiterPerformanceHeader"
+                android:text="Sale Total Customer" />
+
+        </LinearLayout>
+
+        <ListView android:id="@+id/lvReportWaiterPerformance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></ListView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorReportListHeader"
+            android:visibility="gone">
+
+            <customfont.ArialTextView android:id="@+id/tvHeaderWaiterName2"
+                style="@style/styleReportWaiterPerformanceHeader"
+                android:text="Waiter" />
+            <customfont.ArialTextView android:id="@+id/tvHeaderTableName"
+                style="@style/styleReportWaiterPerformanceHeader"
+                android:text="Table" />
+            <customfont.ArialTextView android:id="@+id/tvHeaderTableCount"
+                style="@style/styleReportWaiterPerformanceHeader"
+                android:text="Sale Count" />
+
+        </LinearLayout>
+
+        <ListView android:id="@+id/lvReportWaiterPerformance2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></ListView>
+
+    </LinearLayout>
+
+</ScrollView>

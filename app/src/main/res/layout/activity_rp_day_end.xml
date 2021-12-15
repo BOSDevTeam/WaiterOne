@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="5dp">
+
+        <LinearLayout android:id="@+id/layoutPrint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/colorWhite"
+            android:layout_marginTop="10dp">
+
+            <customfont.BOSTextView android:id="@+id/tvReportName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="End of Day Report"
+                android:textColor="@color/colorPrimaryDark"
+                android:padding="5dp"
+                android:textStyle="bold"/>
+            <customfont.BOSTextView android:id="@+id/tvShopName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shop Name"
+                android:textColor="@color/colorPrimaryDark"
+                android:padding="5dp"
+                android:textStyle="bold"/>
+            <customfont.BOSTextView android:id="@+id/tvShopDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textColor="@color/colorPrimaryDark"
+                android:padding="5dp"
+                android:textStyle="bold"/>
+            <customfont.BOSTextView android:id="@+id/tvPrintDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Printed : "
+                android:textColor="@color/colorPrimaryDark"
+                android:padding="5dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <customfont.BOSTextView android:id="@+id/tvHeaderSlipID"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content"
+                    android:text="Slip"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:padding="5dp"
+                    android:textStyle="bold"/>
+                <customfont.BOSTextView android:id="@+id/tvHeaderTotalAmt"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="SubTotal"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:padding="5dp"
+                    android:gravity="right"
+                    android:textStyle="bold"/>
+                <customfont.BOSTextView android:id="@+id/tvHeaderTax"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="Tax"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:padding="5dp"
+                    android:gravity="right"
+                    android:textStyle="bold"/>
+                <customfont.BOSTextView android:id="@+id/tvHeaderCharges"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="Charges"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:padding="5dp"
+                    android:gravity="right"
+                    android:textStyle="bold" />
+                <customfont.BOSTextView android:id="@+id/tvHeaderDis"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content"
+                    android:text="Dis"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:padding="5dp"
+                    android:gravity="right"
+                    android:textStyle="bold"/>
+                <customfont.BOSTextView android:id="@+id/tvHeaderNetAmt"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:text="NetAmt"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:padding="5dp"
+                    android:gravity="right"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark">
+            </LinearLayout>
+            <LinearLayout android:id="@+id/layoutPrintList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"
+                android:layout_marginBottom="20dp">
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp">
+                <customfont.BOSTextView android:id="@+id/tvSubTotal"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="SubTotal"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:padding="5dp"
+                    android:textStyle="bold"/>
+                <customfont.BOSTextView android:id="@+id/tvTotalAmt"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Sub Total"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:padding="5dp"
+                    android:gravity="right"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp">
+                <customfont.BOSTextView android:id="@+id/tvCommercialTax"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Tax"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:padding="5dp"
+                    android:textStyle="bold"/>
+                <customfont.BOSTextView android:id="@+id/tvTax"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Commercial Tax"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:padding="5dp"
+                    android:gravity="right"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp">
+                <customfont.BOSTextView android:id="@+id/tvServiceCharges"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Charges"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:padding="5dp"
+                    android:textStyle="bold"/>
+                <customfont.BOSTextView android:id="@+id/tvCharges"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Service Charges"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:padding="5dp"
+                    android:gravity="right"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp">
+                <customfont.BOSTextView android:id="@+id/tvDiscount"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Dis"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:padding="5dp"
+                    android:textStyle="bold"/>
+                <customfont.BOSTextView android:id="@+id/tvDis"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Discount"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:padding="5dp"
+                    android:gravity="right"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp">
+                <customfont.BOSTextView android:id="@+id/tvGrandTotal"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="NetAmt"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:padding="5dp"
+                    android:textStyle="bold"/>
+                <customfont.BOSTextView android:id="@+id/tvNetAmt"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Grand Total"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:padding="5dp"
+                    android:gravity="right"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

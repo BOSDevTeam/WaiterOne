@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorFirstPri">
+
+        <customfont.ArialTextView android:id="@+id/tvFromDate"
+            style="@style/styleReportDateText"
+            android:text="From Date" />
+
+        <customfont.ArialTextView android:id="@+id/tvToDate"
+            style="@style/styleReportDateText"
+            android:text="To Date" />
+
+        <customfont.ArialTextView android:id="@+id/tvToday"
+            style="@style/styleReportTodayLabel"
+            android:text="(Today)"
+            android:visibility="gone">
+        </customfont.ArialTextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorReportListHeader">
+
+        <customfont.ArialTextView android:id="@+id/tvHeaderItemName"
+            style="@style/styleReportHeaderTextViewRatio"
+            android:text="Item" />
+        <customfont.ArialTextView android:id="@+id/tvHeaderQuantity"
+            style="@style/styleReportHeaderTextViewRatio"
+            android:text="Qty" />
+        <customfont.ArialTextView android:id="@+id/tvHeaderSalePrice"
+            style="@style/styleReportHeaderTextViewRatio"
+            android:text="Price" />
+        <customfont.ArialTextView android:id="@+id/tvHeaderSaleAmount"
+            style="@style/styleReportHeaderTextViewRatio"
+            android:text="Amount"/>
+
+    </LinearLayout>
+
+    <ListView android:id="@+id/lvReportSaleInvoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
+</LinearLayout>

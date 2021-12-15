@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExportImportActivity"
+    android:orientation="vertical"
+    android:paddingTop="30dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+    <customfont.ArialButton android:id="@+id/btnImportFromCSV"
+        android:text="Import Data From CSV"
+        android:drawableTop="@drawable/ic_file_download"
+        style="@style/styleRectButton"/>
+
+    <customfont.ArialButton android:id="@+id/btnExportToCSV"
+        android:text="Export Data To CSV"
+        android:layout_marginLeft="10dp"
+        android:drawableTop="@drawable/ic_file_upload"
+        style="@style/styleRectButton"/>
+
+    <customfont.ArialButton android:id="@+id/btnImportTranFromCSV"
+        android:text="Import Tran From CSV"
+        android:layout_marginLeft="10dp"
+        android:drawableTop="@drawable/ic_file_download"
+        style="@style/styleRectButton"/>
+
+    <customfont.ArialButton android:id="@+id/btnExportTranToCSV"
+        android:text="Export Tran To CSV"
+        android:layout_marginLeft="10dp"
+        android:drawableTop="@drawable/ic_file_upload"
+        style="@style/styleRectButton"/>
+
+        </LinearLayout>
+
+</LinearLayout>

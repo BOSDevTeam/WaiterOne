@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bosictsolution.waiterone.MainActivity"
+    android:orientation="vertical"
+    android:paddingTop="30dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+    <customfont.ArialButton android:id="@+id/btnDataSetup"
+        android:text="Data Setup"
+        android:drawableTop="@drawable/ic_data_setting"
+        style="@style/styleRectButton"/>
+
+    <customfont.ArialButton android:id="@+id/btnCSVImportExport"
+        android:text="CSV Import/Export"
+        android:layout_marginLeft="10dp"
+        android:drawableTop="@drawable/ic_import_export"
+        style="@style/styleRectButton"/>
+
+    <customfont.ArialButton android:id="@+id/btnServerImport"
+        android:text="Server Import"
+        android:layout_marginLeft="10dp"
+        android:drawableTop="@drawable/ic_file_download"
+        style="@style/styleRectButton"/>
+
+    <customfont.ArialButton android:id="@+id/btnDeleteTran"
+        android:text="Delete Transaction"
+        android:layout_marginLeft="10dp"
+        android:drawableTop="@drawable/ic_delete_sweep"
+        style="@style/styleRectButton"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="visible">
+
+        <customfont.ArialButton android:id="@+id/btnResetSlipId"
+            android:text="Reset SlipID"
+            android:drawableTop="@drawable/ic_refresh"
+            style="@style/styleRectButton"/>
+
+        <customfont.ArialButton android:id="@+id/btnBackupData"
+            android:text="Backup Data"
+            android:drawableTop="@drawable/ic_backup"
+            style="@style/styleRectButton"
+            android:visibility="visible"
+            android:layout_marginLeft="10dp"/>
+
+        <customfont.ArialButton android:id="@+id/btnDeleteVoucher"
+            android:text="Delete Voucher"
+            android:layout_marginLeft="10dp"
+            android:drawableTop="@drawable/ic_delete_forever"
+            style="@style/styleRectButton"/>
+
+        <customfont.ArialButton android:id="@+id/btnDelExtraTran"
+            android:text="Delete Extra"
+            android:layout_marginLeft="10dp"
+            android:drawableTop="@drawable/ic_delete_forever"
+            style="@style/styleRectButton"/>
+
+        <customfont.ArialButton android:id="@+id/btnCustomBackupData"
+            android:text="Backup Data (Custom Path)"
+            android:drawableTop="@drawable/ic_backup"
+            style="@style/styleRectButton"
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

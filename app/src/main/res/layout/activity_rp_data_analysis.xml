@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorFirstPri"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <customfont.ArialTextView android:id="@+id/tvFromDate"
+                style="@style/styleReportBestWaiterDate"
+                android:text="From Date" />
+
+            <customfont.ArialTextView android:id="@+id/tvToDate"
+                style="@style/styleReportBestWaiterDate"
+                android:text="To Date" />
+
+            <customfont.ArialTextView android:id="@+id/tvToday"
+                style="@style/styleReportTodayLabel"
+                android:text="(Today)"
+                android:visibility="gone">
+            </customfont.ArialTextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <customfont.ArialTextView android:id="@+id/tvHeaderBestWaiter"
+            style="@style/styleReportBestWaiterHeader"
+            android:text="The Best Waiter" />
+        <customfont.ArialTextView android:id="@+id/tvHeaderSaledTableCount"
+            style="@style/styleReportBestWaiterHeader"
+            android:text="Sale Table Count" />
+        <customfont.ArialTextView android:id="@+id/tvHeaderSaledCustomerNumber"
+            style="@style/styleReportBestWaiterHeader"
+            android:text="Sale Total Customer" />
+
+            </LinearLayout>
+
+        <ListView android:id="@+id/lvReportBestWaiter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></ListView>
+
+        <customfont.ArialButton android:id="@+id/btnDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Detail"
+            android:textColor="@color/colorFirstPri"
+            android:textStyle="bold"
+            android:textSize="@dimen/button_text_size_large"
+            android:background="@drawable/gray_button"
+            android:padding="10dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <customfont.ArialTextView android:id="@+id/tvLabelTodaySaledTableCount"
+                    style="@style/styleReportSaleAmountList"
+                    android:text="Today's Sale Table Count"
+                    android:background="@color/colorWhite"/>
+
+                <customfont.ArialTextView android:id="@+id/tvLabelTodayCustomerTotal"
+                    style="@style/styleReportSaleAmountList"
+                    android:text="Today's Customer Total"
+                    android:background="@color/colorGray"/>
+
+                <customfont.ArialTextView android:id="@+id/tvLabelTodayMenTotal"
+                    style="@style/styleReportSaleAmountList"
+                    android:text="Today's Men Total"
+                    android:background="@color/colorWhite"/>
+
+                <customfont.ArialTextView android:id="@+id/tvLabelTodayWomenTotal"
+                    style="@style/styleReportSaleAmountList"
+                    android:text="Today's Women Total"
+                    android:background="@color/colorGray"/>
+
+                <customfont.ArialTextView android:id="@+id/tvLabelTodayChildTotal"
+                    style="@style/styleReportSaleAmountList"
+                    android:text="Today's Child Total"
+                    android:background="@color/colorWhite"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <customfont.ArialTextView android:id="@+id/tvTodaySaledTableCount"
+                    style="@style/styleReportSaleAmountList"
+                    android:background="@color/colorWhite"/>
+
+                <customfont.ArialTextView android:id="@+id/tvTodayCustomerTotal"
+                    style="@style/styleReportSaleAmountList"
+                    android:background="@color/colorGray"/>
+
+                <customfont.ArialTextView android:id="@+id/tvTodayMenTotal"
+                    style="@style/styleReportSaleAmountList"
+                    android:background="@color/colorWhite"/>
+
+                <customfont.ArialTextView android:id="@+id/tvTodayWomenTotal"
+                    style="@style/styleReportSaleAmountList"
+                    android:background="@color/colorGray"/>
+
+                <customfont.ArialTextView android:id="@+id/tvTodayChildTotal"
+                    style="@style/styleReportSaleAmountList"
+                    android:background="@color/colorWhite"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#d5e7d1"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView android:id="@+id/tvLabelCustomerChoosedTable"
+            style="@style/styleReportChooseTableTitle"
+            android:text="Choice of Table (by all Customer)" />
+
+        <ListView android:id="@+id/lvReportCustomerChoosedTable"
+            style="@style/styleReportChoosedTableList"></ListView>
+
+        <TextView android:id="@+id/tvLabelMenChoosedTable"
+            style="@style/styleReportChooseTableTitle"
+            android:text="Choice of Table (by Men)" />
+
+        <ListView android:id="@+id/lvReportMenChoosedTable"
+            style="@style/styleReportChoosedTableList"></ListView>
+
+        <TextView android:id="@+id/tvLabelWomenChoosedTable"
+            style="@style/styleReportChooseTableTitle"
+            android:text="Choice of Table (by Women)" />
+
+        <ListView android:id="@+id/lvReportWomenChoosedTable"
+            style="@style/styleReportChoosedTableList"></ListView>
+
+        <TextView android:id="@+id/tvLabelChildChoosedTable"
+            style="@style/styleReportChooseTableTitle"
+            android:text="Choice of Table (by Children)" />
+
+        <ListView android:id="@+id/lvReportChildChoosedTable"
+          style="@style/styleReportChoosedTableList"></ListView>
+
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>

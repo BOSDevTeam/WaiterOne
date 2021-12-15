@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+    <customfont.ArialTextView android:id="@+id/tvLabelChooseMainMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/colorFirstPri"
+        android:padding="10dp"
+        android:text="Choose Allowed Main Menu"
+        android:textSize="@dimen/label_text_size_large" />
+
+    <LinearLayout  android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/colorFirstPri">
+    </LinearLayout>
+
+    <LinearLayout  android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <ListView android:id="@+id/lvMainMenu"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"></ListView>
+
+        <customfont.ArialButton android:id="@+id/btnAllow"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/blue_button"
+            android:text="ALLOW"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:textSize="@dimen/button_text_size_large"
+            android:padding="10dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

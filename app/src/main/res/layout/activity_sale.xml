@@ -1,0 +1,172 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SaleActivity"
+    android:orientation="vertical">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/colorSecondPri">
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <LinearLayout android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ExpandableListView android:id="@+id/android:list"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/colorFirstPri">
+            </ExpandableListView>
+
+            <LinearLayout  android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorDarkGray"></LinearLayout>
+
+            <!-- start list view items -->
+            <LinearLayout android:id="@+id/layoutItem"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/colorFirstPri">
+
+                <customfont.BOSTextView  android:id="@+id/tvSubMenuName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_submenu"
+                    android:textColor="@color/colorGray"
+                    android:textSize="@dimen/label_text_size_large"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"/>
+
+                <ListView android:id="@+id/lvItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@color/colorDarkGray"
+                    android:dividerHeight="1dp">
+                </ListView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- start order place -->
+        <LinearLayout android:id="@+id/layoutOrderPlace"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/colorWhite">
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/colorDarkGray">
+
+                <customfont.ArialButton android:id="@+id/btnSendOrder"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_sendorder"
+                    android:textColor="@color/colorFirstPri"
+                    android:textSize="@dimen/button_text_size_large"
+                    android:background="@drawable/gray_button"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"/>
+
+                <customfont.ArialButton android:id="@+id/btnPrint"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Print"
+                    android:textColor="@color/colorFirstPri"
+                    android:textSize="@dimen/button_text_size_large"
+                    android:background="@drawable/gray_button"
+                    android:layout_marginLeft="1dp"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"/>
+
+                <customfont.ArialButton android:id="@+id/btnChooseTable"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/button_choosetable"
+                    android:background="@drawable/gray_button"
+                    android:textColor="@color/colorFirstPri"
+                    android:textSize="@dimen/button_text_size_large"
+                    android:layout_marginLeft="1dp"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/colorDarkGray">
+
+                <customfont.BOSTextView  android:id="@+id/tvWaiterName"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorFirstPri"
+                    android:textSize="@dimen/label_text_size_small"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:background="@color/colorWhite"/>
+
+                <customfont.BOSTextView  android:id="@+id/tvTableName"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorFirstPri"
+                    android:textSize="@dimen/label_text_size_small"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:layout_marginLeft="1dp"
+                    android:background="@color/colorWhite"/>
+
+                <customfont.BOSTextView android:id="@+id/tvStartTime"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Set Time"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/label_text_size_small"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:layout_marginLeft="1dp"
+                    android:background="@drawable/blue_button"/>
+
+            </LinearLayout>
+
+            <LinearLayout  android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:orientation="horizontal"
+                android:background="@color/colorDarkGray"
+                android:layout_marginTop="4dp"></LinearLayout>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lvOrder">
+            </ListView>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bosictsolution.waiterone.AdminActivity"
+    android:padding="10dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <customfont.ArialTextView android:id="@+id/tvAllowFeature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check Allowed Features"
+            android:textColor="@color/colorFirstPri"
+            android:textSize="@dimen/label_text_size_large"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"/>
+
+        <ListView android:id="@+id/lvFeature"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"></ListView>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+            <customfont.ArialButton android:id="@+id/btnManageMenu"
+                android:text="Manage Menu"
+                android:drawableLeft="@mipmap/manage"
+                style="@style/styleAdminButton" />
+
+            <customfont.ArialButton android:id="@+id/btnChangePassword"
+                android:text="Change Admin Password?"
+                android:drawableLeft="@mipmap/password"
+                style="@style/styleAdminButton" />
+
+            <customfont.ArialButton android:id="@+id/btnMultiPrinterSetting"
+                android:text="Multi Printer Setting"
+                android:drawableLeft="@mipmap/printer"
+                style="@style/styleAdminButton" />
+
+            <customfont.ArialButton android:id="@+id/btnItemSTypePrinterSetting"
+                android:text="SType Printer Setting"
+                android:drawableLeft="@mipmap/printer"
+                style="@style/styleAdminButton" />
+
+            <customfont.ArialButton android:id="@+id/btnRestoreData"
+                android:drawableLeft="@mipmap/restore"
+                style="@style/styleAdminButton"
+                android:text="Restore Data" />
+
+        <customfont.ArialButton android:id="@+id/btnPrinterSetting"
+            android:text="Printer Setting"
+            android:drawableLeft="@mipmap/printer"
+            style="@style/styleAdminButton" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Take Away"
+                android:textColor="@color/colorFirstPri"
+                android:textSize="@dimen/title_text_size_small"
+                android:layout_marginTop="5dp"/>
+
+                <ImageButton android:id="@+id/btnRefreshTakeAway"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_refresh"
+                    android:background="@drawable/transparent_button"/>
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/rdoGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rdoUseTakeAway"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textbox_text_size"
+                    android:text="Use Take Away"
+                    android:textColor="@color/colorPrimary"/>
+
+                <RadioButton
+                    android:id="@+id/rdoUseBoth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textbox_text_size"
+                    android:text="Use both Normal and Take Away"
+                    android:textColor="@color/colorPrimary"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    <customfont.ArialButton android:id="@+id/btnDeveloperMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Developer Mode"
+        android:padding="10dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="15sp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"/>
+
+    <customfont.ArialTextView android:id="@+id/tvCurrentPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textColor="@color/colorFirstPri"
+        android:textSize="@dimen/label_text_size_small"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+</LinearLayout>

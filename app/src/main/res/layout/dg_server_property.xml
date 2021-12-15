@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/colorWhite">
+
+    <customfont.ArialEditText android:id="@+id/etIPAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="Arial Narrow"
+        android:textSize="@dimen/textbox_text_size"
+        android:hint="@string/ip_address"
+        android:padding="10dp"
+        android:background="@color/colorGray"
+        android:textColorHint="@color/colorHint"/>
+
+    <customfont.ArialEditText android:id="@+id/etDatabaseName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="Arial Narrow"
+        android:textSize="@dimen/textbox_text_size"
+        android:hint="@string/database"
+        android:padding="10dp"
+        android:background="@color/colorGray"
+        android:layout_marginTop="5dp"
+        android:textColorHint="@color/colorHint"/>
+
+    <customfont.ArialEditText android:id="@+id/etServerUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="Arial Narrow"
+        android:textSize="@dimen/textbox_text_size"
+        android:hint="@string/user"
+        android:padding="10dp"
+        android:background="@color/colorGray"
+        android:layout_marginTop="5dp"
+        android:textColorHint="@color/colorHint"/>
+
+    <customfont.ArialEditText android:id="@+id/etServerPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="Arial Narrow"
+        android:textSize="@dimen/textbox_text_size"
+        android:hint="@string/password"
+        android:padding="10dp"
+        android:background="@color/colorGray"
+        android:layout_marginTop="5dp"
+        android:inputType="textPassword"
+        android:textColorHint="@color/colorHint"/>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <customfont.ArialButton android:id="@+id/btnOK"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_button"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/button_text_size_large"
+            android:text="@string/btnok"
+            android:layout_gravity="left"
+            style="?android:attr/buttonBarButtonStyle"
+            android:padding="10dp"
+            android:textStyle="bold"/>
+
+        <customfont.ArialButton android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/gray_button"
+            android:textColor="@color/colorFirstPri"
+            android:textSize="@dimen/button_text_size_large"
+            android:text="@string/btncancel"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="right"
+            style="?android:attr/buttonBarButtonStyle"
+            android:padding="10dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</LinearLayout>

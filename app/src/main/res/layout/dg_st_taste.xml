@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:padding="10dp"
+android:orientation="vertical"
+android:background="@color/colorWhite">
+
+<customfont.BOSEditText  android:id="@+id/etTaste"
+    style="@style/styleSetupDialogEditText"
+    android:hint="Taste" />
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="20dp">
+
+    <customfont.ArialButton android:id="@+id/btnSave"
+        style="@style/styleSetupDialogSaveButton"/>
+
+    <customfont.ArialButton android:id="@+id/btnClose"
+        style="@style/styleSetupDialogCloseButton"/>
+
+</LinearLayout>
+</LinearLayout>
