@@ -5,13 +5,12 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Environment;
 import android.os.ParcelFileDescriptor;
 import android.provider.MediaStore;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -25,6 +24,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -37,12 +37,16 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import adapter.SpItemSubGroupAdapter;
 import adapter.StCompanyListAdapter;
 import adapter.SpCompanyAdapter;
 import adapter.StItemListAdapter;
+import adapter.StItemSubGroupListAdapter;
+import adapter.StItemSubListAdapter;
 import adapter.StMainMenuListAdapter;
 import adapter.SpMainMenuAdapter;
 import adapter.ModuleListAdapter;
@@ -60,6 +64,8 @@ import common.FeatureList;
 import common.SystemSetting;
 import data.CompanyData;
 import data.ItemData;
+import data.ItemSubData;
+import data.ItemSubGroupData;
 import data.STypeData;
 import data.MainMenuData;
 import data.ModuleData;
@@ -74,8 +80,8 @@ import listener.SetupEditDeleteButtonClickListener;
 public class SetupActivity extends AppCompatActivity implements SetupEditDeleteButtonClickListener, ModuleCheckedListener {
 
     Button btnWaiterModule, btnTableModule, btnTableTypeModule, btnTasteModule, btnMainMenuModule, btnSubMenuModule, btnItemModule, btnSystemSettingModule,btnSTypeModule,btnCompanyModule,
-            btnNewAddWaiter, btnNewAddTable, btnNewAddTableType, btnNewAddTaste, btnNewAddMainMenu, btnNewAddSubMenu, btnNewAddItem,btnNewAddSType,btnNewAddCompany,btnAddSystemSetting,btnAddVoucherSetting,
-            btnSearchWaiter,btnSearchTableType,btnSearchTable,btnSearchMainMenu,btnSearchTaste,btnSearchSubMenu,btnSearchItem,btnSearchSType,btnSearchCompany, btnVoucherSettingModule;
+            btnNewAddWaiter, btnNewAddTable, btnNewAddTableType, btnNewAddTaste, btnNewAddMainMenu, btnNewAddSubMenu, btnNewAddItem,btnNewAddItemSubGroup,btnNewAddItemSub,btnNewAddSType,btnNewAddCompany,btnAddSystemSetting,btnAddVoucherSetting,
+            btnSearchWaiter,btnSearchTableType,btnSearchTable,btnSearchMainMenu,btnSearchTaste,btnSearchSubMenu,btnSearchItem,btnSearchSType,btnSearchCompany, btnVoucherSettingModule,btnItemSubGroupModule,btnItemSubModule,btnAddItemSub;
     ImageButton btnShopLogo,btnCancelLogo;
     EditText etSearchWaiterName, etSearchTableType, etSearchTable, etSearchTaste, etSearchMainMenu, etSearchSubMenu, etSearchItemID, etSearchItemName,etSearchSType,etSearchCompany,etShopName,etCharges,etTax,
             etTitle,etDescription,etPhone,etMessage,etMessage2,etAddress,etText;
@@ -84,7 +90,7 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
             tvLogo,tvTitle,tvDescription,tvPhone,tvMessage,tvMessage2,tvAddress;
     ListView lvSetup;
     Switch switchBOSKeyboard;
-    LinearLayout layoutSetupWaiter,layoutSetupTable,layoutSetupTableType,layoutSetupTaste,layoutSetupMainMenu,layoutSetupSubMenu,layoutSetupItem,layoutSetupSystemSetting,layoutSetupVoucherSetting,layoutSetupSType,layoutSetupCompany;
+    LinearLayout layoutSetupWaiter,layoutSetupTable,layoutSetupTableType,layoutSetupTaste,layoutSetupMainMenu,layoutSetupSubMenu,layoutSetupItem,layoutSetupSystemSetting,layoutSetupVoucherSetting,layoutSetupSType,layoutSetupCompany,layoutSetupItemSubGroup,layoutSetupItemSub;
     DBHelper db;
     SystemSetting systemSetting=new SystemSetting();
 
@@ -95,6 +101,8 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
     StMainMenuListAdapter mainMenuListAdapter;
     StSubMenuListAdapter subMenuListAdapter;
     StItemListAdapter itemListAdapter;
+    StItemSubGroupListAdapter itemSubGroupListAdapter;
+    StItemSubListAdapter itemSubListAdapter;
     StSTypeListAdapter stSTypeListAdapter;
     StCompanyListAdapter stCompanyListAdapter;
 
@@ -105,10 +113,13 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
     List<MainMenuData> lstMainMenuData;
     List<SubMenuData> lstSubMenuData,lstSubMenuDataForItemSearch;
     List<ItemData> lstItemData;
+    List<ItemSubGroupData> lstItemSubGroupData,lstIncludeItemSubGroup=new ArrayList<>();
+    List<ItemSubData> lstItemSubData;
     List<STypeData> lstSTypeData;
     List<CompanyData> lstCompanyData;
 
     SpTableTypeAdapter spTableTypeAdapter;
+    SpItemSubGroupAdapter spItemSubGroupAdapter;
     SpMainMenuAdapter spMainMenuAdapter;
     SpSubMenuAdapter spSubMenuAdapter;
     SpSTypeAdapter spSTypeAdapter;
@@ -127,6 +138,7 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
     private int GALLERY = 1 , SHOP_LOGO=2;
     byte[] saveImage;
     Bitmap saveBitmap;
+    private static final int ADD_ITEM_SUB_REQUEST = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -231,12 +243,25 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
                 bindMainMenu(spSearchMainMenuForItem);
                 bindSubMenuForItemSearch(spSearchSubMenu);
                 showItemList();
-                /**int position= spSearchMainMenuForItem.getSelectedItemPosition();
-                if(lstMainMenuData.size()!=0) {
-                    selectedMainMenuID = lstMainMenuData.get(position).getMainMenuID();
-                }
-                bindSubMenuForItemEntry(spSearchSubMenu);**/
                 layoutSetupItem.setVisibility(View.VISIBLE);
+            }
+        });
+        btnItemSubGroupModule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setupModuleName= btnItemSubGroupModule.getText().toString();
+                clearAllLayout(btnItemSubGroupModule);
+                showItemSubGroupList();
+                layoutSetupItemSubGroup.setVisibility(View.VISIBLE);
+            }
+        });
+        btnItemSubModule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setupModuleName= btnItemSubModule.getText().toString();
+                clearAllLayout(btnItemSubModule);
+                showItemSubList();
+                layoutSetupItemSub.setVisibility(View.VISIBLE);
             }
         });
         btnCompanyModule.setOnClickListener(new View.OnClickListener() {
@@ -420,6 +445,18 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
                 showItemList();
             }
         });
+        btnNewAddItemSubGroup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showItemSubGroupDialog("","",1,false);
+            }
+        });
+        btnNewAddItemSub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showItemSubDialog(0,"",0,false);
+            }
+        });
         btnNewAddCompany.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -585,7 +622,24 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
             int mainMenuID=lstItemData.get(position).getMainMenuID();
             editSubMenuID=lstItemData.get(position).getSubMenuID();
             int sTypeID=lstItemData.get(position).getsTypeID();
+            lstIncludeItemSubGroup=db.getItemSubGroupByItemID(lstItemData.get(position).getItemid());
             showItemDialog(mainMenuID,sTypeID,lstItemData.get(position).getItemid(),lstItemData.get(position).getItemName(),lstItemData.get(position).getPrice(),lstItemData.get(position).getOutOfOrder(),true,lstItemData.get(position).getItemImage());
+        }
+        else if(setupModuleName.equals(btnItemSubGroupModule.getText().toString())){
+            editid=lstItemSubGroupData.get(position).getPkId();
+            showItemSubGroupDialog(lstItemSubGroupData.get(position).getSubGroupName(),lstItemSubGroupData.get(position).getSubTitle(),lstItemSubGroupData.get(position).isSingleCheck(),true);
+        }
+        else if(setupModuleName.equals(btnItemSubModule.getText().toString())){
+            editid=lstItemSubData.get(position).getPkId();
+            int subGroupId=lstItemSubData.get(position).getSubGroupId();
+            int subGroupPosition=0;
+            for(int i=0;i<lstItemSubGroupData.size();i++){
+                if(lstItemSubGroupData.get(i).getPkId()==subGroupId){
+                    subGroupPosition=i;
+                    break;
+                }
+            }
+            showItemSubDialog(subGroupPosition,lstItemSubData.get(position).getSubName(),lstItemSubData.get(position).getPrice(),true);
         }
         else if(setupModuleName.equals(btnTasteModule.getText().toString())){
             editid=lstTasteData.get(position).getTasteid();
@@ -618,6 +672,12 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
         }
         else if(setupModuleName.equals(btnItemModule.getText().toString())){
             confirmMessage="Are you sure you want to delete item "+lstItemData.get(position).getItemName()+"?";
+        }
+        else if(setupModuleName.equals(btnItemSubGroupModule.getText().toString())){
+            confirmMessage="Are you sure you want to delete item sub group "+lstItemSubGroupData.get(position).getSubGroupName()+"?";
+        }
+        else if(setupModuleName.equals(btnItemSubModule.getText().toString())){
+            confirmMessage="Are you sure you want to delete item sub "+lstItemSubData.get(position).getSubName()+"?";
         }
         else if(setupModuleName.equals(btnTasteModule.getText().toString())){
             confirmMessage="Are you sure you want to delete taste "+lstTasteData.get(position).getTasteName()+"?";
@@ -700,6 +760,10 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
                         Toast.makeText(context, "Failed!", Toast.LENGTH_SHORT).show();
                     }
                 }
+            }else if(requestCode == ADD_ITEM_SUB_REQUEST){
+                lstIncludeItemSubGroup =(List<ItemSubGroupData>) data.getSerializableExtra("LstItemSubGroup");
+                if(lstIncludeItemSubGroup.size() != 0 && btnAddItemSub != null) btnAddItemSub.setText("Include "+lstIncludeItemSubGroup.size()+" Item Sub Group");
+                else btnAddItemSub.setText("Add Item Sub");
             }
         }
     }
@@ -928,6 +992,45 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
         itemListAdapter.setOnSetupEditDeleteButtonClickListener(this);
     }
 
+    private void showItemSubGroupList(){
+        lstItemSubGroupData=new ArrayList<>();
+        Cursor cur=db.getItemSubGroup();
+        while(cur.moveToNext()){
+            ItemSubGroupData data=new ItemSubGroupData();
+            data.setPkId(cur.getInt(0));
+            data.setSubGroupName(cur.getString(1));
+            data.setSubTitle(cur.getString(2));
+            if(cur.getInt(3)==1){
+                data.setSingleCheck(1);
+                data.setCheckType(systemSetting.SINGLE_CHECK);
+            }else{
+                data.setSingleCheck(0);
+                data.setCheckType(systemSetting.MULTI_CHECK);
+            }
+            lstItemSubGroupData.add(data);
+        }
+        itemSubGroupListAdapter=new StItemSubGroupListAdapter(this,lstItemSubGroupData);
+        lvSetup.setAdapter(itemSubGroupListAdapter);
+        itemSubGroupListAdapter.setOnSetupEditDeleteButtonClickListener(this);
+    }
+
+    private void showItemSubList(){
+        lstItemSubData=new ArrayList<>();
+        Cursor cur=db.getItemSub();
+        while(cur.moveToNext()){
+            ItemSubData data=new ItemSubData();
+            data.setPkId(cur.getInt(0));
+            data.setSubGroupId(cur.getInt(1));
+            data.setSubName(cur.getString(2));
+            data.setPrice(cur.getInt(3));
+            data.setSubGroupName(cur.getString(4));
+            lstItemSubData.add(data);
+        }
+        itemSubListAdapter=new StItemSubListAdapter(this,lstItemSubData);
+        lvSetup.setAdapter(itemSubListAdapter);
+        itemSubListAdapter.setOnSetupEditDeleteButtonClickListener(this);
+    }
+
     private void showCompanyList(){
         String companyName= etSearchCompany.getText().toString();
         lstCompanyData=new ArrayList<>();
@@ -983,10 +1086,6 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
 
     private void bindSType(Spinner spSType){
         lstSTypeData =new ArrayList<>();
-        //STypeData dataEmpty=new STypeData();
-        //dataEmpty.setsTypeID(0);
-        //dataEmpty.setsTypeName("Choose SType");
-        //lstSTypeData.add(dataEmpty);
         Cursor cur=db.getSType();
         while(cur.moveToNext()){
             STypeData data=new STypeData();
@@ -997,6 +1096,21 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
         if(lstSTypeData.size()!=0) {
             spSTypeAdapter = new SpSTypeAdapter(this, lstSTypeData);
             spSType.setAdapter(spSTypeAdapter);
+        }
+    }
+
+    private void bindItemSubGroup(Spinner spItemSubGroup){
+        lstItemSubGroupData =new ArrayList<>();
+        Cursor cur=db.getItemSubGroup();
+        while(cur.moveToNext()){
+            ItemSubGroupData data=new ItemSubGroupData();
+            data.setPkId(cur.getInt(0));
+            data.setSubGroupName(cur.getString(1));
+            lstItemSubGroupData.add(data);
+        }
+        if(lstItemSubGroupData.size()!=0) {
+            spItemSubGroupAdapter = new SpItemSubGroupAdapter(this, lstItemSubGroupData);
+            spItemSubGroup.setAdapter(spItemSubGroupAdapter);
         }
     }
 
@@ -1186,9 +1300,24 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
                 }
                 else if(setupModuleName.equals(btnItemModule.getText().toString())){
                     deleteid=lstItemData.get(position).getId();
-                    if(db.deleteItem(deleteid)){
+                    String itemId=lstItemData.get(position).getItemid();
+                    if(db.deleteItem(deleteid,itemId)){
                         systemSetting.showMessage(SystemSetting.SUCCESS,"Delete Successful!",context,getLayoutInflater());
                         showItemList();
+                    }
+                }
+                else if(setupModuleName.equals(btnItemSubGroupModule.getText().toString())){
+                    deleteid=lstItemSubGroupData.get(position).getPkId();
+                    if(db.deleteItemSubGroup(deleteid)){
+                        systemSetting.showMessage(SystemSetting.SUCCESS,"Delete Successful!",context,getLayoutInflater());
+                        showItemSubGroupList();
+                    }
+                }
+                else if(setupModuleName.equals(btnItemSubModule.getText().toString())){
+                    deleteid=lstItemSubData.get(position).getPkId();
+                    if(db.deleteItemSub(deleteid)){
+                        systemSetting.showMessage(SystemSetting.SUCCESS,"Delete Successful!",context,getLayoutInflater());
+                        showItemSubList();
                     }
                 }
                 else if(setupModuleName.equals(btnTasteModule.getText().toString())){
@@ -1225,6 +1354,8 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
         layoutSetupVoucherSetting=(LinearLayout)findViewById(R.id.layoutSetupVoucherSetting);
         layoutSetupSType=(LinearLayout)findViewById(R.id.layoutSetupSType);
         layoutSetupCompany=(LinearLayout)findViewById(R.id.layoutSetupCompany);
+        layoutSetupItemSubGroup=(LinearLayout)findViewById(R.id.layoutSetupItemSubGroup);
+        layoutSetupItemSub=(LinearLayout)findViewById(R.id.layoutSetupItemSub);
 
         spSearchTableType =(Spinner) findViewById(R.id.spSearchTableType);
         spSearchMainMenu =(Spinner)findViewById(R.id.spSearchMainMenu);
@@ -1280,6 +1411,8 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
         btnSubMenuModule =(Button)findViewById(R.id.btnSubMenuModule);
         btnItemModule =(Button)findViewById(R.id.btnItemModule);
         btnSTypeModule =(Button)findViewById(R.id.btnSTypeModule);
+        btnItemSubGroupModule =(Button)findViewById(R.id.btnItemSubGroupModule);
+        btnItemSubModule =(Button)findViewById(R.id.btnItemSubModule);
         btnCompanyModule =(Button)findViewById(R.id.btnCompanyModule);
         btnSystemSettingModule =(Button)findViewById(R.id.btnSystemSettingModule);
         btnVoucherSettingModule =(Button)findViewById(R.id.btnVoucherSettingModule);
@@ -1291,6 +1424,8 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
         btnNewAddMainMenu =(Button)findViewById(R.id.btnAddNewMainMenu);
         btnNewAddSubMenu =(Button)findViewById(R.id.btnAddNewSubMenu);
         btnNewAddItem =(Button)findViewById(R.id.btnAddNewItem);
+        btnNewAddItemSubGroup =(Button)findViewById(R.id.btnAddNewItemSubGroup);
+        btnNewAddItemSub =(Button)findViewById(R.id.btnAddNewItemSub);
         btnNewAddCompany =(Button)findViewById(R.id.btnAddNewCompany);
         btnAddSystemSetting=(Button)findViewById(R.id.btnAddSystemSetting);
         btnAddVoucherSetting=(Button)findViewById(R.id.btnAddVoucherSetting);
@@ -1321,6 +1456,8 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
         layoutSetupMainMenu.setVisibility(View.GONE);
         layoutSetupSubMenu.setVisibility(View.GONE);
         layoutSetupItem.setVisibility(View.GONE);
+        layoutSetupItemSubGroup.setVisibility(View.GONE);
+        layoutSetupItemSub.setVisibility(View.GONE);
         layoutSetupSystemSetting.setVisibility(View.GONE);
         layoutSetupVoucherSetting.setVisibility(View.GONE);
         layoutSetupSType.setVisibility(View.GONE);
@@ -1332,6 +1469,8 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
         btnMainMenuModule.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
         btnSubMenuModule.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
         btnItemModule.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
+        btnItemSubGroupModule.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
+        btnItemSubModule.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
         btnTasteModule.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
         btnSystemSettingModule.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
         btnVoucherSettingModule.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
@@ -2010,6 +2149,7 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
         final ImageButton btnImageBrowse=(ImageButton)view.findViewById(R.id.btnImageBrowse);
         final ImageButton btnImageDelete=(ImageButton)view.findViewById(R.id.btnImageDelete);
         final LinearLayout layoutItemImage=(LinearLayout) view.findViewById(R.id.layoutItemImage);
+        btnAddItemSub=view.findViewById(R.id.btnAddItemSub);
 
         if(db.getFeatureResult(FeatureList.fUseItemImage)==1)layoutItemImage.setVisibility(View.VISIBLE);
 
@@ -2071,6 +2211,9 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
             }else{
                 ivItemImage.setImageBitmap(null);
             }
+            if(lstIncludeItemSubGroup.size()!=0)btnAddItemSub.setText("Include "+lstIncludeItemSubGroup.size()+" Item Sub Group");
+        }else{
+            lstIncludeItemSubGroup=new ArrayList<>();
         }
 
         btnImageBrowse.setOnClickListener(new View.OnClickListener() {
@@ -2093,6 +2236,15 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
             public void onClick(View v) {
                 btnImageDelete.setVisibility(View.GONE);
                 ivItemImage.setImageBitmap(null);
+            }
+        });
+
+        btnAddItemSub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(context,AddItemSubActivity.class);
+                i.putExtra("LstIncludeItemSubGroup",(Serializable) lstIncludeItemSubGroup);
+                startActivityForResult(i,ADD_ITEM_SUB_REQUEST);
             }
         });
 
@@ -2160,18 +2312,27 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
 
                 if(!edit) {
                     if (db.insertItem(itemid,etItemName.getText().toString(),subMenuID,Double.parseDouble(etPrice.getText().toString()),outOfOrder,sTypeID,saveImage)) {
+                        for(int i=0;i<lstIncludeItemSubGroup.size();i++) {
+                            db.insertItemAndSub(itemid, lstIncludeItemSubGroup.get(i).getPkId(), i + 1);
+                        }
                         systemSetting.showMessage(SystemSetting.SUCCESS,"Success!",context,getLayoutInflater());
                         etItemID.setText("");
                         etItemName.setText("");
                         etPrice.setText("");
                         chkOutOfOrder.setChecked(false);
                         ivItemImage.setImageBitmap(null);
+                        lstIncludeItemSubGroup=new ArrayList<>();
+                        btnAddItemSub.setText(getResources().getString(R.string.add_item_sub));
                     } else {
                         systemSetting.showMessage(SystemSetting.INFO,"ItemID " + itemid + " has already existed!",context,getLayoutInflater());
                         etItemID.requestFocus();
                     }
                 }else{
                     if (db.updateItem(editid,itemid,etItemName.getText().toString(),subMenuID,Double.parseDouble(etPrice.getText().toString()),outOfOrder,sTypeID,saveImage)) {
+                        db.deleteItemAndSub(itemid);
+                        for(int i=0;i<lstIncludeItemSubGroup.size();i++) {
+                            db.insertItemAndSub(itemid, lstIncludeItemSubGroup.get(i).getPkId(), i + 1);
+                        }
                         MainMenuData main=new MainMenuData();
                         main.setMainMenuID(0);
                         main.setMainMenuName("Main Menu");
@@ -2187,6 +2348,161 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
                     }else {
                         systemSetting.showMessage(SystemSetting.INFO,"ItemID " + itemid + " has already existed!",context,getLayoutInflater());
                         etItemID.requestFocus();
+                    }
+                }
+            }
+        });
+    }
+
+    private void showItemSubGroupDialog(String groupName, String subTitle, int isSingleCheck, final boolean edit){
+        LayoutInflater reg=LayoutInflater.from(context);
+        View view=reg.inflate(R.layout.dg_st_item_sub_group, null);
+        android.app.AlertDialog.Builder dialog=new android.app.AlertDialog.Builder(context);
+        dialog.setView(view);
+
+        final EditText etGroupName = view.findViewById(R.id.etGroupName);
+        final EditText etSubTitle = view.findViewById(R.id.etSubTitle);
+        final RadioButton rdoAllowSingle = view.findViewById(R.id.rdoAllowSingle);
+        final RadioButton rdoAllowMulti = view.findViewById(R.id.rdoAllowMulti);
+        final Button btnClose = view.findViewById(R.id.btnClose);
+        final Button btnSave = view.findViewById(R.id.btnSave);
+
+        dialog.setCancelable(false);
+        final android.app.AlertDialog setupDialog=dialog.create();
+        setupDialog.show();
+
+        if(edit){
+            etGroupName.setText(groupName);
+            etSubTitle.setText(subTitle);
+            if(isSingleCheck == 1){
+                rdoAllowSingle.setChecked(true);
+                rdoAllowMulti.setChecked(false);
+            }else{
+                rdoAllowSingle.setChecked(false);
+                rdoAllowMulti.setChecked(true);
+            }
+        }
+
+        rdoAllowSingle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(rdoAllowSingle.isChecked())rdoAllowMulti.setChecked(false);
+            }
+        });
+        rdoAllowMulti.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(rdoAllowMulti.isChecked())rdoAllowSingle.setChecked(false);
+            }
+        });
+        btnClose.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                showItemSubGroupList();
+                setupDialog.dismiss();
+            }
+        });
+        btnSave.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                int isSingleCheck=0;
+                if(etGroupName.getText().toString().length()==0){
+                    systemSetting.showMessage(SystemSetting.WARNING,"Enter Group Name!",context,getLayoutInflater());
+                    etGroupName.requestFocus();
+                    return;
+                }else if(etSubTitle.getText().toString().length()==0){
+                    systemSetting.showMessage(SystemSetting.WARNING,"Enter Sub Title!",context,getLayoutInflater());
+                    etSubTitle.requestFocus();
+                    return;
+                }
+                if(rdoAllowSingle.isChecked())isSingleCheck=1;
+                else isSingleCheck=0;
+                if(!edit) {
+                    if (db.insertItemSubGroup(etGroupName.getText().toString(),etSubTitle.getText().toString(),isSingleCheck)) {
+                        systemSetting.showMessage(SystemSetting.SUCCESS,"Success!",context,getLayoutInflater());
+                        etGroupName.setText("");
+                        etSubTitle.setText("");
+                    }
+                }else{
+                    if (db.updateItemSubGroup(editid,etGroupName.getText().toString(),etSubTitle.getText().toString(),isSingleCheck)) {
+                        systemSetting.showMessage(SystemSetting.SUCCESS,"Success!",context,getLayoutInflater());
+                        etGroupName.setText("");
+                        etSubTitle.setText("");
+                        showItemSubGroupList();
+                        setupDialog.dismiss();
+                    }
+                }
+            }
+        });
+    }
+
+    private void showItemSubDialog(int itemSubGroupPosition,String subName,int price,final boolean edit){
+        LayoutInflater reg=LayoutInflater.from(context);
+        View view=reg.inflate(R.layout.dg_st_item_sub, null);
+        android.app.AlertDialog.Builder dialog=new android.app.AlertDialog.Builder(context);
+        dialog.setView(view);
+
+        final Spinner spItemSubGroup= view.findViewById(R.id.spItemSubGroup);
+        final EditText etSubName= view.findViewById(R.id.etSubName);
+        final EditText etPrice= view.findViewById(R.id.etPrice);
+        final Button btnClose= view.findViewById(R.id.btnClose);
+        final Button btnSave= view.findViewById(R.id.btnSave);
+
+        dialog.setCancelable(false);
+        final android.app.AlertDialog setupDialog=dialog.create();
+        setupDialog.show();
+
+        bindItemSubGroup(spItemSubGroup);
+
+        if(edit){
+            spItemSubGroup.setSelection(itemSubGroupPosition);
+            etSubName.setText(subName);
+            etPrice.setText(String.valueOf(price));
+        }
+
+        btnClose.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                showItemSubList();
+                setupDialog.dismiss();
+            }
+        });
+
+        btnSave.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                if(lstItemSubGroupData.size()==0){
+                    systemSetting.showMessage(SystemSetting.WARNING,"Firstly, fill item sub group!",context,getLayoutInflater());
+                    return;
+                }
+                int position= spItemSubGroup.getSelectedItemPosition();
+                int itemSubGroupId=lstItemSubGroupData.get(position).getPkId();
+                if(etSubName.getText().toString().length()==0){
+                    systemSetting.showMessage(SystemSetting.WARNING,"Enter Sub Name!",context,getLayoutInflater());
+                    etSubName.requestFocus();
+                    return;
+                }else if(etPrice.getText().toString().length()==0){
+                    systemSetting.showMessage(SystemSetting.WARNING,"Enter Sub Price!",context,getLayoutInflater());
+                    etPrice.requestFocus();
+                    return;
+                }
+                if(!edit) {
+                    if (db.insertItemSub(itemSubGroupId,etSubName.getText().toString(),Integer.parseInt(etPrice.getText().toString()))) {
+                        systemSetting.showMessage(SystemSetting.SUCCESS,"Success!",context,getLayoutInflater());
+                        etSubName.setText("");
+                        etPrice.setText("");
+                    }
+                }else{
+                    if (db.updateItemSub(editid,itemSubGroupId,etSubName.getText().toString(),Integer.parseInt(etPrice.getText().toString()))) {
+                        systemSetting.showMessage(SystemSetting.SUCCESS,"Success!",context,getLayoutInflater());
+                        etSubName.setText("");
+                        etPrice.setText("");
+                        showItemSubList();
+                        setupDialog.dismiss();
                     }
                 }
             }

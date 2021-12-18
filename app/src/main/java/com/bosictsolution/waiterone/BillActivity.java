@@ -6,8 +6,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.AsyncTask;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -38,7 +38,6 @@ import common.FeatureList;
 import common.PrinterWiFiPort;
 import common.SystemSetting;
 import data.TransactionData;
-import listener.PrinterChoiceListener;
 
 public class BillActivity extends AppCompatActivity {
 

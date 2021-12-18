@@ -15,7 +15,9 @@
         android:hint="User Name"
         android:background="@color/colorGray"
         android:textSize="@dimen/textbox_text_size"
-        android:textColorHint="@color/colorHint"/>
+        android:textColorHint="@color/colorHint"
+        android:inputType="text"
+        android:imeOptions="actionNext"/>
 
     <customfont.ArialEditText  android:id="@+id/etPassword"
         android:layout_width="match_parent"
@@ -26,7 +28,9 @@
         android:hint="Password"
         android:background="@color/colorGray"
         android:textSize="@dimen/textbox_text_size"
-        android:textColorHint="@color/colorHint"/>
+        android:textColorHint="@color/colorHint"
+        android:inputType="text"
+        android:imeOptions="actionDone"/>
 
     <customfont.ArialTextView android:id="@+id/tvLabelAllowRight"
         android:layout_width="match_parent"

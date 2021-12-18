@@ -40,6 +40,12 @@
                 <customfont.ArialButton android:id="@+id/btnSTypeModule"
                     android:text="Item SType"
                     style="@style/styleSetupModuleButton"/>
+                <customfont.ArialButton android:id="@+id/btnItemSubGroupModule"
+                    android:text="Item Sub Group"
+                    style="@style/styleSetupModuleButton"/>
+                <customfont.ArialButton android:id="@+id/btnItemSubModule"
+                    android:text="Item Sub"
+                    style="@style/styleSetupModuleButton"/>
                 <customfont.ArialButton android:id="@+id/btnItemModule"
                     android:text="Item"
                     style="@style/styleSetupModuleButton"/>
@@ -242,6 +248,30 @@
                 android:visibility="invisible"/>
 
         </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/layoutSetupItemSubGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <customfont.ArialButton android:id="@+id/btnAddNewItemSubGroup"
+                style="@style/styleSetupAddButton"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/layoutSetupItemSub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <customfont.ArialButton android:id="@+id/btnAddNewItemSub"
+                style="@style/styleSetupAddButton"/>
 
         </LinearLayout>
 

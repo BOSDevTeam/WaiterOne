@@ -49,6 +49,8 @@ public class SystemSetting {
     public enum BackupType {SystemBackup,UserBackup,UserCustomBackup}
     public static final String MyPREFERENCES = "MyPrefs" ;
     public static final int USE_TAKE_AWAY=1,USE_BOTH_NORMAL_TAKE_AWAY=2;
+    public static final String SINGLE_CHECK="Single";
+    public static final String MULTI_CHECK="Multi";
 
     public SystemSetting(){
 

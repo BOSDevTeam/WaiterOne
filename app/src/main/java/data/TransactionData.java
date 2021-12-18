@@ -18,6 +18,7 @@ public class TransactionData {
     String taste;
     String stringQty;
     String orderTime;
+    String allItemSub;
     int srNo;
     double salePrice,amount;
     float floatQty;
@@ -262,5 +263,13 @@ public class TransactionData {
 
     public void setFloatQty(float floatQty) {
         this.floatQty = floatQty;
+    }
+
+    public String getAllItemSub() {
+        return allItemSub;
+    }
+
+    public void setAllItemSub(String allItemSub) {
+        this.allItemSub = allItemSub;
     }
 }

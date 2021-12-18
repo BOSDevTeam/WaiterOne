@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="5dp"
@@ -14,7 +15,10 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:visibility="gone"
-            android:layout_marginRight="5dp"/>
+            android:layout_marginRight="5dp"
+            tools:visibility="visible"
+            tools:src="@drawable/ic_add_photo"
+            tools:tint="@color/colorFirstPri"/>
 
         <customfont.BOSTextView android:id="@+id/tvItemName"
             android:layout_width="wrap_content"
@@ -22,7 +26,19 @@
             android:textSize="@dimen/label_text_size_large"
             android:typeface="monospace"
             android:textColor="@color/colorPrimary"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            tools:text="Item Name"/>
+
+        <customfont.BOSTextView android:id="@+id/tvItemSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/label_text_size_small"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            tools:text="Item Sub"
+            android:background="@drawable/blue_button"
+            android:padding="5dp"/>
 
         <customfont.BOSTextView android:id="@+id/tvTaste"
             android:layout_width="wrap_content"
@@ -30,7 +46,9 @@
             android:textSize="@dimen/label_text_size_small"
             android:textColor="@color/colorFirstPri"
             android:layout_marginLeft="5dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            tools:text="Taste"/>
+
     </LinearLayout>
 
     <LinearLayout

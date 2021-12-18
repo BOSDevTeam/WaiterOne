@@ -42,7 +42,9 @@
 
         <customfont.BOSEditText android:id="@+id/etShopName"
             style="@style/styleEditTextInStart"
-            android:hint="Enter Shop Name"/>
+            android:hint="Enter Shop Name"
+            android:inputType="text"
+            android:imeOptions="actionDone"/>
 
         <CheckBox android:id="@+id/chkUseMultiPrinter"
             android:layout_width="350dp"

@@ -12,6 +12,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import data.ItemAndSubData;
+import data.ItemSubData;
+import data.ItemSubGroupData;
 import data.TransactionData;
 
 /**
@@ -35,6 +38,9 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE SubMenu "+"(SubMenuID integer primary key,SubMenuName text,MainMenuID integer,SortCode text)");
         db.execSQL("CREATE TABLE ItemSType "+"(STypeID integer primary key,STypeName text)");
         db.execSQL("CREATE TABLE Item "+"(ID integer primary key,ItemID text,ItemName text,SubMenuID integer,Price real,OutofOrder int,STypeID int,Image blob)");
+        db.execSQL("CREATE TABLE ItemSubGroup "+"(PKID integer primary key,GroupName text,SubTitle text,IsSingleCheck integer)");
+        db.execSQL("CREATE TABLE ItemSub "+"(PKID integer primary key,SubGroupID integer,SubName text,Price integer)");
+        db.execSQL("CREATE TABLE ItemAndSub "+"(PKID integer primary key,ItemID text,SubGroupID integer,LevelNo integer)");
         db.execSQL("CREATE TABLE Taste "+"(TasteID integer primary key,TasteName text)");
         db.execSQL("CREATE TABLE Company "+"(CompanyID integer primary key,CompanyName text)");
         db.execSQL("CREATE TABLE SystemSetting "+"(Tax integer,Service integer,ShopName text,CompanyID integer)");
@@ -419,7 +425,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     /**
-     * trancate methods
+     * truncate methods
      */
     public void truncateSetupTables(){
         SQLiteDatabase db=this.getWritableDatabase();
@@ -430,6 +436,9 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("delete from MainMenu");
         db.execSQL("delete from SubMenu");
         db.execSQL("delete from Item");
+        db.execSQL("delete from ItemSubGroup");
+        db.execSQL("delete from ItemSub");
+        db.execSQL("delete from ItemAndSub");
         db.execSQL("delete from Taste");
         db.execSQL("delete from ItemSType");
     }
@@ -472,6 +481,18 @@ public class DBHelper extends SQLiteOpenHelper {
     public void truncateItem(){
         SQLiteDatabase db=this.getWritableDatabase();
         db.execSQL("delete from Item");
+    }
+    public void truncateItemSubGroup(){
+        SQLiteDatabase db=this.getWritableDatabase();
+        db.execSQL("delete from ItemSubGroup");
+    }
+    public void truncateItemSub(){
+        SQLiteDatabase db=this.getWritableDatabase();
+        db.execSQL("delete from ItemSub");
+    }
+    public void truncateItemAndSub(){
+        SQLiteDatabase db=this.getWritableDatabase();
+        db.execSQL("delete from ItemAndSub");
     }
     public void truncateItemSType(){
         SQLiteDatabase db=this.getWritableDatabase();
@@ -1172,9 +1193,10 @@ public class DBHelper extends SQLiteOpenHelper {
             return true;
         }
     }
-    public boolean deleteItem(int id){
+    public boolean deleteItem(int id,String itemid){
         SQLiteDatabase db=this.getWritableDatabase();
         db.execSQL("delete from Item where ID="+id);
+        db.execSQL("delete from ItemAndSub where ItemID='"+itemid+"'");
         return true;
     }
     public Cursor getItem(){
@@ -1240,6 +1262,196 @@ public class DBHelper extends SQLiteOpenHelper {
     public Cursor getItemBySubMenu(int subMenuID){
         SQLiteDatabase db=this.getReadableDatabase();
         Cursor cur=db.rawQuery("select ID,ItemID,ItemName,item.SubMenuID,Price,OutofOrder,sub.SubMenuName,item.STypeID,Image from Item item inner join SubMenu sub on item.SubMenuID=sub.SubMenuID where item.SubMenuID="+subMenuID,null);
+        return cur;
+    }
+
+    /**
+     * Item Sub Group
+     */
+    public boolean insertItemSubGroup(String groupName,String subTitle,int isSingleCheck){
+        SQLiteDatabase db=this.getWritableDatabase();
+        ContentValues value=new ContentValues();
+        value.put("GroupName", groupName);
+        value.put("SubTitle", subTitle);
+        value.put("IsSingleCheck", isSingleCheck);
+        db.insert("ItemSubGroup", null, value);
+        return true;
+    }
+    public boolean insertItemSubGroup(int pkId,String groupName,String subTitle,int isSingleCheck){
+        SQLiteDatabase db=this.getWritableDatabase();
+        ContentValues value=new ContentValues();
+        value.put("PKID",pkId);
+        value.put("GroupName", groupName);
+        value.put("SubTitle", subTitle);
+        value.put("IsSingleCheck", isSingleCheck);
+        db.insert("ItemSubGroup", null, value);
+        return true;
+    }
+    public boolean updateItemSubGroup(int pkId,String groupName,String subTitle,int isSingleCheck){
+        SQLiteDatabase db=this.getWritableDatabase();
+        ContentValues value=new ContentValues();
+        value.put("GroupName", groupName);
+        value.put("SubTitle", subTitle);
+        value.put("IsSingleCheck", isSingleCheck);
+        db.update("ItemSubGroup", value, "PKID=?", new String[]{Integer.toString(pkId)});
+        return true;
+    }
+    public boolean deleteItemSubGroup(int pkId){
+        SQLiteDatabase dbRead=this.getReadableDatabase();
+        Cursor cur=dbRead.rawQuery("select PKID from ItemSub where SubGroupID="+pkId,null);
+        if(cur.moveToFirst()){
+            return false;
+        }else {
+            SQLiteDatabase db = this.getWritableDatabase();
+            db.execSQL("delete from ItemSubGroup where PKID=" + pkId);
+            return true;
+        }
+    }
+    public Cursor getItemSubGroup(){
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cur=db.rawQuery("select PKID,GroupName,SubTitle,IsSingleCheck from ItemSubGroup",null);
+        return cur;
+    }
+    public Cursor getItemSubGroupByFilter(String groupName){
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cur=db.rawQuery("select PKID,GroupName,SubTitle,IsSingleCheck from ItemSubGroup where GroupName Like '%"+groupName+"%'",null);
+        return cur;
+    }
+
+    /**
+     * Item And Sub
+     */
+    public boolean insertItemAndSub(String itemId,int subGroupId,int levelNo){
+        SQLiteDatabase db=this.getWritableDatabase();
+        ContentValues value=new ContentValues();
+        value.put("ItemID", itemId);
+        value.put("SubGroupID", subGroupId);
+        value.put("LevelNo", levelNo);
+        db.insert("ItemAndSub", null, value);
+        return true;
+    }
+    public boolean insertItemAndSub(int pkId,String itemId,int subGroupId,int levelNo){
+        SQLiteDatabase db=this.getWritableDatabase();
+        ContentValues value=new ContentValues();
+        value.put("PKID",pkId);
+        value.put("ItemID", itemId);
+        value.put("SubGroupID", subGroupId);
+        value.put("LevelNo", levelNo);
+        db.insert("ItemAndSub", null, value);
+        return true;
+    }
+    public boolean deleteItemAndSub(String itemId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("delete from ItemAndSub where ItemID='" + itemId + "'");
+        return true;
+    }
+    public List<ItemSubGroupData> getItemSubGroupByItemID(String itemId){
+        SystemSetting systemSetting=new SystemSetting();
+        List<ItemSubGroupData> lstItemSubGroupData=new ArrayList<>();
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cur=db.rawQuery("select SubGroupID from ItemAndSub where ItemID= '"+itemId+"'",null);
+        while(cur.moveToNext()){
+            Cursor nextCur=db.rawQuery("select PKID,GroupName,SubTitle,IsSingleCheck from ItemSubGroup where PKID= "+cur.getInt(0),null);
+            while(nextCur.moveToNext()){
+                ItemSubGroupData data=new ItemSubGroupData();
+                data.setPkId(nextCur.getInt(0));
+                data.setSubGroupName(nextCur.getString(1));
+                data.setSubTitle(nextCur.getString(2));
+                if(nextCur.getInt(3)==1){
+                    data.setSingleCheck(1);
+                    data.setCheckType(systemSetting.SINGLE_CHECK);
+                }else{
+                    data.setSingleCheck(0);
+                    data.setCheckType(systemSetting.MULTI_CHECK);
+                }
+                lstItemSubGroupData.add(data);
+            }
+        }
+        return lstItemSubGroupData;
+    }
+
+    public List<ItemSubGroupData> getItemSubByItemID(String itemId){
+        List<ItemSubGroupData> lstItemSubGroupData=new ArrayList<>();
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cur=db.rawQuery("select SubGroupID,SubTitle,IsSingleCheck from ItemAndSub iAnds inner join ItemSubGroup gp on iAnds.SubGroupID=gp.PKID where ItemID= '"+itemId+"' order by LevelNo",null);
+        while(cur.moveToNext()){
+            ItemSubGroupData groupData=new ItemSubGroupData();
+            groupData.setPkId(cur.getInt(0));
+            groupData.setSubTitle(cur.getString(1));
+            groupData.setSingleCheck(cur.getInt(2));
+
+            List<ItemSubData> lstItemSubData=new ArrayList<>();
+            Cursor nextCur=db.rawQuery("select PKID,SubName,Price from ItemSub where SubGroupID= "+cur.getInt(0),null);
+            while(nextCur.moveToNext()){
+                ItemSubData data=new ItemSubData();
+                data.setPkId(nextCur.getInt(0));
+                data.setSubName(nextCur.getString(1));
+                data.setPrice(nextCur.getInt(2));
+                lstItemSubData.add(data);
+            }
+            groupData.setLstItemSubData(lstItemSubData);
+            lstItemSubGroupData.add(groupData);
+        }
+        return lstItemSubGroupData;
+    }
+
+    /**
+     * Item Sub
+     */
+    public boolean insertItemSub(int subGroupId,String subName,int price){
+        SQLiteDatabase db=this.getWritableDatabase();
+        ContentValues value=new ContentValues();
+        value.put("SubGroupID", subGroupId);
+        value.put("SubName", subName);
+        value.put("Price", price);
+        db.insert("ItemSub", null, value);
+        return true;
+    }
+    public boolean insertItemSub(int pkId,int subGroupId,String subName,int price){
+        SQLiteDatabase db=this.getWritableDatabase();
+        ContentValues value=new ContentValues();
+        value.put("PKID",pkId);
+        value.put("SubGroupID", subGroupId);
+        value.put("SubName", subName);
+        value.put("Price", price);
+        db.insert("ItemSub", null, value);
+        return true;
+    }
+    public boolean updateItemSub(int pkId,int subGroupId,String subName,int price){
+        SQLiteDatabase db=this.getWritableDatabase();
+        ContentValues value=new ContentValues();
+        value.put("SubGroupID", subGroupId);
+        value.put("SubName", subName);
+        value.put("Price", price);
+        db.update("ItemSub", value, "PKID=?", new String[]{Integer.toString(pkId)});
+        return true;
+    }
+    public boolean deleteItemSub(int pkId) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("delete from ItemSub where PKID=" + pkId);
+        return true;
+    }
+    public Cursor getItemSub(){
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cur=db.rawQuery("select item.PKID,SubGroupID,SubName,Price,GroupName from ItemSub item inner join ItemSubGroup gp on item.SubGroupID=gp.PKID order by SubGroupID",null);
+        return cur;
+    }
+    public List<ItemSubData> getItemSubByGroup(int subGroupId){
+        List<ItemSubData> lstItemSubData=new ArrayList<>();
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cur=db.rawQuery("select PKID,SubName,Price from ItemSub where SubGroupID= "+subGroupId,null);
+        while(cur.moveToNext()){
+            ItemSubData data=new ItemSubData();
+            data.setPkId(cur.getInt(0));
+            data.setSubName(cur.getString(1));
+            data.setPrice(cur.getInt(2));
+            lstItemSubData.add(data);
+        }
+        return lstItemSubData;
+    }
+    public Cursor getItemSubByFilter(String subName){
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cur=db.rawQuery("select item.PKID,SubGroupID,SubName,Price,GroupName from ItemSub item inner join ItemSubGroup gp on item.SubGroupID=gp.PKID where SubName Like '%" + subName + "%' order by SubGroupID",null);
         return cur;
     }
 

@@ -3,33 +3,25 @@ package com.bosictsolution.waiterone;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import adapter.MasterSaleListAdapter;
-import adapter.SpTableAdapter;
-import adapter.SpTableTypeAdapter;
-import adapter.SpWaiterAdapter;
 import common.DBHelper;
 import common.SystemSetting;
-import data.TableData;
-import data.TableTypeData;
 import data.TransactionData;
-import data.WaiterData;
 import listener.DeleteVouListBtnListener;
 
 public class TransactionActivity extends AppCompatActivity implements DeleteVouListBtnListener {

@@ -8,16 +8,19 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.database.Cursor;
 import android.os.AsyncTask;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -34,8 +37,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.support.v4.app.ActionBarDrawerToggle;
-import android.support.v4.widget.DrawerLayout;
+import androidx.legacy.app.ActionBarDrawerToggle;
+import androidx.drawerlayout.widget.DrawerLayout;
 import android.view.View;
 import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.Toast;
@@ -47,12 +50,14 @@ import adapter.ItemImageListAdapter;
 import adapter.ItemListAdapter;
 import adapter.MenuExpandableListAdapter;
 import adapter.OrderListAdapter;
+import adapter.SaleItemSubRvAdapter;
 import common.AlertView;
 import common.DBHelper;
 import common.FeatureList;
 import common.PrinterWiFiPort;
 import common.SystemSetting;
 import data.ItemData;
+import data.ItemSubGroupData;
 import data.MainMenuData;
 import data.SubMenuData;
 import data.TasteData;
@@ -112,6 +117,7 @@ public class SaleActivity extends AppCompatActivity implements DialogTasteClickL
     private String printerIPAddress="";
     private Thread hThread;
     String ioException;
+    SaleItemSubRvAdapter saleItemSubRvAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -170,6 +176,7 @@ public class SaleActivity extends AppCompatActivity implements DialogTasteClickL
 
         if(drawerLayout!=null){
             actionBarDrawerToggle=new ActionBarDrawerToggle(this,drawerLayout,R.mipmap.menu,R.string.app_name,R.string.app_name){
+                @SuppressLint("RestrictedApi")
                 public void onDrawerClosed(View view){
                     invalidateOptionsMenu();
                 }
@@ -185,15 +192,20 @@ public class SaleActivity extends AppCompatActivity implements DialogTasteClickL
         lvItem.setOnItemClickListener(new OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> parent,View v,int position,long id){
+                if(saleItemSubRvAdapter != null)saleItemSubRvAdapter.lstItemSubGroup=new ArrayList<>();
                 if(lstItemData.size()!=0) {
                     int outOfOrder = lstItemData.get(position).getOutOfOrder();
                     if (outOfOrder == 1) {
                         systemSetting.showMessage(SystemSetting.ERROR,"Out of Order Item!",context,getLayoutInflater());
                         return;
                     } else {
-                        allowAutoTaste = db.getFeatureResult(FeatureList.fAutoTaste);
-                        if (allowAutoTaste == 1) showTasteDialog(position);
-                        else placeOrder(position, "");
+                        String itemId=lstItemData.get(position).getItemid();
+                        List<ItemSubGroupData> lstItemSubGroupData=db.getItemSubByItemID(itemId);
+                        if(lstItemSubGroupData.size()!=0){
+                            showItemSubDialog(lstItemSubGroupData,position);
+                        }else {
+                            isShowTasteAndPlaceOrder(position);
+                        }
                     }
                 }
             }
@@ -789,12 +801,21 @@ public class SaleActivity extends AppCompatActivity implements DialogTasteClickL
 
     @Override
     public void onOrderClickListener(int position) {
+        if(saleItemSubRvAdapter != null)saleItemSubRvAdapter.lstItemSubGroup=new ArrayList<>();
         if (lstItemData.size() != 0) {
             int outOfOrder = lstItemData.get(position).getOutOfOrder();
             if (outOfOrder == 1) {
                 systemSetting.showMessage(SystemSetting.ERROR, "Out of Order Item!", context, getLayoutInflater());
                 return;
-            } else placeOrder(position, "");
+            } else {
+                String itemId=lstItemData.get(position).getItemid();
+                List<ItemSubGroupData> lstItemSubGroupData=db.getItemSubByItemID(itemId);
+                if(lstItemSubGroupData.size()!=0){
+                    showItemSubDialog(lstItemSubGroupData,position);
+                }else {
+                    isShowTasteAndPlaceOrder(position);
+                }
+            }
         }
     }
 
@@ -1077,24 +1098,42 @@ public class SaleActivity extends AppCompatActivity implements DialogTasteClickL
     }
 
     private void placeOrder(int position,String taste){
+        String itemSub="";
+        int itemSubPrice=0;
+
+        if(saleItemSubRvAdapter != null){
+            for(int i=0;i<saleItemSubRvAdapter.lstItemSubGroup.size();i++){
+                for(int x=0;x<saleItemSubRvAdapter.lstItemSubGroup.get(i).getLstItemSubData().size();x++){
+                    if(saleItemSubRvAdapter.lstItemSubGroup.get(i).getLstItemSubData().get(x).isSelected()){
+                        itemSubPrice+=saleItemSubRvAdapter.lstItemSubGroup.get(i).getLstItemSubData().get(x).getPrice();
+                        itemSub+=saleItemSubRvAdapter.lstItemSubGroup.get(i).getLstItemSubData().get(x).getSubName()+",";
+                    }
+                }
+            }
+        }
+        if(itemSub.length()!=0) itemSub=itemSub.substring(0, itemSub.length() - 1);
+
         TransactionData data=new TransactionData();
         data.setItemid(lstItemData.get(position).getItemid());
         data.setItemName(lstItemData.get(position).getItemName());
-        data.setSalePrice(lstItemData.get(position).getPrice());
+        data.setSalePrice(lstItemData.get(position).getPrice()+itemSubPrice);
         data.setCounterID(lstItemData.get(position).getCounterID());
         data.setStype(lstItemData.get(position).getsTypeID());
         data.setStringQty("1");
         data.setIntegerQty(1);
         data.setTaste(taste);
-        data.setAmount(lstItemData.get(position).getPrice());
+        data.setAmount(lstItemData.get(position).getPrice()+itemSubPrice);
         if(allowOrderTime==1) data.setOrderTime(getCurrentTime());
         data.setItemImage(lstItemData.get(position).getItemImage());
+        data.setAllItemSub(itemSub);
 
         lstOrderItem.add(data);
 
         orderListAdapter=new OrderListAdapter(this,lstOrderItem);
         lvOrder.setAdapter(orderListAdapter);
         orderListAdapter.setOnOrderButtonClickListener(this);
+
+        Toast.makeText(context,"Order Added!",Toast.LENGTH_SHORT).show();
     }
 
     private void showCalculatorDialog(final int type,final int position,final EditText etOrderQty,final Button btnOrderPrice){
@@ -1510,5 +1549,45 @@ public class SaleActivity extends AppCompatActivity implements DialogTasteClickL
                 alertDialog.dismiss();
             }
         });
+    }
+
+    private void showItemSubDialog(List<ItemSubGroupData> lstItemSubGroupData,int position){
+        LayoutInflater li=LayoutInflater.from(context);
+        View view=li.inflate(R.layout.dg_sale_item_sub, null);
+        AlertDialog.Builder dialog=new AlertDialog.Builder(context);
+        dialog.setView(view);
+
+        final ImageButton btnClose=view.findViewById(R.id.btnClose);
+        final RecyclerView rvRootItemSub=view.findViewById(R.id.rvRootItemSub);
+        final Button btnOk=view.findViewById(R.id.btnOk);
+
+        saleItemSubRvAdapter =new SaleItemSubRvAdapter(lstItemSubGroupData,context);
+        rvRootItemSub.setAdapter(saleItemSubRvAdapter);
+        rvRootItemSub.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
+
+        dialog.setCancelable(false);
+        final AlertDialog alertDialog=dialog.create();
+        alertDialog.show();
+
+        btnClose.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+                alertDialog.dismiss();
+            }
+        });
+        btnOk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                isShowTasteAndPlaceOrder(position);
+                alertDialog.dismiss();
+            }
+        });
+    }
+
+    private void isShowTasteAndPlaceOrder(int position){
+        allowAutoTaste = db.getFeatureResult(FeatureList.fAutoTaste);
+        if (allowAutoTaste == 1) showTasteDialog(position);
+        else placeOrder(position, "");
     }
 }

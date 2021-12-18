@@ -61,7 +61,7 @@ public class OrderListAdapter extends BaseAdapter {
     }
 
     static class ViewHolder {
-        TextView tvItemName,tvTaste,tvTime;
+        TextView tvItemName,tvTaste,tvTime,tvItemSub;
         EditText etQuantity;
         ImageButton imgbtnPlus,imgbtnMinus,imgbtnCancel,imgbtnCalculator,imgbtnTaste;
         View row;
@@ -78,6 +78,7 @@ public class OrderListAdapter extends BaseAdapter {
             row=layoutInflater.inflate(R.layout.list_order, parent,false);
             holder=new ViewHolder();
             holder.tvItemName=(TextView) row.findViewById(R.id.tvItemName);
+            holder.tvItemSub=(TextView) row.findViewById(R.id.tvItemSub);
             holder.tvTaste=(TextView) row.findViewById(R.id.tvTaste);
             holder.tvTime=(TextView) row.findViewById(R.id.tvTime);
             holder.etQuantity=(EditText) row.findViewById(R.id.etQuantity);
@@ -99,6 +100,10 @@ public class OrderListAdapter extends BaseAdapter {
         }
 
         holder.tvItemName.setText(lstTransactionData.get(position).getItemName());
+        holder.tvItemSub.setText(lstTransactionData.get(position).getAllItemSub());
+        if(lstTransactionData.get(position).getAllItemSub().length()==0) holder.tvItemSub.setVisibility(View.GONE);
+        else holder.tvItemSub.setVisibility(View.VISIBLE);
+
         holder.tvTaste.setText(lstTransactionData.get(position).getTaste());
         if(db.getFeatureResult(FeatureList.fOrderTime)==1) {
             holder.tvTime.setVisibility(View.VISIBLE);

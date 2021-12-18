@@ -75,4 +75,9 @@
     <string name="label_company_name">[V2.0] Developed by Blue Ocean Strategy Co.Ltd</string>
 
     <string name="place_continue">Place &amp; Continue</string>
+
+    <string name="check_type">Check Type</string>
+    <string name="allow_single">Allow Single Check</string>
+    <string name="allow_multi">Allow Multi Check</string>
+    <string name="add_item_sub">Add Item Sub</string>
 </resources>

@@ -12,9 +12,9 @@
         android:text="Waiter"
         android:textSize="15sp"/>
     
-    <android.support.v7.widget.RecyclerView android:id="@+id/rvList"
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvList"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
 
 
 </LinearLayout>

@@ -7,8 +7,8 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Environment;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -189,8 +189,8 @@ public class StartActivity extends AppCompatActivity implements SetupEditDeleteB
             e.printStackTrace();
         } finally {
             try {
-                fos58.close();
-                fos80.close();
+                if(fos58 != null)fos58.close();
+                if(fos80 != null)fos80.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -255,14 +255,14 @@ public class StartActivity extends AppCompatActivity implements SetupEditDeleteB
             systemSetting.showMessage(SystemSetting.ERROR,"Not Found MAC Address!",context,getLayoutInflater());
             return;
         }
-        else if(registerKey.length()==0){
+        /*else if(registerKey.length()==0){
             systemSetting.showMessage(SystemSetting.INFO,"Enter Register Key",context,getLayoutInflater());
             return;
         }
         else if(!generateKey.equals(registerKey)){
             systemSetting.showMessage(SystemSetting.ERROR,"Invalid Register Key!",context,getLayoutInflater());
             return;
-        }
+        }*/
         else{
             db.deleteRegister();
             if (db.insertRegister(macAddress, registerKey)) {

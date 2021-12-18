@@ -1,7 +1,5 @@
 package com.bosictsolution.waiterone;
 
-import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -13,32 +11,27 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Environment;
 import android.os.Handler;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.andprn.jpos.command.ESCPOSConst;
 import com.andprn.jpos.printer.ESCPOSPrinter;
-import com.bosictsolution.waiterone.bt.BtUtil;
 import com.bosictsolution.waiterone.print.GPrinterCommand;
 import com.bosictsolution.waiterone.print.PrintPic;
 import com.bosictsolution.waiterone.print.PrintQueue;
-import com.bosictsolution.waiterone.print.PrintUtil;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import adapter.BtDeviceListAdapter;
 import adapter.RpDayEndParentListAdapter;
 import common.DBHelper;
 import common.SystemSetting;

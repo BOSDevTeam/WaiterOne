@@ -590,4 +590,44 @@
         <item name="android:popupBackground">@color/colorDarkGray</item>
     </style>
 
+    <style name="DividerGray">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/colorGray</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+
+    <style name="DialogClose">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/transparent_button</item>
+        <item name="android:layout_gravity">right</item>
+        <item name="android:src">@drawable/ic_baseline_close_24</item>
+        <item name="android:tint">@color/colorFirstPri</item>
+    </style>
+
+    <style name="SaleSubItemPrice">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/label_text_size_small</item>
+        <item name="android:gravity">right</item>
+    </style>
+
+    <style name="SaleSubItemName">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/label_text_size_small</item>
+    </style>
+
+    <style name="SaleSubTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/label_text_size_small</item>
+    </style>
+
 </resources>
