@@ -119,20 +119,6 @@ public class BillActivity extends AppCompatActivity {
                     Log.e(TAG, e.getMessage(), e);
                 }
                 connectPrinter();
-                /**if(db.getFeatureResult(FeatureList.fUseMultiPrinter)!=1) {
-                    try {
-                        wifiDisConn();
-                    } catch (IOException e) {
-                        Log.e(TAG, e.getMessage(), e);
-                    } catch (InterruptedException e) {
-                        Log.e(TAG, e.getMessage(), e);
-                    }
-                    connectPrinter();
-                    //showConfirmDialog();
-                }else{
-                    confirmMessage="Are you sure you want to pay bill for table "+billTableName+"?";
-                    showConfirmDialog();
-                }**/
             }
         });
         btnPaidCalculate.setOnClickListener(new View.OnClickListener() {
