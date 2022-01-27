@@ -8,7 +8,7 @@
     <customfont.BOSTextView android:id="@+id/tvBookingTable"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:textSize="@dimen/label_text_size_large"
+        android:textSize="@dimen/large_text_size"
         android:textColor="@color/colorWhite"
         android:textStyle="bold"
         android:background="@drawable/booking_table_bg"

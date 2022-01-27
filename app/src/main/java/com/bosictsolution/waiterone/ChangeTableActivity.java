@@ -114,7 +114,7 @@ public class ChangeTableActivity extends AppCompatActivity {
                 //new
                 if(ocpSelectedView ==null){
                     ocpSelectedView =view;
-                    view.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
+                    view.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                     ocpViewColor =colorRed;
                     ocpTableID =lstOccupiedTable.get(position).getTableid();
                     ocpTableName =lstOccupiedTable.get(position).getTableName();
@@ -124,7 +124,7 @@ public class ChangeTableActivity extends AppCompatActivity {
                     //new = other
                     if(ocpSelectedView ==view){
                         if(ocpViewColor ==colorWhite){
-                            view.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
+                            view.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                             ocpViewColor = colorRed;
                             ocpTableID =lstOccupiedTable.get(position).getTableid();
                             ocpTableName =lstOccupiedTable.get(position).getTableName();
@@ -137,7 +137,7 @@ public class ChangeTableActivity extends AppCompatActivity {
                     }else {
                         ocpSelectedView.setBackgroundColor(getResources().getColor(R.color.colorWhite));
                         ocpSelectedView = view;
-                        view.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
+                        view.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                         ocpViewColor = colorRed;
                         ocpTableID =lstOccupiedTable.get(position).getTableid();
                         ocpTableName =lstOccupiedTable.get(position).getTableName();
@@ -152,7 +152,7 @@ public class ChangeTableActivity extends AppCompatActivity {
                 //new
                 if(empSelectedView ==null){
                     empSelectedView =view;
-                    view.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
+                    view.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                     empViewColor =colorRed;
                     empTableID =lstEmptyTable.get(position).getTableid();
                     empTableName =lstEmptyTable.get(position).getTableName();
@@ -162,7 +162,7 @@ public class ChangeTableActivity extends AppCompatActivity {
                     //new = other
                     if(empSelectedView ==view){
                         if(empViewColor ==colorWhite){
-                            view.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
+                            view.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                             empViewColor = colorRed;
                             empTableID =lstEmptyTable.get(position).getTableid();
                             empTableName =lstEmptyTable.get(position).getTableName();
@@ -175,7 +175,7 @@ public class ChangeTableActivity extends AppCompatActivity {
                     }else {
                         empSelectedView.setBackgroundColor(getResources().getColor(R.color.colorWhite));
                         empSelectedView = view;
-                        view.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
+                        view.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                         empViewColor = colorRed;
                         empTableID =lstEmptyTable.get(position).getTableid();
                         empTableName =lstEmptyTable.get(position).getTableName();

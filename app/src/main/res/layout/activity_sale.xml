@@ -7,7 +7,7 @@
 
     <LinearLayout android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:background="@color/colorSecondPri">
+        android:background="@color/colorAccent">
     </LinearLayout>
 
     <LinearLayout android:layout_width="match_parent"
@@ -24,12 +24,12 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:background="@color/colorFirstPri">
+                android:background="@color/colorPrimary">
             </ExpandableListView>
 
             <LinearLayout  android:layout_width="1dp"
                 android:layout_height="match_parent"
-                android:background="@color/colorDarkGray"></LinearLayout>
+                android:background="@color/colorGray2"></LinearLayout>
 
             <!-- start list view items -->
             <LinearLayout android:id="@+id/layoutItem"
@@ -37,14 +37,14 @@
                 android:layout_weight="1"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@color/colorFirstPri">
+                android:background="@color/colorPrimary">
 
                 <customfont.BOSTextView  android:id="@+id/tvSubMenuName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/hint_submenu"
-                    android:textColor="@color/colorGray"
-                    android:textSize="@dimen/label_text_size_large"
+                    android:textColor="@color/colorGray1"
+                    android:textSize="@dimen/large_text_size"
                     android:textStyle="bold"
                     android:gravity="center"
                     android:paddingLeft="10dp"
@@ -55,8 +55,9 @@
                 <ListView android:id="@+id/lvItem"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:divider="@color/colorDarkGray"
-                    android:dividerHeight="1dp">
+                    android:divider="@color/colorGray2"
+                    android:dividerHeight="1dp"
+                    tools:listitem="@layout/list_item">
                 </ListView>
 
             </LinearLayout>
@@ -67,105 +68,94 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background="@color/colorWhite">
+            android:orientation="vertical">
 
             <LinearLayout android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@color/colorDarkGray">
+                android:layout_height="wrap_content">
 
-                <customfont.ArialButton android:id="@+id/btnSendOrder"
+                <Button android:id="@+id/btnSendOrder"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/button_sendorder"
-                    android:textColor="@color/colorFirstPri"
-                    android:textSize="@dimen/button_text_size_large"
-                    android:background="@drawable/gray_button"
-                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/regular_text_size"
+                    android:background="@drawable/green_button"
                     android:textAllCaps="false"/>
 
-                <customfont.ArialButton android:id="@+id/btnPrint"
+                <Button android:id="@+id/btnPrint"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Print"
-                    android:textColor="@color/colorFirstPri"
-                    android:textSize="@dimen/button_text_size_large"
-                    android:background="@drawable/gray_button"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/regular_text_size"
+                    android:background="@drawable/primary_button"
                     android:layout_marginLeft="1dp"
-                    android:textStyle="bold"
                     android:textAllCaps="false"/>
 
-                <customfont.ArialButton android:id="@+id/btnChooseTable"
+                <Button android:id="@+id/btnChooseTable"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/button_choosetable"
-                    android:background="@drawable/gray_button"
-                    android:textColor="@color/colorFirstPri"
-                    android:textSize="@dimen/button_text_size_large"
+                    android:background="@drawable/accent_button"
+                    android:textColor="@color/colorBlackLight"
+                    android:textSize="@dimen/regular_text_size"
                     android:layout_marginLeft="1dp"
-                    android:textStyle="bold"
                     android:textAllCaps="false"/>
 
             </LinearLayout>
 
             <LinearLayout android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@color/colorDarkGray">
+                android:layout_height="wrap_content">
 
                 <customfont.BOSTextView  android:id="@+id/tvWaiterName"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorFirstPri"
-                    android:textSize="@dimen/label_text_size_small"
+                    android:textColor="@color/colorBlackLight"
+                    android:textSize="@dimen/small_text_size"
                     android:textStyle="bold"
                     android:gravity="center"
                     android:padding="10dp"
-                    android:background="@color/colorWhite"/>
+                    android:background="@color/colorWhite"
+                    tools:text="Waiter"/>
 
                 <customfont.BOSTextView  android:id="@+id/tvTableName"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorFirstPri"
-                    android:textSize="@dimen/label_text_size_small"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="@dimen/large_text_size"
                     android:textStyle="bold"
                     android:gravity="center"
                     android:padding="10dp"
                     android:layout_marginLeft="1dp"
-                    android:background="@color/colorWhite"/>
+                    android:background="@color/colorWhite"
+                    tools:text="A1"/>
 
                 <customfont.BOSTextView android:id="@+id/tvStartTime"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="Set Time"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/label_text_size_small"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/small_text_size"
                     android:textStyle="bold"
                     android:gravity="center"
                     android:padding="10dp"
                     android:layout_marginLeft="1dp"
-                    android:background="@drawable/blue_button"/>
+                    android:background="@drawable/gray_button"/>
 
             </LinearLayout>
-
-            <LinearLayout  android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:orientation="horizontal"
-                android:background="@color/colorDarkGray"
-                android:layout_marginTop="4dp"></LinearLayout>
 
             <ListView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/lvOrder">
-            </ListView>
+                android:id="@+id/lvOrder"
+                tools:listitem="@layout/list_order"
+                android:background="@color/colorGray1"/>
 
         </LinearLayout>
     </LinearLayout>

@@ -5,6 +5,7 @@
     <item android:id="@+id/menuAdmin"
         android:title="@string/menu_admin"
         app:showAsAction="always"
-        android:icon="@mipmap/setting"/>
+        android:icon="@drawable/ic_settings_24"
+        android:iconTint="@color/colorWhite"/>
 
 </menu>

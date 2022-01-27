@@ -9,21 +9,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/colorFirstPri">
+        android:background="@color/colorPrimary">
 
-        <customfont.ArialTextView android:id="@+id/tvFromDate"
+        <TextView android:id="@+id/tvFromDate"
             style="@style/styleReportDateText"
             android:text="From Date" />
 
-        <customfont.ArialTextView android:id="@+id/tvToDate"
+        <TextView android:id="@+id/tvToDate"
             style="@style/styleReportDateText"
             android:text="To Date" />
 
-        <customfont.ArialTextView android:id="@+id/tvToday"
+        <TextView android:id="@+id/tvToday"
             style="@style/styleReportTodayLabel"
             android:text="(Today)"
             android:visibility="gone">
-        </customfont.ArialTextView>
+        </TextView>
 
     </LinearLayout>
 
@@ -31,21 +31,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/colorReportListHeader">
+        android:background="@color/colorPrimary">
 
-        <customfont.ArialTextView android:id="@+id/tvHeaderTime"
+        <TextView android:id="@+id/tvHeaderTime"
             style="@style/styleReportHeaderTextViewRatio"
             android:text="Time" />
-        <customfont.ArialTextView android:id="@+id/tvHeaderTotalTransaction"
+        <TextView android:id="@+id/tvHeaderTotalTransaction"
             style="@style/styleReportHeaderTextViewRatio"
             android:text="#Transactions" />
-        <customfont.ArialTextView android:id="@+id/tvHeaderTotalItem"
+        <TextView android:id="@+id/tvHeaderTotalItem"
             style="@style/styleReportHeaderTextViewRatio"
             android:text="#Item"/>
-        <customfont.ArialTextView android:id="@+id/tvHeaderTotalAmount"
+        <TextView android:id="@+id/tvHeaderTotalAmount"
             style="@style/styleReportHeaderTextViewRatio"
             android:text="Amount" />
-        <customfont.ArialTextView android:id="@+id/tvHeaderTotalCustomer"
+        <TextView android:id="@+id/tvHeaderTotalCustomer"
             style="@style/styleReportHeaderTextViewRatio"
             android:text="#Customer"/>
 

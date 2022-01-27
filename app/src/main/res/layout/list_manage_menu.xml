@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <CheckBox android:id="@+id/chkMainMenu"
         android:layout_width="wrap_content"
@@ -12,10 +13,11 @@
         android:id="@+id/tvMainMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/label_text_size_small"
+        android:textSize="@dimen/regular_text_size"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimary"
-        android:padding="10dp">
-    </customfont.BOSTextView>
+        android:textColor="@color/colorBlackLight"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        tools:text="feature"/>
 
 </LinearLayout>

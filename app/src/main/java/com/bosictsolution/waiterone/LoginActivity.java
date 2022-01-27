@@ -62,7 +62,7 @@ public class LoginActivity extends AppCompatActivity {
         BA = BluetoothAdapter.getDefaultAdapter();
 
         if (db.getFeatureResult(FeatureList.fUseMultiPrinter) == 1) {
-            checkBluetoothOn();
+//            checkBluetoothOn();
         }
 
         etPassword.setOnTouchListener(new View.OnTouchListener() {

@@ -1340,6 +1340,20 @@ public class DBHelper extends SQLiteOpenHelper {
         db.insert("ItemAndSub", null, value);
         return true;
     }
+    public List<ItemAndSubData> getItemAndSub(){
+        SQLiteDatabase db=this.getReadableDatabase();
+        List<ItemAndSubData> lstItemAndSubData=new ArrayList<>();
+        Cursor cur=db.rawQuery("select PKID,ItemID,SubGroupID,LevelNo from ItemAndSub",null);
+        while(cur.moveToNext()){
+            ItemAndSubData data=new ItemAndSubData();
+            data.setPkId(cur.getInt(0));
+            data.setItemId(cur.getString(1));
+            data.setSubGroupId(cur.getInt(2));
+            data.setLevelNo(cur.getInt(3));
+            lstItemAndSubData.add(data);
+        }
+        return lstItemAndSubData;
+    }
     public boolean deleteItemAndSub(String itemId) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("delete from ItemAndSub where ItemID='" + itemId + "'");

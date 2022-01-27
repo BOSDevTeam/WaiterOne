@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorFirstPri"
+        android:background="@color/colorPrimary"
         android:orientation="vertical"
         android:padding="10dp">
 
@@ -19,19 +19,19 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <customfont.ArialTextView android:id="@+id/tvFromDate"
+            <TextView android:id="@+id/tvFromDate"
                 style="@style/styleReportBestWaiterDate"
                 android:text="From Date" />
 
-            <customfont.ArialTextView android:id="@+id/tvToDate"
+            <TextView android:id="@+id/tvToDate"
                 style="@style/styleReportBestWaiterDate"
                 android:text="To Date" />
 
-            <customfont.ArialTextView android:id="@+id/tvToday"
+            <TextView android:id="@+id/tvToday"
                 style="@style/styleReportTodayLabel"
                 android:text="(Today)"
                 android:visibility="gone">
-            </customfont.ArialTextView>
+            </TextView>
 
         </LinearLayout>
 
@@ -40,13 +40,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-        <customfont.ArialTextView android:id="@+id/tvHeaderBestWaiter"
+        <TextView android:id="@+id/tvHeaderBestWaiter"
             style="@style/styleReportBestWaiterHeader"
             android:text="The Best Waiter" />
-        <customfont.ArialTextView android:id="@+id/tvHeaderSaledTableCount"
+        <TextView android:id="@+id/tvHeaderSaledTableCount"
             style="@style/styleReportBestWaiterHeader"
             android:text="Sale Table Count" />
-        <customfont.ArialTextView android:id="@+id/tvHeaderSaledCustomerNumber"
+        <TextView android:id="@+id/tvHeaderSaledCustomerNumber"
             style="@style/styleReportBestWaiterHeader"
             android:text="Sale Total Customer" />
 
@@ -56,14 +56,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"></ListView>
 
-        <customfont.ArialButton android:id="@+id/btnDetail"
+        <Button android:id="@+id/btnDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:text="Detail"
-            android:textColor="@color/colorFirstPri"
+            android:textColor="@color/colorPrimary"
             android:textStyle="bold"
-            android:textSize="@dimen/button_text_size_large"
+            android:textSize="@dimen/regular_text_size"
             android:background="@drawable/gray_button"
             android:padding="10dp"/>
 
@@ -79,27 +79,27 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <customfont.ArialTextView android:id="@+id/tvLabelTodaySaledTableCount"
+                <TextView android:id="@+id/tvLabelTodaySaledTableCount"
                     style="@style/styleReportSaleAmountList"
                     android:text="Today's Sale Table Count"
                     android:background="@color/colorWhite"/>
 
-                <customfont.ArialTextView android:id="@+id/tvLabelTodayCustomerTotal"
+                <TextView android:id="@+id/tvLabelTodayCustomerTotal"
                     style="@style/styleReportSaleAmountList"
                     android:text="Today's Customer Total"
-                    android:background="@color/colorGray"/>
+                    android:background="@color/colorGray1"/>
 
-                <customfont.ArialTextView android:id="@+id/tvLabelTodayMenTotal"
+                <TextView android:id="@+id/tvLabelTodayMenTotal"
                     style="@style/styleReportSaleAmountList"
                     android:text="Today's Men Total"
                     android:background="@color/colorWhite"/>
 
-                <customfont.ArialTextView android:id="@+id/tvLabelTodayWomenTotal"
+                <TextView android:id="@+id/tvLabelTodayWomenTotal"
                     style="@style/styleReportSaleAmountList"
                     android:text="Today's Women Total"
-                    android:background="@color/colorGray"/>
+                    android:background="@color/colorGray1"/>
 
-                <customfont.ArialTextView android:id="@+id/tvLabelTodayChildTotal"
+                <TextView android:id="@+id/tvLabelTodayChildTotal"
                     style="@style/styleReportSaleAmountList"
                     android:text="Today's Child Total"
                     android:background="@color/colorWhite"/>
@@ -112,23 +112,23 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <customfont.ArialTextView android:id="@+id/tvTodaySaledTableCount"
+                <TextView android:id="@+id/tvTodaySaledTableCount"
                     style="@style/styleReportSaleAmountList"
                     android:background="@color/colorWhite"/>
 
-                <customfont.ArialTextView android:id="@+id/tvTodayCustomerTotal"
+                <TextView android:id="@+id/tvTodayCustomerTotal"
                     style="@style/styleReportSaleAmountList"
-                    android:background="@color/colorGray"/>
+                    android:background="@color/colorGray1"/>
 
-                <customfont.ArialTextView android:id="@+id/tvTodayMenTotal"
+                <TextView android:id="@+id/tvTodayMenTotal"
                     style="@style/styleReportSaleAmountList"
                     android:background="@color/colorWhite"/>
 
-                <customfont.ArialTextView android:id="@+id/tvTodayWomenTotal"
+                <TextView android:id="@+id/tvTodayWomenTotal"
                     style="@style/styleReportSaleAmountList"
-                    android:background="@color/colorGray"/>
+                    android:background="@color/colorGray1"/>
 
-                <customfont.ArialTextView android:id="@+id/tvTodayChildTotal"
+                <TextView android:id="@+id/tvTodayChildTotal"
                     style="@style/styleReportSaleAmountList"
                     android:background="@color/colorWhite"/>
 

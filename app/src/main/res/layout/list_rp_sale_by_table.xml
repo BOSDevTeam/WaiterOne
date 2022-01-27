@@ -11,11 +11,11 @@
 
         <customfont.BOSTextView android:id="@+id/tvListTableTypeName"
             style="@style/styleReportListTextViewRatio"
-            android:textColor="@color/colorReportGroupFirstPri" />
+            android:textColor="@color/colorPrimary" />
 
         <customfont.BOSTextView android:id="@+id/tvListTotalByTableType"
             style="@style/styleReportListTextViewRatio"
-            android:textColor="@color/colorReportGroupFirstPri"
+            android:textColor="@color/colorPrimary"
             android:gravity="right"/>
 
     </LinearLayout>
@@ -27,11 +27,11 @@
 
         <customfont.BOSTextView android:id="@+id/tvListTableName"
             style="@style/styleReportListTextViewRatio"
-            android:textColor="@color/colorReportGroupSecondPri" />
+            android:textColor="@color/colorAccent" />
 
         <customfont.BOSTextView android:id="@+id/tvListTotalByTable"
             style="@style/styleReportListTextViewRatio"
-            android:textColor="@color/colorReportGroupSecondPri"
+            android:textColor="@color/colorAccent"
             android:gravity="right"/>
 
     </LinearLayout>

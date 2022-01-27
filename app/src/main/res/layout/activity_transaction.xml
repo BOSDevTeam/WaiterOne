@@ -16,23 +16,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp">
-            <customfont.ArialEditText android:id="@+id/etVoucherNo"
+            <EditText android:id="@+id/etVoucherNo"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:hint="Voucher No."
                 android:padding="10dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/textbox_text_size"/>
+                android:textSize="@dimen/regular_text_size"/>
 
-            <customfont.ArialButton android:id="@+id/btnSearch"
+            <Button android:id="@+id/btnSearch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Search"
-                android:textColor="@color/colorFirstPri"
+                android:textColor="@color/colorPrimary"
                 android:textAllCaps="false"
                 android:background="@drawable/gray_button"
-                android:textSize="@dimen/button_text_size_large"
+                android:textSize="@dimen/regular_text_size"
                 android:textStyle="bold"/>
 
             <LinearLayout
@@ -60,7 +60,7 @@
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:background="@color/colorGray"></Spinner>
+                android:background="@color/colorGray1"></Spinner>
 
         </LinearLayout>
 
@@ -75,14 +75,14 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:background="@color/colorGray"></Spinner>
+                android:background="@color/colorGray1"></Spinner>
 
             <Spinner android:id="@+id/spTable"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:background="@color/colorGray"></Spinner>
+                android:background="@color/colorGray1"></Spinner>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -99,43 +99,43 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorGray"
+        android:background="@color/colorGray1"
         android:padding="10dp">
 
-        <customfont.ArialTextView
+        <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="Voucher No."
-            android:textColor="@color/colorFirstPri"
-            android:textSize="@dimen/list_header_text_size"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/small_text_size"
             android:textStyle="bold"/>
 
-        <customfont.ArialTextView
+        <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="Date"
-            android:textColor="@color/colorFirstPri"
-            android:textSize="@dimen/list_header_text_size"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/small_text_size"
             android:textStyle="bold"/>
 
-        <customfont.ArialTextView
+        <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="Waiter"
-            android:textColor="@color/colorFirstPri"
-            android:textSize="@dimen/list_header_text_size"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/small_text_size"
             android:textStyle="bold"/>
 
-        <customfont.ArialTextView
+        <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:text="Table"
-            android:textColor="@color/colorFirstPri"
-            android:textSize="@dimen/list_header_text_size"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/small_text_size"
             android:textStyle="bold"
             android:layout_marginRight="150dp"/>
 

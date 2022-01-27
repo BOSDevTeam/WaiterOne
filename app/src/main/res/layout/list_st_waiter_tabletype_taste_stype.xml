@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     style="@style/styleSetupListLayout">
 
     <customfont.BOSTextView android:id="@+id/tvName"
+        tools:text="test"
         style="@style/styleSetupListTextView"/>
 
     <ImageButton android:id="@+id/btnEdit"

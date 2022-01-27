@@ -11,14 +11,14 @@
 
         <customfont.BOSTextView android:id="@+id/tvListMainMenuName"
             style="@style/styleReportListTextViewRatio"
-            android:textColor="@color/colorReportGroupFirstPri"
-            android:textSize="@dimen/label_text_size_large"/>
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/large_text_size"/>
 
         <customfont.BOSTextView android:id="@+id/tvListTotalByMainMenu"
             style="@style/styleReportListTextViewRatio"
-            android:textColor="@color/colorReportGroupFirstPri"
+            android:textColor="@color/colorPrimary"
             android:gravity="right"
-            android:textSize="@dimen/label_text_size_large"/>
+            android:textSize="@dimen/large_text_size"/>
 
     </LinearLayout>
 
@@ -29,14 +29,14 @@
 
         <customfont.BOSTextView android:id="@+id/tvListSubMenuName"
             style="@style/styleReportListTextViewRatio"
-            android:textColor="@color/colorReportGroupSecondPri"
-            android:textSize="@dimen/label_text_size_large"/>
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/large_text_size"/>
 
         <customfont.BOSTextView android:id="@+id/tvListTotalBySubMenu"
             style="@style/styleReportListTextViewRatio"
-            android:textColor="@color/colorReportGroupSecondPri"
+            android:textColor="@color/colorAccent"
             android:gravity="right"
-            android:textSize="@dimen/label_text_size_large"/>
+            android:textSize="@dimen/large_text_size"/>
 
     </LinearLayout>
 

@@ -8,7 +8,7 @@
 
     <LinearLayout android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:background="@color/colorSecondPri">
+        android:background="@color/colorAccent">
     </LinearLayout>
 
     <RelativeLayout android:layout_width="match_parent"
@@ -19,17 +19,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Waiter"
-            android:textSize="@dimen/label_text_size_large"
-            android:textColor="@color/colorFirstPri"
+            android:textSize="@dimen/large_text_size"
+            android:textColor="@color/colorPrimary"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
-        <customfont.ArialButton android:id="@+id/btnNewBooking"
+        <Button android:id="@+id/btnNewBooking"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Add Booking"
-            android:textSize="@dimen/button_text_size_large"
-            android:textColor="@color/colorFirstPri"
+            android:textSize="@dimen/regular_text_size"
+            android:textColor="@color/colorPrimary"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:background="@drawable/gray_button"
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="10dp"
-        android:background="@color/colorFirstPri">
+        android:background="@color/colorPrimary">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -66,27 +66,27 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"/>
 
-        <customfont.ArialTextView android:id="@+id/tvHeaderBookingTableName"
+        <TextView android:id="@+id/tvHeaderBookingTableName"
             style="@style/styleBookingListHeader"
             android:text="Table"/>
 
-        <customfont.ArialTextView android:id="@+id/tvHeaderGuestName"
+        <TextView android:id="@+id/tvHeaderGuestName"
             style="@style/styleBookingListHeader"
             android:text="Guest Name"/>
 
-        <customfont.ArialTextView android:id="@+id/tvHeaderBookingDate"
+        <TextView android:id="@+id/tvHeaderBookingDate"
             style="@style/styleBookingListHeader"
             android:text="Date"/>
 
-        <customfont.ArialTextView android:id="@+id/tvHeaderBookingTime"
+        <TextView android:id="@+id/tvHeaderBookingTime"
             style="@style/styleBookingListHeader"
             android:text="Arrival Time"/>
 
-        <customfont.ArialTextView android:id="@+id/tvHeaderPhone"
+        <TextView android:id="@+id/tvHeaderPhone"
             style="@style/styleBookingListHeader"
             android:text="Contact No."/>
 
-        <customfont.ArialTextView android:id="@+id/tvHeaderPeople"
+        <TextView android:id="@+id/tvHeaderPeople"
             style="@style/styleBookingListHeader"
             android:text="No. of Person"
             android:gravity="center"/>

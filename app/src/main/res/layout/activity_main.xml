@@ -12,10 +12,10 @@
     <LinearLayout android:id="@+id/layoutSale"
         style="@style/styleMainLayout">
         <ImageView style="@style/styleMainImageView"
-            android:src="@mipmap/sale"/>
-        <customfont.ArialTextView android:id="@+id/tvSale"
+            android:src="@drawable/ic_point_of_sale_36"/>
+        <TextView android:id="@+id/tvSale"
             style="@style/styleMainTextView"
-            android:text="SALE"/>
+            android:text="@string/sale"/>
     </LinearLayout>
 
     <LinearLayout android:id="@+id/layoutOpenOrder"
@@ -23,26 +23,26 @@
         android:visibility="gone">
         <ImageView style="@style/styleMainImageView"
             android:src="@mipmap/openorder"/>
-        <customfont.ArialTextView android:id="@+id/tvOpenOrder"
+        <TextView android:id="@+id/tvOpenOrder"
             style="@style/styleMainTextView"
-            android:text="OPEN ORDER"/>
+            android:text="@string/open_order"/>
     </LinearLayout>
 
     <LinearLayout android:id="@+id/layoutReport"
         style="@style/styleMainLayout">
         <ImageView style="@style/styleMainImageView"
-            android:src="@mipmap/report"/>
-        <customfont.ArialTextView android:id="@+id/tvReport"
+            android:src="@drawable/ic_report_36"/>
+        <TextView android:id="@+id/tvReport"
             style="@style/styleMainTextView"
-            android:text="REPORT"/>
+            android:text="@string/report"/>
     </LinearLayout>
 
     <LinearLayout android:id="@+id/layoutSystem"
         style="@style/styleMainLayout">
         <ImageView style="@style/styleMainImageView"
-            android:src="@mipmap/system"/>
-        <customfont.ArialTextView android:id="@+id/tvSystem"
+            android:src="@drawable/ic_settings_applications_36"/>
+        <TextView android:id="@+id/tvSystem"
             style="@style/styleMainTextView"
-            android:text="SYSTEM"/>
+            android:text="@string/system"/>
     </LinearLayout>
 </LinearLayout>

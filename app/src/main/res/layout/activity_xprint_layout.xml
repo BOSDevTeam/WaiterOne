@@ -16,16 +16,16 @@
             android:layout_height="wrap_content"
             android:textSize="@dimen/splash_app_label"
             android:text="Printing......."
-            android:textColor="@color/colorDarkGray"/>
+            android:textColor="@color/colorGray2"/>
 
-    <customfont.ArialButton android:id="@+id/btnPrint"
+    <Button android:id="@+id/btnPrint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="PRINT"
-        android:background="@drawable/blue_button"
+        android:background="@drawable/primary_button"
         android:textColor="@color/colorWhite"
         android:padding="20dp"
-        android:textSize="@dimen/button_text_size_large"
+        android:textSize="@dimen/regular_text_size"
         android:textStyle="bold"
         android:visibility="gone"/>
 

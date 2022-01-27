@@ -22,44 +22,44 @@
                 android:padding="10dp"
                 android:orientation="vertical">
 
-                <customfont.ArialButton android:id="@+id/btnWaiterModule"
-                    android:text="User"
+                <Button android:id="@+id/btnWaiterModule"
+                    android:text="@string/user"
                     style="@style/styleSetupModuleButton"/>
-                <customfont.ArialButton android:id="@+id/btnTableTypeModule"
-                    android:text="Table Type"
+                <Button android:id="@+id/btnTableTypeModule"
+                    android:text="@string/table_type"
                     style="@style/styleSetupModuleButton"/>
-                <customfont.ArialButton android:id="@+id/btnTableModule"
-                    android:text="Table"
+                <Button android:id="@+id/btnTableModule"
+                    android:text="@string/table"
                     style="@style/styleSetupModuleButton"/>
-                <customfont.ArialButton android:id="@+id/btnMainMenuModule"
-                    android:text="Main Menu"
+                <Button android:id="@+id/btnMainMenuModule"
+                    android:text="@string/main_menu"
                     style="@style/styleSetupModuleButton"/>
-                <customfont.ArialButton android:id="@+id/btnSubMenuModule"
-                    android:text="Sub Menu"
+                <Button android:id="@+id/btnSubMenuModule"
+                    android:text="@string/sub_menu"
                     style="@style/styleSetupModuleButton"/>
-                <customfont.ArialButton android:id="@+id/btnSTypeModule"
-                    android:text="Item SType"
+                <Button android:id="@+id/btnSTypeModule"
+                    android:text="@string/item_type"
                     style="@style/styleSetupModuleButton"/>
-                <customfont.ArialButton android:id="@+id/btnItemSubGroupModule"
-                    android:text="Item Sub Group"
+                <Button android:id="@+id/btnItemSubGroupModule"
+                    android:text="@string/item_sub_group"
                     style="@style/styleSetupModuleButton"/>
-                <customfont.ArialButton android:id="@+id/btnItemSubModule"
-                    android:text="Item Sub"
+                <Button android:id="@+id/btnItemSubModule"
+                    android:text="@string/item_sub"
                     style="@style/styleSetupModuleButton"/>
-                <customfont.ArialButton android:id="@+id/btnItemModule"
-                    android:text="Item"
+                <Button android:id="@+id/btnItemModule"
+                    android:text="@string/item"
                     style="@style/styleSetupModuleButton"/>
-                <customfont.ArialButton android:id="@+id/btnTasteModule"
-                    android:text="Taste"
+                <Button android:id="@+id/btnTasteModule"
+                    android:text="@string/taste"
                     style="@style/styleSetupModuleButton"/>
-                <customfont.ArialButton android:id="@+id/btnCompanyModule"
-                    android:text="Company"
+                <Button android:id="@+id/btnCompanyModule"
+                    android:text="@string/company"
                     style="@style/styleSetupModuleButton"/>
-                <customfont.ArialButton android:id="@+id/btnSystemSettingModule"
-                    android:text="System Setting"
+                <Button android:id="@+id/btnSystemSettingModule"
+                    android:text="@string/system_setting"
                     style="@style/styleSetupModuleButton"/>
-                <customfont.ArialButton android:id="@+id/btnVoucherSettingModule"
-                    android:text="Voucher Setting"
+                <Button android:id="@+id/btnVoucherSettingModule"
+                    android:text="@string/voucher_setting"
                     style="@style/styleSetupModuleButton"/>
             </LinearLayout>
 
@@ -67,12 +67,11 @@
 
     </LinearLayout>
 
-
     <LinearLayout
         android:layout_width="0dp"
         android:layout_weight="3"
         android:layout_height="match_parent"
-        android:background="@color/colorGray"
+        android:background="@color/colorGray2"
         android:orientation="vertical">
 
         <LinearLayout android:id="@+id/layoutSetupWaiter"
@@ -83,13 +82,12 @@
             android:visibility="gone">
 
             <customfont.BOSEditText android:id="@+id/etSearchWaiterName"
-               style="@style/styleSetupSearchEditText"
-                android:hint="User Name"/>
+               style="@style/styleSetupSearchEditText" />
 
-            <customfont.ArialButton android:id="@+id/btnSearchWaiter"
+            <Button android:id="@+id/btnSearchWaiter"
                 style="@style/styleSetupSearchButton"/>
 
-            <customfont.ArialButton android:id="@+id/btnNewAddWaiter"
+            <Button android:id="@+id/btnNewAddWaiter"
                style="@style/styleSetupAddButton"/>
 
         </LinearLayout>
@@ -102,13 +100,12 @@
             android:visibility="gone">
 
             <customfont.BOSEditText android:id="@+id/etSearchTableType"
-                style="@style/styleSetupSearchEditText"
-                android:hint="Table Type" />
+                style="@style/styleSetupSearchEditText" />
 
-            <customfont.ArialButton android:id="@+id/btnSearchTableType"
+            <Button android:id="@+id/btnSearchTableType"
                 style="@style/styleSetupSearchButton"/>
 
-            <customfont.ArialButton android:id="@+id/btnAddNewTableType"
+            <Button android:id="@+id/btnAddNewTableType"
                 style="@style/styleSetupAddButton"/>
 
         </LinearLayout>
@@ -121,17 +118,17 @@
             android:visibility="gone">
 
             <Spinner android:id="@+id/spSearchTableType"
-                style="@style/styleSetupSearchSpinner"></Spinner>
+                style="@style/styleSetupSearchSpinner"/>
 
             <customfont.BOSEditText android:id="@+id/etSearchTable"
                 style="@style/styleSetupSearchEditText"
                 android:hint="Table"
                 android:layout_marginLeft="10dp"/>
 
-            <customfont.ArialButton android:id="@+id/btnSearchTable"
+            <Button android:id="@+id/btnSearchTable"
                 style="@style/styleSetupSearchButton"/>
 
-            <customfont.ArialButton android:id="@+id/btnAddNewTable"
+            <Button android:id="@+id/btnAddNewTable"
                 style="@style/styleSetupAddButton"/>
 
         </LinearLayout>
@@ -147,10 +144,10 @@
                 style="@style/styleSetupSearchEditText"
                 android:hint="Taste"/>
 
-            <customfont.ArialButton android:id="@+id/btnSearchTaste"
+            <Button android:id="@+id/btnSearchTaste"
                 style="@style/styleSetupSearchButton"/>
 
-            <customfont.ArialButton android:id="@+id/btnAddNewTaste"
+            <Button android:id="@+id/btnAddNewTaste"
                 style="@style/styleSetupAddButton"/>
 
         </LinearLayout>
@@ -163,13 +160,12 @@
             android:visibility="gone">
 
             <customfont.BOSEditText android:id="@+id/etSearchSType"
-                style="@style/styleSetupSearchEditText"
-                android:hint="SType"/>
+                style="@style/styleSetupSearchEditText" />
 
-            <customfont.ArialButton android:id="@+id/btnSearchSType"
+            <Button android:id="@+id/btnSearchSType"
                 style="@style/styleSetupSearchButton"/>
 
-            <customfont.ArialButton android:id="@+id/btnAddNewSType"
+            <Button android:id="@+id/btnAddNewSType"
                 style="@style/styleSetupAddButton"/>
 
         </LinearLayout>
@@ -182,13 +178,12 @@
             android:visibility="gone">
 
             <customfont.BOSEditText android:id="@+id/etSearchMainMenu"
-                style="@style/styleSetupSearchEditText"
-                android:hint="Main Menu"/>
+                style="@style/styleSetupSearchEditText" />
 
-            <customfont.ArialButton android:id="@+id/btnSearchMainMenu"
+            <Button android:id="@+id/btnSearchMainMenu"
                 style="@style/styleSetupSearchButton"/>
 
-            <customfont.ArialButton android:id="@+id/btnAddNewMainMenu"
+            <Button android:id="@+id/btnAddNewMainMenu"
                 style="@style/styleSetupAddButton"/>
 
         </LinearLayout>
@@ -213,31 +208,33 @@
                 android:hint="Sub Menu"
                 android:layout_marginLeft="10dp"/>
 
-                <customfont.ArialButton android:id="@+id/btnSearchSubMenu"
+                <Button android:id="@+id/btnSearchSubMenu"
                     style="@style/styleSetupSearchButton"/>
 
-                <customfont.ArialButton android:id="@+id/btnAddNewSubMenu"
+                <Button android:id="@+id/btnAddNewSubMenu"
                     style="@style/styleSetupAddButton"/>
 
                 </LinearLayout>
+
+            <View style="@style/DividerGray"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:paddingRight="50dp"
-            android:background="@color/colorDarkGray"
+            android:background="@color/colorGray2"
             android:gravity="center">
 
-            <customfont.ArialTextView android:id="@+id/tvHeaderSubMenu"
+            <TextView android:id="@+id/tvHeaderSubMenu"
                 style="@style/styleSetupHeaderTextView"
                 android:text="Name"/>
 
-            <customfont.ArialTextView android:id="@+id/tvHeaderMainMenuName"
+            <TextView android:id="@+id/tvHeaderMainMenuName"
                 style="@style/styleSetupHeaderTextView"
                 android:text="Main Menu"/>
 
-            <customfont.ArialTextView android:id="@+id/tvHeaderSortCode"
+            <TextView android:id="@+id/tvHeaderSortCode"
                 style="@style/styleSetupHeaderTextView"
                 android:text="Sort Code"/>
 
@@ -256,10 +253,12 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="10dp"
-            android:visibility="gone">
+            android:visibility="gone"
+            android:gravity="right"
+            tools:visibility="visible">
 
-            <customfont.ArialButton android:id="@+id/btnAddNewItemSubGroup"
-                style="@style/styleSetupAddButton"/>
+            <Button android:id="@+id/btnAddNewItemSubGroup"
+                style="@style/styleSetupAddButton" />
 
         </LinearLayout>
 
@@ -268,10 +267,11 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="10dp"
-            android:visibility="gone">
+            android:visibility="gone"
+            android:gravity="right">
 
-            <customfont.ArialButton android:id="@+id/btnAddNewItemSub"
-                style="@style/styleSetupAddButton"/>
+            <Button android:id="@+id/btnAddNewItemSub"
+                style="@style/styleSetupAddButton" />
 
         </LinearLayout>
 
@@ -294,7 +294,7 @@
                 style="@style/styleSetupSearchSpinner"
                 android:layout_marginLeft="10dp"></Spinner>
 
-                <customfont.ArialButton android:id="@+id/btnAddNewItem"
+                <Button android:id="@+id/btnAddNewItem"
                     style="@style/styleSetupAddButton"/>
 
             </LinearLayout>
@@ -314,36 +314,38 @@
                 android:hint="Item Name"
                 android:layout_marginLeft="10dp"/>
 
-                <customfont.ArialButton android:id="@+id/btnSearchItem"
+                <Button android:id="@+id/btnSearchItem"
                     style="@style/styleSetupSearchButton"/>
             </LinearLayout>
+
+            <View style="@style/DividerGray"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:paddingRight="50dp"
-                android:background="@color/colorDarkGray"
+                android:background="@color/colorGray2"
                 android:gravity="center">
 
-                <customfont.ArialTextView android:id="@+id/tvHeaderItemID"
+                <TextView android:id="@+id/tvHeaderItemID"
                     style="@style/styleSetupHeaderTextView"
                     android:text="ItemID"
                     android:layout_marginLeft="25dp"/>
 
-                <customfont.ArialTextView android:id="@+id/tvHeaderItemName"
+                <TextView android:id="@+id/tvHeaderItemName"
                     style="@style/styleSetupHeaderTextView"
                     android:text="Name"/>
 
-                <customfont.ArialTextView android:id="@+id/tvHeaderSubMenuName"
+                <TextView android:id="@+id/tvHeaderSubMenuName"
                     style="@style/styleSetupHeaderTextView"
                     android:text="Sub Menu"/>
 
-                <customfont.ArialTextView android:id="@+id/tvHeaderPrice"
+                <TextView android:id="@+id/tvHeaderPrice"
                     style="@style/styleSetupHeaderTextView"
                     android:text="Price"/>
 
-                <customfont.ArialTextView android:id="@+id/tvHeaderOutOfOrder"
+                <TextView android:id="@+id/tvHeaderOutOfOrder"
                     style="@style/styleSetupHeaderTextView"
                     android:text="Order Out" />
 
@@ -368,72 +370,72 @@
                 style="@style/styleSetupSearchEditText"
                 android:hint="Company"/>
 
-            <customfont.ArialButton android:id="@+id/btnSearchCompany"
+            <Button android:id="@+id/btnSearchCompany"
                 style="@style/styleSetupSearchButton"/>
 
-            <customfont.ArialButton android:id="@+id/btnAddNewCompany"
+            <Button android:id="@+id/btnAddNewCompany"
                 style="@style/styleSetupAddButton"/>
 
         </LinearLayout>
 
-        <LinearLayout android:id="@+id/layoutSetupSystemSetting"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="10dp"
-            android:visibility="gone">
+            android:layout_height="wrap_content">
 
-           <TableLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content">
+            <LinearLayout android:id="@+id/layoutSetupSystemSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="gone">
 
-               <TableRow android:padding="10dp">
-                   <customfont.ArialTextView android:id="@+id/tvShopName"
-                      style="@style/styleSetupTextView"
-                       android:text="Shop Name"/>
-                   <customfont.BOSEditText android:id="@+id/etShopName"
-                       style="@style/styleSetupEditText"/>
-               </TableRow>
-               <TableRow android:padding="10dp">
-                   <customfont.ArialTextView android:id="@+id/tvCompany"
-                       style="@style/styleSetupTextView"
-                       android:text="Company"/>
-                   <Spinner  android:id="@+id/spCompany"
-                       style="@style/styleSetupDialogSpinner"/>
-               </TableRow>
-               <TableRow android:padding="10dp">
-                   <customfont.ArialTextView android:id="@+id/tvCharges"
-                       style="@style/styleSetupTextView"
-                       android:text="Charges"/>
-                   <customfont.ArialEditText android:id="@+id/etCharges"
-                       style="@style/styleSetupEditText"
-                       android:inputType="number"
-                       android:text="0"/>
-               </TableRow>
-               <TableRow android:padding="10dp">
-                   <customfont.ArialTextView android:id="@+id/tvTax"
-                       style="@style/styleSetupTextView"
-                       android:text="Tax"/>
-                   <customfont.ArialEditText android:id="@+id/etTax"
-                       style="@style/styleSetupEditText"
-                       android:inputType="number"
-                       android:text="0"/>
-               </TableRow>
-               <TableRow android:padding="10dp">
-                   <TextView/>
-                   <customfont.ArialButton android:id="@+id/btnAddSystemSetting"
-                       android:layout_width="0dp"
-                       android:layout_weight="1"
-                       android:layout_height="wrap_content"
-                       android:background="@drawable/blue_button"
-                       android:textColor="@color/colorWhite"
-                       android:textSize="@dimen/button_text_size_large"
-                       android:text="SAVE" />
-               </TableRow>
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-           </TableLayout>
+                    <TableRow android:padding="10dp">
+                        <TextView android:id="@+id/tvShopName"
+                            style="@style/styleSetupTextView"
+                            android:text="Shop Name"/>
+                        <customfont.BOSEditText android:id="@+id/etShopName"
+                            style="@style/styleSetupEditText"/>
+                    </TableRow>
+                    <TableRow android:padding="10dp">
+                        <TextView android:id="@+id/tvCompany"
+                            style="@style/styleSetupTextView"
+                            android:text="Company"/>
+                        <Spinner android:id="@+id/spCompany"
+                            style="@style/styleSetupDialogSpinner"/>
+                    </TableRow>
+                    <TableRow android:padding="10dp">
+                        <TextView android:id="@+id/tvCharges"
+                            style="@style/styleSetupTextView"
+                            android:text="Charges"/>
+                        <EditText android:id="@+id/etCharges"
+                            style="@style/styleSetupEditText"
+                            android:inputType="number"
+                            android:text="0"/>
+                    </TableRow>
+                    <TableRow android:padding="10dp">
+                        <TextView android:id="@+id/tvTax"
+                            style="@style/styleSetupTextView"
+                            android:text="Tax"/>
+                        <EditText android:id="@+id/etTax"
+                            style="@style/styleSetupEditText"
+                            android:inputType="number"
+                            android:text="0"/>
+                    </TableRow>
+                    <TableRow android:padding="10dp">
+                        <TextView/>
+                        <Button android:id="@+id/btnAddSystemSetting"
+                            style="@style/styleSetupSaveButton"/>
+                    </TableRow>
 
-        </LinearLayout>
+                </TableLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
 
         <ScrollView
             android:layout_width="match_parent"
@@ -449,85 +451,93 @@
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TableRow android:padding="10dp">
-                    <customfont.ArialTextView android:id="@+id/tvLogo"
+                    <TextView android:id="@+id/tvLogo"
                         style="@style/styleSetupTextView"
-                        android:text="Logo" />
+                        android:text="Logo"
+                        android:layout_gravity="center|left"/>
                     <ImageButton android:id="@+id/btnShopLogo"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@mipmap/shoplogo"
-                        android:layout_gravity="center"/>
+                        android:src="@drawable/ic_image_100"
+                        android:layout_gravity="center"
+                        android:background="@color/colorGray1"
+                        android:padding="10dp"
+                        android:tint="@color/colorGray4"/>
                     <ImageButton android:id="@+id/btnCancelLogo"
                         android:layout_height="wrap_content"
                         android:layout_width="wrap_content"
-                        android:src="@mipmap/cancel2"
+                        android:src="@drawable/ic_baseline_close_24"
                         android:background="@drawable/transparent_button"
                         android:padding="10dp"
-                        android:layout_gravity="center"
+                        android:layout_gravity="bottom"
                         android:layout_marginLeft="20dp"/>
                 </TableRow>
                 <TableRow android:padding="10dp">
-                    <customfont.ArialTextView android:id="@+id/tvTitle"
+                    <TextView android:id="@+id/tvTitle"
                         style="@style/styleSetupTextView"
                         android:text="Title"/>
                     <customfont.BOSEditText android:id="@+id/etTitle"
-                        style="@style/styleSetupEditText"/>
+                        style="@style/styleSetupEditText"
+                        android:imeOptions="actionNext"/>
                 </TableRow>
                 <TableRow android:padding="10dp">
-                    <customfont.ArialTextView android:id="@+id/tvDescription"
+                    <TextView android:id="@+id/tvDescription"
                         style="@style/styleSetupTextView"
                         android:text="Description"/>
                     <customfont.BOSEditText android:id="@+id/etDescription"
-                        style="@style/styleSetupEditText"/>
+                        style="@style/styleSetupEditText"
+                        android:imeOptions="actionNext"/>
                 </TableRow>
                 <TableRow android:padding="10dp">
-                    <customfont.ArialTextView android:id="@+id/tvPhone"
+                    <TextView android:id="@+id/tvPhone"
                         style="@style/styleSetupTextView"
                         android:text="Phone"/>
                     <customfont.BOSEditText android:id="@+id/etPhone"
-                        style="@style/styleSetupEditText"/>
+                        style="@style/styleSetupEditText"
+                        android:inputType="number"
+                        android:imeOptions="actionNext"/>
                 </TableRow>
                 <TableRow android:padding="10dp">
-                    <customfont.ArialTextView android:id="@+id/tvMessage"
+                    <TextView android:id="@+id/tvMessage"
                         style="@style/styleSetupTextView"
                         android:text="Message"/>
                     <customfont.BOSEditText android:id="@+id/etMessage"
-                        style="@style/styleSetupEditText"/>
+                        style="@style/styleSetupEditText"
+                        android:imeOptions="actionNext"/>
                 </TableRow>
                 <TableRow android:padding="10dp">
-                    <customfont.ArialTextView android:id="@+id/tvMessage2"
+                    <TextView android:id="@+id/tvMessage2"
                         style="@style/styleSetupTextView"
                         android:text="Message2"/>
                     <customfont.BOSEditText android:id="@+id/etMessage2"
-                        style="@style/styleSetupEditText"/>
+                        style="@style/styleSetupEditText"
+                        android:imeOptions="actionNext"/>
                 </TableRow>
                 <TableRow android:padding="10dp">
-                    <customfont.ArialTextView android:id="@+id/tvAddress"
+                    <TextView android:id="@+id/tvAddress"
                         style="@style/styleSetupTextView"
                         android:text="Address"/>
                     <customfont.BOSEditText android:id="@+id/etAddress"
-                        style="@style/styleSetupEditText"/>
+                        style="@style/styleSetupEditText"
+                        android:imeOptions="actionDone"/>
                 </TableRow>
                 <TableRow android:padding="10dp">
                     <TextView/>
-                    <customfont.ArialButton android:id="@+id/btnAddVoucherSetting"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/blue_button"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="@dimen/button_text_size_large"
-                        android:text="SAVE"/>
+                    <Button android:id="@+id/btnAddVoucherSetting"
+                        style="@style/styleSetupSaveButton"/>
                 </TableRow>
             </TableLayout>
 
             </LinearLayout>
+
         </ScrollView>
 
         <ListView android:id="@+id/lvSetup"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"></ListView>
+            android:layout_height="match_parent"
+            android:background="@color/colorGray1"></ListView>
 
     </LinearLayout>
 

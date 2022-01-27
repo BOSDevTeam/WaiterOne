@@ -8,7 +8,7 @@
     <TextView android:id="@+id/tvWaiterName"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorFirstPri"
+        android:textColor="@color/colorPrimary"
         android:text="Waiter"
         android:textSize="15sp"/>
     

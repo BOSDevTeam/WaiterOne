@@ -6,7 +6,7 @@
         style="@style/styleSetupListTextView"/>
 
     <customfont.BOSTextView android:id="@+id/tvMainMenuName"
-        style="@style/styleSetupListTextView2"/>
+        style="@style/styleSetupListTextView"/>
 
     <customfont.BOSTextView android:id="@+id/tvSortCode"
         style="@style/styleSetupListTextView"/>

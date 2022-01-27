@@ -6,7 +6,7 @@
     tools:context="com.bosictsolution.waiterone.OpenOrderActivity"
     android:padding="5dp"
     android:orientation="vertical"
-    android:background="@color/colorGray">
+    android:background="@color/colorGray1">
 
     <TextView android:id="@+id/tvWaiter"
         android:layout_width="wrap_content"

@@ -11,15 +11,15 @@
 
         <customfont.BOSTextView android:id="@+id/tvListWaiterName"
             style="@style/styleReportListTextViewRatio"
-            android:textColor="@color/colorReportGroupFirstPri" />
+            android:textColor="@color/colorPrimary" />
 
         <customfont.BOSTextView android:id="@+id/tvListTotalSaleTable"
             style="@style/styleReportListTextViewRatio"
-            android:textColor="@color/colorReportGroupFirstPri" />
+            android:textColor="@color/colorPrimary" />
 
         <customfont.BOSTextView android:id="@+id/tvListTotal"
             style="@style/styleReportListTextViewRatio"
-            android:textColor="@color/colorReportGroupFirstPri"
+            android:textColor="@color/colorPrimary"
             android:gravity="right"/>
 
     </LinearLayout>

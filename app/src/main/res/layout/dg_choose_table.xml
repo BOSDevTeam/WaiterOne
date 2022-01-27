@@ -5,19 +5,19 @@
     android:orientation="vertical"
     android:background="@color/colorWhite">
 
-    <customfont.ArialTextView android:id="@+id/tvLabelChooseTable"
+    <TextView android:id="@+id/tvLabelChooseTable"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:textColor="@color/colorFirstPri"
+            android:textColor="@color/colorPrimary"
             android:padding="5dp"
             android:text="Choose Table"
-            android:textSize="@dimen/label_text_size_large" />
+            android:textSize="@dimen/large_text_size" />
 
     <LinearLayout  android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="5dp"
-        android:background="@color/colorFirstPri">
+        android:background="@color/colorPrimary">
     </LinearLayout>
 
     <LinearLayout  android:layout_width="match_parent"
@@ -28,8 +28,8 @@
         <Spinner android:id="@+id/spSearchTableType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorGray"
-            android:popupBackground="@color/colorDarkGray"></Spinner>
+            android:background="@color/colorGray1"
+            android:popupBackground="@color/colorGray2"></Spinner>
 
         <ListView android:id="@+id/lvTable"
                     android:layout_height="0dp"
@@ -45,23 +45,23 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="50dp"
-            android:background="@drawable/blue_button"
+            android:background="@drawable/primary_button"
             android:text="OK"
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
-            android:textSize="@dimen/button_text_size_large"
+            android:textSize="@dimen/regular_text_size"
             android:padding="10dp"
             android:textAllCaps="false"/>
 
-            <customfont.ArialButton android:id="@+id/btnViewAllTable"
+            <Button android:id="@+id/btnViewAllTable"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="50dp"
-                android:background="@drawable/blue_button"
+                android:background="@drawable/primary_button"
                 android:text="View All"
                 android:textColor="@color/colorWhite"
                 android:textStyle="bold"
-                android:textSize="@dimen/button_text_size_large"
+                android:textSize="@dimen/regular_text_size"
                 android:padding="10dp"
                 android:layout_marginLeft="5dp"
                 android:textAllCaps="false"/>

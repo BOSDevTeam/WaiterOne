@@ -4,13 +4,14 @@
     android:layout_height="wrap_content"
     android:padding="10dp">
 
-    <customfont.ArialTextView android:id="@+id/tvListReport"
+    <TextView android:id="@+id/tvListReport"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/label_text_size_large"
+        android:textSize="@dimen/large_text_size"
         android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold"
-        android:drawableLeft="@mipmap/right_arrow"
+        android:drawableLeft="@drawable/ic_double_arrow_right_24"
         android:drawablePadding="10dp"/>
+
 </LinearLayout>
 

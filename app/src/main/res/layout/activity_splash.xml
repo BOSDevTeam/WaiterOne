@@ -4,13 +4,13 @@
     android:layout_height="match_parent"
     tools:context=".SaleActivity"
     android:orientation="vertical"
-    android:background="@color/colorFirstPri" >
+    android:background="@color/colorPrimary" >
 
     <TextView android:id="@+id/tvAppName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="@dimen/splash_app_label"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/colorGray1"
         android:text="@string/app_name"
         android:layout_centerInParent="true"/>
 
@@ -21,11 +21,11 @@
         android:layout_centerInParent="true"
         android:layout_above="@+id/tvCompanyName" />
 
-    <customfont.ArialTextView android:id="@+id/tvCompanyName"
+    <TextView android:id="@+id/tvCompanyName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/label_text_size_small"
-        android:textColor="@color/colorGray"
+        android:textSize="@dimen/small_text_size"
+        android:textColor="@color/colorGray3"
         android:text="@string/label_company_name"
         android:layout_centerInParent="true"
         android:layout_alignParentBottom="true"

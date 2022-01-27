@@ -1,6 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
     <LinearLayout android:id="@+id/layoutRegister"
@@ -10,22 +11,23 @@
         android:padding="20dp"
         android:background="@drawable/start_border_bg">
 
-        <customfont.ArialTextView android:id="@+id/tvTitleRegister"
+        <TextView android:id="@+id/tvTitleRegister"
             android:text="Setup Register Key"
             style="@style/styleTitleInStart"/>
 
-        <customfont.ArialEditText android:id="@+id/etMacAddress"
+        <EditText android:id="@+id/etMacAddress"
             style="@style/styleEditTextInStart"
             android:enabled="false"
             android:layout_marginTop="10dp"/>
 
-        <customfont.ArialEditText android:id="@+id/etRegisterKey"
+        <EditText android:id="@+id/etRegisterKey"
             android:layout_marginTop="10dp"
             style="@style/styleEditTextInStart"
-            android:hint="Register Key"/>
+            android:hint="Register Key"
+            android:imeOptions="actionDone"/>
 
-            <customfont.ArialButton android:id="@+id/btnRegister"
-                android:background="@drawable/blue_button"
+            <Button android:id="@+id/btnRegister"
+                android:background="@drawable/primary_button"
                 android:text="Register"
                 android:layout_marginTop="20dp"
                 style="@style/styleButtonInStart"/>
@@ -38,7 +40,8 @@
         android:orientation="vertical"
         android:padding="20dp"
         android:background="@drawable/start_border_bg"
-        android:visibility="gone">
+        android:visibility="gone"
+        tools:visibility="visible">
 
         <customfont.BOSEditText android:id="@+id/etShopName"
             style="@style/styleEditTextInStart"
@@ -54,8 +57,8 @@
             android:layout_marginTop="10dp"
             android:layout_gravity="center"/>
 
-        <customfont.ArialButton android:id="@+id/btnOK"
-            android:background="@drawable/blue_button"
+        <Button android:id="@+id/btnOK"
+            android:background="@drawable/primary_button"
             android:text="OK"
             android:layout_marginTop="20dp"
             style="@style/styleButtonInStart"/>
@@ -67,35 +70,37 @@
         android:layout_height="match_parent"
         android:padding="20dp"
         android:orientation="vertical"
-        android:visibility="gone">
+        android:visibility="gone"
+        tools:visibility="visible">
 
         <LinearLayout android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center">
 
-        <customfont.ArialButton android:id="@+id/btnCreateUser"
+        <Button android:id="@+id/btnCreateUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CREATE USER"
             android:padding="10dp"
-            android:background="@drawable/blue_button"
-            android:textSize="@dimen/button_text_size_large"
+            android:background="@drawable/primary_button"
+            android:textSize="@dimen/regular_text_size"
             android:textColor="@color/colorWhite"
             android:textStyle="bold"/>
 
-        <customfont.ArialButton android:id="@+id/btnContinue"
+        <Button android:id="@+id/btnContinue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CONTINUE"
             android:padding="10dp"
             android:background="@drawable/gray_button"
-            android:textSize="@dimen/button_text_size_large"
-            android:textColor="@color/colorFirstPri"
+            android:textSize="@dimen/regular_text_size"
+            android:textColor="@color/colorPrimary"
             android:layout_marginLeft="20dp"
             android:drawableRight="@mipmap/right_arrow2"
             android:drawablePadding="10dp"
             android:textStyle="bold"/>
+
             </LinearLayout>
 
         <ListView android:id="@+id/lvUser"
@@ -104,4 +109,5 @@
             android:layout_marginTop="10dp"></ListView>
 
     </LinearLayout>
+
 </LinearLayout>

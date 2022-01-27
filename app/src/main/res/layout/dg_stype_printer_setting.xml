@@ -6,12 +6,7 @@
     android:padding="10dp">
 
     <ImageButton android:id="@+id/btnClose"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/cancel2"
-        android:background="@drawable/transparent_button"
-        android:padding="5dp"
-        android:layout_gravity="right"/>
+        style="@style/dialogClose"/>
 
     <Spinner android:id="@+id/spItemSType"
         style="@style/styleSetupDialogSpinner"
@@ -21,44 +16,14 @@
         style="@style/styleSetupDialogSpinner"
         android:layout_marginTop="10dp"></Spinner>
 
-    <!--<customfont.ArialEditText android:id="@+id/etPrinterIP"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="Enter Printer IP Address"
-        android:padding="10dp"
-        android:textSize="@dimen/textbox_text_size"
-        android:textColor="@color/colorPrimary"
-        android:background="@color/colorGray"
-        android:textColorHint="@color/colorHint"/>-->
+    <LinearLayout style="@style/dialogBottom">
 
-    <LinearLayout android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp">
+        <Button android:id="@+id/btnCancel"
+            style="@style/styleSetupDialogCloseButton"
+            android:text="@string/cancel"/>
 
-        <customfont.ArialButton android:id="@+id/btnCancel"
-            android:layout_width="0dip"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:background="@drawable/gray_button"
-            android:text="CANCEL"
-            android:textColor="@color/colorFirstPri"
-            android:textStyle="bold"
-            android:textSize="@dimen/button_text_size_large"
-            android:padding="10dp"/>
-
-        <customfont.ArialButton android:id="@+id/btnSave"
-            android:layout_width="0dip"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:background="@drawable/blue_button"
-            android:text="SAVE"
-            android:textColor="@color/colorWhite"
-            android:textStyle="bold"
-            android:textSize="@dimen/button_text_size_large"
-            android:padding="10dp"
-            android:layout_marginLeft="5dp"/>
+        <Button android:id="@+id/btnSave"
+            style="@style/styleSetupDialogSaveButton"/>
 
     </LinearLayout>
 

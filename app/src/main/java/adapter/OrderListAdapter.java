@@ -100,11 +100,15 @@ public class OrderListAdapter extends BaseAdapter {
         }
 
         holder.tvItemName.setText(lstTransactionData.get(position).getItemName());
-        holder.tvItemSub.setText(lstTransactionData.get(position).getAllItemSub());
-        if(lstTransactionData.get(position).getAllItemSub().length()==0) holder.tvItemSub.setVisibility(View.GONE);
-        else holder.tvItemSub.setVisibility(View.VISIBLE);
+
+        if(lstTransactionData.get(position).getAllItemSub().length()!=0) {
+            holder.tvItemSub.setVisibility(View.VISIBLE);
+            holder.tvItemSub.setText(lstTransactionData.get(position).getAllItemSub());
+        }
+        else holder.tvItemSub.setVisibility(View.GONE);
 
         holder.tvTaste.setText(lstTransactionData.get(position).getTaste());
+
         if(db.getFeatureResult(FeatureList.fOrderTime)==1) {
             holder.tvTime.setVisibility(View.VISIBLE);
             holder.tvTime.setText(lstTransactionData.get(position).getOrderTime());
@@ -123,7 +127,6 @@ public class OrderListAdapter extends BaseAdapter {
             bitmap = BitmapFactory.decodeByteArray(lstTransactionData.get(position).getItemImage(), 0, lstTransactionData.get(position).getItemImage().length);
             if (bitmap != null) holder.ivItemImage.setImageBitmap(bitmap);
         }else holder.ivItemImage.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_default_image));
-
 
         holder.imgbtnPlus.setOnClickListener(new View.OnClickListener() {
 

@@ -27,7 +27,10 @@ import java.util.List;
 import au.com.bytecode.opencsv.CSVReader;
 import au.com.bytecode.opencsv.CSVWriter;
 import data.CompanyData;
+import data.ItemAndSubData;
 import data.ItemData;
+import data.ItemSubData;
+import data.ItemSubGroupData;
 import data.MainMenuData;
 import data.STypeData;
 import data.SubMenuData;
@@ -94,6 +97,9 @@ public class SystemSetting {
         File fileVoucherSetting = new File(exportDir, "VoucherSetting.csv");
         File fileSType = new File(exportDir, "ItemSType.csv");
         File fileCompany = new File(exportDir, "Company.csv");
+        File fileItemSubGroup = new File(exportDir, "ItemSubGroup.csv");
+        File fileItemSub = new File(exportDir, "ItemSub.csv");
+        File fileItemAndSub = new File(exportDir, "ItemAndSub.csv");
 
         try {
             /** for waiter **/
@@ -381,6 +387,61 @@ public class SystemSetting {
                 csvWriteSType.writeNext(data);
             }
             csvWriteSType.close();
+
+            /** for item sub group **/
+            fileItemSubGroup.createNewFile();
+            CSVWriter csvWriteItemSubGroup = new CSVWriter(new FileWriter(fileItemSubGroup));
+            Cursor curItemSubGroup = db.getItemSubGroup();
+            List<ItemSubGroupData> lstItemSubGroupData = new ArrayList<>();
+            while (curItemSubGroup.moveToNext()) {
+                ItemSubGroupData data = new ItemSubGroupData();
+                data.setPkId(curItemSubGroup.getInt(0));
+                data.setSubGroupName(curItemSubGroup.getString(1));
+                data.setSubTitle(curItemSubGroup.getString(2));
+                data.setSingleCheck(curItemSubGroup.getInt(3));
+                lstItemSubGroupData.add(data);
+            }
+            String headerItemSubGroup[] = {"PKID", "GroupName","SubTitle","IsSingleCheck"};
+            csvWriteItemSubGroup.writeNext(headerItemSubGroup);
+            for (int i = 0; i < lstItemSubGroupData.size(); i++) {
+                String data[] = {String.valueOf(lstItemSubGroupData.get(i).getPkId()), lstItemSubGroupData.get(i).getSubGroupName(), lstItemSubGroupData.get(i).getSubTitle(),String.valueOf(lstItemSubGroupData.get(i).isSingleCheck())};
+                csvWriteItemSubGroup.writeNext(data);
+            }
+            csvWriteItemSubGroup.close();
+
+            /** for item sub **/
+            fileItemSub.createNewFile();
+            CSVWriter csvWriteItemSub = new CSVWriter(new FileWriter(fileItemSub));
+            Cursor curItemSub = db.getItemSub();
+            List<ItemSubData> lstItemSubData = new ArrayList<>();
+            while (curItemSub.moveToNext()) {
+                ItemSubData data = new ItemSubData();
+                data.setPkId(curItemSub.getInt(0));
+                data.setSubGroupId(curItemSub.getInt(1));
+                data.setSubName(curItemSub.getString(2));
+                data.setPrice(curItemSub.getInt(3));
+                lstItemSubData.add(data);
+            }
+            String headerItemSub[] = {"PKID", "SubGroupID","SubName","Price"};
+            csvWriteItemSub.writeNext(headerItemSub);
+            for (int i = 0; i < lstItemSubData.size(); i++) {
+                String data[] = {String.valueOf(lstItemSubData.get(i).getPkId()), String.valueOf(lstItemSubData.get(i).getSubGroupId()), lstItemSubData.get(i).getSubName(),String.valueOf(lstItemSubData.get(i).getPrice())};
+                csvWriteItemSub.writeNext(data);
+            }
+            csvWriteItemSub.close();
+
+            /** for item and sub **/
+            fileItemAndSub.createNewFile();
+            CSVWriter csvWriteItemAndSub = new CSVWriter(new FileWriter(fileItemAndSub));
+            List<ItemAndSubData> lstItemAndSubData = db.getItemAndSub();
+            String headerItemAndSub[] = {"PKID", "ItemID","SubGroupID","LevelNo"};
+            csvWriteItemAndSub.writeNext(headerItemAndSub);
+            for (int i = 0; i < lstItemAndSubData.size(); i++) {
+                String data[] = {String.valueOf(lstItemAndSubData.get(i).getPkId()), lstItemAndSubData.get(i).getItemId(), String.valueOf(lstItemAndSubData.get(i).getSubGroupId()),String.valueOf(lstItemAndSubData.get(i).getLevelNo())};
+                csvWriteItemAndSub.writeNext(data);
+            }
+            csvWriteItemAndSub.close();
+
         } catch (IOException e) {
             Log.e("ExportImportActivity", e.getMessage(), e);
         }
@@ -406,6 +467,9 @@ public class SystemSetting {
         File fileVoucherSetting = new File(importDir, "VoucherSetting.csv");
         File fileSType = new File(importDir, "ItemSType.csv");
         File fileCompany = new File(importDir, "Company.csv");
+        File fileItemSubGroup = new File(importDir, "ItemSubGroup.csv");
+        File fileItemSub = new File(importDir, "ItemSub.csv");
+        File fileItemAndSub = new File(importDir, "ItemAndSub.csv");
 
         try {
 
@@ -544,6 +608,42 @@ public class SystemSetting {
                 int sTypeID = Integer.parseInt(nextLineSType[0]);
                 String sTypeName = nextLineSType[1];
                 db.insertSType(sTypeID, sTypeName);
+            }
+
+            CSVReader csvReadItemSubGroup = new CSVReader(new FileReader(fileItemSubGroup));
+            String[] nextLineItemSubGroup;
+            db.truncateItemSubGroup();
+            csvReadItemSubGroup.readNext();
+            while ((nextLineItemSubGroup = csvReadItemSubGroup.readNext()) != null) {
+                int pkId = Integer.parseInt(nextLineItemSubGroup[0]);
+                String groupName = nextLineItemSubGroup[1];
+                String subTitle = nextLineItemSubGroup[2];
+                int isSingleCheck = Integer.parseInt(nextLineItemSubGroup[3]);
+                db.insertItemSubGroup(pkId,groupName,subTitle,isSingleCheck);
+            }
+
+            CSVReader csvReadItemSub = new CSVReader(new FileReader(fileItemSub));
+            String[] nextLineItemSub;
+            db.truncateItemSub();
+            csvReadItemSub.readNext();
+            while ((nextLineItemSub = csvReadItemSub.readNext()) != null) {
+                int pkId = Integer.parseInt(nextLineItemSub[0]);
+                int subGroupId = Integer.parseInt(nextLineItemSub[1]);
+                String subName = nextLineItemSub[2];
+                int price = Integer.parseInt(nextLineItemSub[3]);
+                db.insertItemSub(pkId,subGroupId,subName,price);
+            }
+
+            CSVReader csvReadItemAndSub = new CSVReader(new FileReader(fileItemAndSub));
+            String[] nextLineItemAndSub;
+            db.truncateItemAndSub();
+            csvReadItemAndSub.readNext();
+            while ((nextLineItemAndSub = csvReadItemAndSub.readNext()) != null) {
+                int pkId = Integer.parseInt(nextLineItemAndSub[0]);
+                String itemId = nextLineItemAndSub[1];
+                int subGroupId = Integer.parseInt(nextLineItemAndSub[2]);
+                int levelNo = Integer.parseInt(nextLineItemAndSub[3]);
+                db.insertItemAndSub(pkId,itemId,subGroupId,levelNo);
             }
 
             restoreItemImage(db);

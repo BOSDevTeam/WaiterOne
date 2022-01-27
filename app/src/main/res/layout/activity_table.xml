@@ -7,7 +7,7 @@
 
     <LinearLayout android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:background="@color/colorSecondPri"></LinearLayout>
+        android:background="@color/colorAccent"/>
 
     <LinearLayout  android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,11 +15,12 @@
 
         <LinearLayout android:layout_width="200dp"
             android:layout_height="match_parent"
-            android:background="@color/colorFirstPri">
+            android:background="@color/colorPrimary">
 
             <ListView android:id="@+id/lvTableType"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"></ListView>
+                android:layout_height="wrap_content"/>
+
         </LinearLayout>
 
         <LinearLayout android:layout_width="match_parent"
@@ -33,11 +34,13 @@
                 <customfont.BOSTextView android:id="@+id/tvTableTypeName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/label_text_size_large"
-                    android:textColor="@color/colorFirstPri"
+                    android:textSize="@dimen/regular_text_size"
+                    android:textColor="@color/colorBlackLight"
                     android:textStyle="bold"
                     android:layout_marginLeft="15dp"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorSuccess"
+                    android:padding="10dp"/>
 
                 <ImageView android:layout_width="20dp"
                     android:layout_height="20dp"
@@ -45,12 +48,11 @@
                     android:layout_toLeftOf="@+id/tvLabelOccupiedTable"
                     android:layout_marginRight="5dp"/>
 
-                <customfont.ArialTextView android:id="@+id/tvLabelOccupiedTable"
+                <TextView android:id="@+id/tvLabelOccupiedTable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/label_text_size_small"
-                    android:textColor="@color/colorPrimary"
-                    android:textStyle="bold"
+                    android:textSize="@dimen/small_text_size"
+                    android:textColor="@color/colorBlackLight"
                     android:layout_toLeftOf="@+id/imgBookingTable"
                     android:layout_marginRight="10dp"
                     android:text="@string/lbl_using_tables"/>
@@ -62,12 +64,11 @@
                     android:layout_toLeftOf="@+id/tvLabelBookingTable"
                     android:layout_marginRight="5dp"/>
 
-                <customfont.ArialTextView android:id="@+id/tvLabelBookingTable"
+                <TextView android:id="@+id/tvLabelBookingTable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/label_text_size_small"
-                    android:textColor="@color/colorPrimary"
-                    android:textStyle="bold"
+                    android:textSize="@dimen/small_text_size"
+                    android:textColor="@color/colorBlackLight"
                     android:layout_toLeftOf="@+id/imgEmptyTable"
                     android:layout_marginRight="10dp"
                     android:text="Booking Table"/>
@@ -79,13 +80,11 @@
                     android:layout_toLeftOf="@+id/tvLabelEmptyTable"
                     android:layout_marginRight="5dp"/>
 
-                <customfont.ArialTextView android:id="@+id/tvLabelEmptyTable"
+                <TextView android:id="@+id/tvLabelEmptyTable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/label_text_size_small"
-                    android:fontFamily="Arial Narrow"
-                    android:textColor="@color/colorPrimary"
-                    android:textStyle="bold"
+                    android:textSize="@dimen/small_text_size"
+                    android:textColor="@color/colorBlackLight"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="20dp"
                     android:text="@string/lbl_free_tables"/>
@@ -103,8 +102,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Multi Table Bill"
-                    android:textColor="@color/colorFirstPri"
-                    android:textSize="@dimen/label_text_size_small"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/regular_text_size"
                     android:gravity="center" />
 
                 <LinearLayout android:id="@+id/layoutTarget"
@@ -125,25 +124,25 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="10dp"
-                        android:background="@color/colorFirstPri"
+                        android:background="@color/colorPrimary"
                         android:textColor="@color/colorWhite"
                         android:textStyle="bold"
-                        android:textSize="@dimen/textbox_text_size"
+                        android:textSize="@dimen/regular_text_size"
                         android:hint="Main Table"
-                        android:textColorHint="@color/colorGray"
+                        android:textColorHint="@color/colorGray1"
                         android:gravity="center"/>
 
                     <customfont.BOSTextView android:id="@+id/tvCombineTable"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="10dp"
-                        android:background="@color/colorSecondPri"
+                        android:background="@color/colorAccent"
                         android:textColor="@color/colorWhite"
                         android:textStyle="bold"
-                        android:textSize="@dimen/textbox_text_size"
+                        android:textSize="@dimen/regular_text_size"
                         android:layout_marginLeft="10dp"
                         android:hint="Other Tables"
-                        android:textColorHint="@color/colorGray"
+                        android:textColorHint="@color/colorGray1"
                         android:gravity="center"/>
 
                     </LinearLayout>

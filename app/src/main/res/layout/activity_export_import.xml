@@ -5,9 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".ExportImportActivity"
     android:orientation="vertical"
-    android:paddingTop="30dp"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp">
+    android:paddingTop="20dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,29 +13,26 @@
         android:orientation="horizontal"
         android:padding="10dp">
 
-    <customfont.ArialButton android:id="@+id/btnImportFromCSV"
-        android:text="Import Data From CSV"
+    <Button android:id="@+id/btnImportFromCSV"
+        android:text="@string/import_data_from_csv"
         android:drawableTop="@drawable/ic_file_download"
-        style="@style/styleRectButton"/>
+        style="@style/styleImportExportButton"/>
 
-    <customfont.ArialButton android:id="@+id/btnExportToCSV"
-        android:text="Export Data To CSV"
-        android:layout_marginLeft="10dp"
+    <Button android:id="@+id/btnExportToCSV"
+        android:text="@string/export_data_to_csv"
         android:drawableTop="@drawable/ic_file_upload"
-        style="@style/styleRectButton"/>
+        style="@style/styleImportExportButton"/>
 
-    <customfont.ArialButton android:id="@+id/btnImportTranFromCSV"
-        android:text="Import Tran From CSV"
-        android:layout_marginLeft="10dp"
+    <Button android:id="@+id/btnImportTranFromCSV"
+        android:text="@string/import_tran_from_csv"
         android:drawableTop="@drawable/ic_file_download"
-        style="@style/styleRectButton"/>
+        style="@style/styleImportExportButton"/>
 
-    <customfont.ArialButton android:id="@+id/btnExportTranToCSV"
-        android:text="Export Tran To CSV"
-        android:layout_marginLeft="10dp"
+    <Button android:id="@+id/btnExportTranToCSV"
+        android:text="@string/export_tran_to_csv"
         android:drawableTop="@drawable/ic_file_upload"
-        style="@style/styleRectButton"/>
+        style="@style/styleImportExportButton"/>
 
-        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>

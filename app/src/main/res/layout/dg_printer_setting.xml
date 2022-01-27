@@ -6,60 +6,27 @@
     android:background="@color/colorWhite"
     android:orientation="vertical">
 
-    <customfont.ArialEditText  android:id="@+id/etPrinterIP"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/textbox_text_size"
-        android:textColor="@color/colorPrimary"
-        android:textStyle="bold"
-        android:background="@color/colorGray"
+    <EditText  android:id="@+id/etPrinterIP"
+        style="@style/fullEditText"
         android:hint="Printer IP Address"
-        android:layout_marginTop="10dp"
-        android:padding="10dp"
-        android:textColorHint="@color/colorHint"/>
+        android:imeOptions="actionNext"/>
 
-    <customfont.ArialEditText  android:id="@+id/etPortNumber"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/textbox_text_size"
-        android:textColor="@color/colorPrimary"
-        android:textStyle="bold"
-        android:background="@color/colorGray"
+    <EditText  android:id="@+id/etPortNumber"
+        style="@style/fullEditText"
         android:hint="Port Number"
         android:layout_marginTop="10dp"
-        android:padding="10dp"/>
+        android:imeOptions="actionDone"/>
 
-    <LinearLayout android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+    <LinearLayout style="@style/dialogBottom">
 
-        <customfont.ArialButton android:id="@+id/btnOK"
-            android:layout_width="0dip"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:background="@drawable/blue_button"
-            android:text="OK"
-            android:textColor="@color/colorWhite"
-            android:textStyle="bold"
-            style="?android:attr/buttonBarButtonStyle"
-            android:textSize="@dimen/button_text_size_large"
-            android:padding="10dp"/>
+        <Button android:id="@+id/btnCancel"
+            style="@style/styleSetupDialogCloseButton"
+            android:text="@string/cancel"/>
 
-        <customfont.ArialButton android:id="@+id/btnCancel"
-            android:layout_width="0dip"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:background="@drawable/gray_button"
-            android:text="Cancel"
-            android:textColor="@color/colorFirstPri"
-            android:textStyle="bold"
-            style="?android:attr/buttonBarButtonStyle"
-            android:textSize="@dimen/button_text_size_large"
-            android:layout_marginLeft="5dp"
-            android:padding="10dp"/>
+        <Button android:id="@+id/btnOK"
+            style="@style/styleSetupDialogSaveButton"
+            android:text="@string/ok"/>
 
     </LinearLayout>
+
 </LinearLayout>

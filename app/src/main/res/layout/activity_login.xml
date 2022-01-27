@@ -11,7 +11,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal"
-        android:background="#CC333333">
+        android:background="#CC17476E">
 
         <LinearLayout android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -37,12 +37,12 @@
                     android:background="@drawable/login_layout_bg"
                     android:gravity="center">
 
-                    <customfont.ArialTextView android:id="@+id/tvTitleLogin"
+                    <TextView android:id="@+id/tvTitleLogin"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/waiter_login"
-                        android:textColor="@color/colorGray"
-                        android:textSize="@dimen/main_text_size"/>
+                        android:textColor="@color/colorGray1"
+                        android:textSize="@dimen/larger_text_size"/>
 
                     <Spinner android:id="@+id/spUserName"
                         android:layout_width="match_parent"
@@ -51,47 +51,43 @@
                         android:background="@drawable/login_spinner_bg"
                         android:popupBackground="@color/colorPrimary"/>
 
-                    <customfont.ArialEditText android:id="@+id/txtPassword"
+                    <EditText android:id="@+id/txtPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/password_hiht"
-                        android:textSize="@dimen/label_text_size_large"
+                        android:textSize="@dimen/regular_text_size"
                         android:singleLine="true"
                         android:layout_marginTop="15dp"
                         android:inputType="textPassword"
                         android:background="#CC33333F"
                         android:textColor="@color/colorWhite"
-                        android:textColorHint="@color/colorGray"
+                        android:textColorHint="@color/colorGray1"
                         android:textStyle="bold"
                         android:padding="10dp"
                         android:focusable="false"/>
 
-                    <customfont.ArialButton android:id="@+id/btnLogin"
+                    <Button android:id="@+id/btnLogin"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/btnLogin"
-                        android:textColor="@color/colorWhite"
-                        android:background="@drawable/blue_button"
-                        android:typeface="monospace"
-                        android:textSize="@dimen/button_text_size_large"
+                        android:text="@string/login"
+                        android:textColor="@color/colorBlackLight"
+                        android:background="@drawable/bg_accent_5r"
+                        android:textSize="@dimen/regular_text_size"
                         android:textStyle="bold"
                         style="?android:attr/buttonBarButtonStyle"
                         android:padding="10dp"
-                        android:layout_marginTop="20dp">
-                    </customfont.ArialButton>
+                        android:layout_marginTop="20dp"/>
 
-                    <customfont.ArialButton android:id="@+id/btnExit"
+                    <Button android:id="@+id/btnExit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/btnExit"
-                        android:textColor="@color/colorFirstPri"
-                        android:background="@drawable/exit_button"
-                        android:typeface="monospace"
-                        android:textSize="@dimen/button_text_size_small"
+                        android:text="@string/exit"
+                        android:textColor="@color/colorBlackLight"
                         android:textStyle="bold"
                         android:padding="15dp"
-                        android:layout_marginTop="30dp" >
-                    </customfont.ArialButton>
+                        android:layout_marginTop="30dp"
+                        android:textAllCaps="false"/>
+
                 </LinearLayout>
 
             </ScrollView>
@@ -100,13 +96,13 @@
     </LinearLayout>
 
     <LinearLayout android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#33333F">
+        android:layout_height="30dp"
+        android:background="@color/colorPrimaryDark">
 
-        <customfont.ArialTextView android:layout_width="wrap_content"
+        <TextView android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/copyright"
-            android:textColor="@color/colorWhite"
+            android:textColor="@color/colorGray2"
             android:textSize="13sp"
             android:layout_gravity="center|left"/>
     </LinearLayout>

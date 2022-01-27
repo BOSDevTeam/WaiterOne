@@ -1463,20 +1463,20 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
         layoutSetupSType.setVisibility(View.GONE);
         layoutSetupCompany.setVisibility(View.GONE);
         lvSetup.setVisibility(View.VISIBLE);
-        btnWaiterModule.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
-        btnTableTypeModule.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
-        btnTableModule.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
-        btnMainMenuModule.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
-        btnSubMenuModule.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
-        btnItemModule.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
-        btnItemSubGroupModule.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
-        btnItemSubModule.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
-        btnTasteModule.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
-        btnSystemSettingModule.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
-        btnVoucherSettingModule.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
-        btnSTypeModule.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
-        btnCompanyModule.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
-        btn.setBackgroundColor(getResources().getColor(R.color.colorSecondPri));
+        btnWaiterModule.setBackground(getResources().getDrawable(R.drawable.bg_gray_5r));
+        btnTableTypeModule.setBackground(getResources().getDrawable(R.drawable.bg_gray_5r));
+        btnTableModule.setBackground(getResources().getDrawable(R.drawable.bg_gray_5r));
+        btnMainMenuModule.setBackground(getResources().getDrawable(R.drawable.bg_gray_5r));
+        btnSubMenuModule.setBackground(getResources().getDrawable(R.drawable.bg_gray_5r));
+        btnItemModule.setBackground(getResources().getDrawable(R.drawable.bg_gray_5r));
+        btnItemSubGroupModule.setBackground(getResources().getDrawable(R.drawable.bg_gray_5r));
+        btnItemSubModule.setBackground(getResources().getDrawable(R.drawable.bg_gray_5r));
+        btnTasteModule.setBackground(getResources().getDrawable(R.drawable.bg_gray_5r));
+        btnSystemSettingModule.setBackground(getResources().getDrawable(R.drawable.bg_gray_5r));
+        btnVoucherSettingModule.setBackground(getResources().getDrawable(R.drawable.bg_gray_5r));
+        btnSTypeModule.setBackground(getResources().getDrawable(R.drawable.bg_gray_5r));
+        btnCompanyModule.setBackground(getResources().getDrawable(R.drawable.bg_gray_5r));
+        btn.setBackground(getResources().getDrawable(R.drawable.bg_accent_5r));
     }
 
     private void clearWaiterControls(){
@@ -2275,7 +2275,7 @@ public class SetupActivity extends AppCompatActivity implements SetupEditDeleteB
                     return;
                 }
                 if(lstSTypeData.size()==0){
-                    systemSetting.showMessage(SystemSetting.WARNING,"Fill Item SType First!",context,getLayoutInflater());
+                    systemSetting.showMessage(SystemSetting.WARNING,"Fill Item Type First!",context,getLayoutInflater());
                     return;
                 }
                 int position= spSubMenu.getSelectedItemPosition();

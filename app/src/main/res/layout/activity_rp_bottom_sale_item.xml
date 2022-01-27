@@ -9,21 +9,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/colorFirstPri">
+        android:background="@color/colorPrimary">
 
-        <customfont.ArialTextView android:id="@+id/tvFromDate"
+        <TextView android:id="@+id/tvFromDate"
             style="@style/styleReportDateText"
             android:text="From Date" />
 
-        <customfont.ArialTextView android:id="@+id/tvToDate"
+        <TextView android:id="@+id/tvToDate"
             style="@style/styleReportDateText"
             android:text="To Date" />
 
-        <customfont.ArialTextView android:id="@+id/tvToday"
+        <TextView android:id="@+id/tvToday"
             style="@style/styleReportTodayLabel"
             android:text="(Today)"
             android:visibility="gone">
-        </customfont.ArialTextView>
+        </TextView>
 
     </LinearLayout>
 
@@ -32,15 +32,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/colorReportListHeader">
+        android:background="@color/colorPrimary">
 
-        <customfont.ArialTextView android:id="@+id/tvHeaderItem"
+        <TextView android:id="@+id/tvHeaderItem"
             style="@style/styleReportHeaderTextViewRatio"
             android:text="Item"/>
-        <customfont.ArialTextView android:id="@+id/tvHeaderMenu"
+        <TextView android:id="@+id/tvHeaderMenu"
             style="@style/styleReportHeaderTextViewRatio"
             android:text="Menu"/>
-        <customfont.ArialTextView android:id="@+id/tvHeaderQty"
+        <TextView android:id="@+id/tvHeaderQty"
             style="@style/styleReportHeaderTextViewRatio"
             android:text="Sale Qty"/>
 

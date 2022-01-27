@@ -5,84 +5,40 @@
     android:padding="10dp"
     android:background="@color/colorWhite">
 
-    <customfont.ArialEditText android:id="@+id/etIPAddress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimary"
-        android:fontFamily="Arial Narrow"
-        android:textSize="@dimen/textbox_text_size"
+    <EditText android:id="@+id/etIPAddress"
+        style="@style/fullEditText"
         android:hint="@string/ip_address"
-        android:padding="10dp"
-        android:background="@color/colorGray"
-        android:textColorHint="@color/colorHint"/>
+        android:imeOptions="actionNext"/>
 
-    <customfont.ArialEditText android:id="@+id/etDatabaseName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimary"
-        android:fontFamily="Arial Narrow"
-        android:textSize="@dimen/textbox_text_size"
+    <EditText android:id="@+id/etDatabaseName"
+        style="@style/fullEditText"
         android:hint="@string/database"
-        android:padding="10dp"
-        android:background="@color/colorGray"
-        android:layout_marginTop="5dp"
-        android:textColorHint="@color/colorHint"/>
+        android:imeOptions="actionNext"
+        android:layout_marginTop="5dp" />
 
-    <customfont.ArialEditText android:id="@+id/etServerUser"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimary"
-        android:fontFamily="Arial Narrow"
-        android:textSize="@dimen/textbox_text_size"
+    <EditText android:id="@+id/etServerUser"
+        style="@style/fullEditText"
         android:hint="@string/user"
-        android:padding="10dp"
-        android:background="@color/colorGray"
-        android:layout_marginTop="5dp"
-        android:textColorHint="@color/colorHint"/>
+        android:imeOptions="actionNext"
+        android:layout_marginTop="5dp" />
 
-    <customfont.ArialEditText android:id="@+id/etServerPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimary"
-        android:fontFamily="Arial Narrow"
-        android:textSize="@dimen/textbox_text_size"
+    <EditText android:id="@+id/etServerPassword"
+        style="@style/fullEditText"
         android:hint="@string/password"
-        android:padding="10dp"
-        android:background="@color/colorGray"
+        android:imeOptions="actionDone"
         android:layout_marginTop="5dp"
-        android:inputType="textPassword"
-        android:textColorHint="@color/colorHint"/>
+        android:inputType="textPassword" />
 
-    <LinearLayout android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp">
+    <LinearLayout style="@style/dialogBottom">
 
-        <customfont.ArialButton android:id="@+id/btnOK"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:background="@drawable/blue_button"
-            android:textColor="@color/colorWhite"
-            android:textSize="@dimen/button_text_size_large"
-            android:text="@string/btnok"
-            android:layout_gravity="left"
-            style="?android:attr/buttonBarButtonStyle"
-            android:padding="10dp"
-            android:textStyle="bold"/>
+        <Button android:id="@+id/btnCancel"
+            style="@style/styleSetupDialogCloseButton"
+            android:text="@string/cancel"/>
 
-        <customfont.ArialButton android:id="@+id/btnCancel"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/gray_button"
-            android:textColor="@color/colorFirstPri"
-            android:textSize="@dimen/button_text_size_large"
-            android:text="@string/btncancel"
-            android:layout_marginLeft="5dp"
-            android:layout_gravity="right"
-            style="?android:attr/buttonBarButtonStyle"
-            android:padding="10dp"
-            android:textStyle="bold"/>
+        <Button android:id="@+id/btnOK"
+            style="@style/styleSetupDialogSaveButton"
+            android:text="@string/ok"/>
+
     </LinearLayout>
+
 </LinearLayout>

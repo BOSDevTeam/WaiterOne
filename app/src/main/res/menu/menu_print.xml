@@ -5,6 +5,7 @@
     <item android:id="@+id/menuPrint"
         android:title="@string/menu_print"
         app:showAsAction="always"
-        android:icon="@mipmap/print"/>
+        android:icon="@drawable/ic_print_24"
+        android:iconTint="@color/colorWhite"/>
 
 </menu>

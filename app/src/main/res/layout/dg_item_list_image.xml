@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:padding="10dp">
 
@@ -17,14 +17,13 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textColor="@color/colorFirstPri"/>
+            android:textSize="@dimen/regular_text_size"
+            android:textColor="@color/colorBlackLight"
+            android:textStyle="bold"
+            tools:text="Drink > Bubble Tea"/>
 
             <ImageButton android:id="@+id/btnClose"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:background="@drawable/transparent_button"
-                android:src="@drawable/ic_delete"/>
+                style="@style/dialogClose"/>
 
     </LinearLayout>
 
@@ -34,6 +33,7 @@
         android:numColumns="auto_fit"
         android:columnWidth="150dp"
         android:layout_marginTop="3dp"
-        android:stretchMode="spacingWidthUniform"></GridView>
+        android:stretchMode="spacingWidthUniform"
+        tools:listitem="@layout/list_item_image"/>
 
 </LinearLayout>

@@ -41,7 +41,6 @@ public class SplashActivity extends AppCompatActivity {
 
         tvAppName=(TextView)findViewById(R.id.tvAppName);
         tvCompanyName=(TextView)findViewById(R.id.tvCompanyName);
-        tvAppName.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/SCRIPTBL.TTF"));
 
         this.getSupportActionBar().hide();
 

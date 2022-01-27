@@ -5,6 +5,7 @@
     <item android:id="@+id/menuChange"
         android:title="@string/menu_change_table"
         app:showAsAction="always"
-        android:icon="@mipmap/confirm"/>
+        android:icon="@drawable/ic_done_24"
+        android:iconTint="@color/colorWhite"/>
 
 </menu>

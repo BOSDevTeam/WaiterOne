@@ -88,7 +88,7 @@ public class XTestDynamicLayoutActivity extends AppCompatActivity {
         layoutPrint.setOrientation(LinearLayout.VERTICAL);
         layoutPrint.setGravity(Gravity.CENTER);
         layoutPrint.setPadding(0,0,17,0);
-        layoutPrint.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
+        layoutPrint.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         layoutPrint.setLayoutParams(layoutPrintParams);
     }
 
@@ -111,12 +111,12 @@ public class XTestDynamicLayoutActivity extends AppCompatActivity {
         layoutPrint.setOrientation(LinearLayout.VERTICAL);
         layoutPrint.setGravity(Gravity.CENTER);
         layoutPrint.setPadding(0,0,17,0);
-        layoutPrint.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
+        layoutPrint.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         layoutPrint.setLayoutParams(layoutPrintParams);
 
         BOSTextView tvReportName=new BOSTextView(this,null);
         TableRow.LayoutParams tvReportNameParams = new TableRow.LayoutParams( TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
-        tvReportName.setTextColor(getResources().getColor(R.color.colorFirstPri));
+        tvReportName.setTextColor(getResources().getColor(R.color.colorPrimary));
         tvReportName.setPadding(5,5,5,5);
         tvReportName.setTypeface(Typeface.DEFAULT_BOLD);
         tvReportName.setText("End of Day Report");
@@ -126,7 +126,7 @@ public class XTestDynamicLayoutActivity extends AppCompatActivity {
 
         BOSTextView tvShopName=new BOSTextView(this,null);
         TableRow.LayoutParams tvShopNameParams = new TableRow.LayoutParams( TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
-        tvShopName.setTextColor(getResources().getColor(R.color.colorFirstPri));
+        tvShopName.setTextColor(getResources().getColor(R.color.colorPrimary));
         tvShopName.setPadding(5,5,5,5);
         tvShopName.setTypeface(Typeface.DEFAULT_BOLD);
         if(tabletSize==10)tvShopName.setTextSize(getResources().getDimensionPixelSize(R.dimen.print_label_10));
@@ -135,7 +135,7 @@ public class XTestDynamicLayoutActivity extends AppCompatActivity {
 
         BOSTextView tvShopDesc=new BOSTextView(this,null);
         TableRow.LayoutParams tvShopDescParams = new TableRow.LayoutParams( TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
-        tvShopDesc.setTextColor(getResources().getColor(R.color.colorFirstPri));
+        tvShopDesc.setTextColor(getResources().getColor(R.color.colorPrimary));
         tvShopDesc.setPadding(5,5,5,5);
         tvShopDesc.setTypeface(Typeface.DEFAULT_BOLD);
         if(tabletSize==10)tvShopDesc.setTextSize(getResources().getDimensionPixelSize(R.dimen.print_label_10));
@@ -146,7 +146,7 @@ public class XTestDynamicLayoutActivity extends AppCompatActivity {
 
         BOSTextView tvPrintDate=new BOSTextView(this,null);
         TableRow.LayoutParams tvPrintDateParams = new TableRow.LayoutParams( TableRow.LayoutParams.WRAP_CONTENT, TableRow.LayoutParams.WRAP_CONTENT);
-        tvPrintDate.setTextColor(getResources().getColor(R.color.colorFirstPri));
+        tvPrintDate.setTextColor(getResources().getColor(R.color.colorPrimary));
         tvPrintDate.setPadding(5,5,5,5);
         tvPrintDate.setTypeface(Typeface.DEFAULT_BOLD);
         if(tabletSize==10)tvPrintDate.setTextSize(getResources().getDimensionPixelSize(R.dimen.print_label_10));
@@ -162,7 +162,7 @@ public class XTestDynamicLayoutActivity extends AppCompatActivity {
 
         BOSTextView tvHeaderSlipID=new BOSTextView(this,null);
         TableRow.LayoutParams tvHeaderSlipIDParams = new TableRow.LayoutParams( 0, TableRow.LayoutParams.WRAP_CONTENT,0.8f);
-        tvHeaderSlipID.setTextColor(getResources().getColor(R.color.colorFirstPri));
+        tvHeaderSlipID.setTextColor(getResources().getColor(R.color.colorPrimary));
         tvHeaderSlipID.setPadding(5,5,5,5);
         tvHeaderSlipID.setTypeface(Typeface.DEFAULT_BOLD);
         tvHeaderSlipID.setText("Slip");
@@ -172,7 +172,7 @@ public class XTestDynamicLayoutActivity extends AppCompatActivity {
 
         BOSTextView tvHeaderTotalAmt=new BOSTextView(this,null);
         TableRow.LayoutParams tvHeaderTotalAmtParams = new TableRow.LayoutParams( 0, TableRow.LayoutParams.WRAP_CONTENT,1.3f);
-        tvHeaderTotalAmt.setTextColor(getResources().getColor(R.color.colorFirstPri));
+        tvHeaderTotalAmt.setTextColor(getResources().getColor(R.color.colorPrimary));
         tvHeaderTotalAmt.setPadding(5,5,5,5);
         tvHeaderTotalAmt.setTypeface(Typeface.DEFAULT_BOLD);
         tvHeaderTotalAmt.setText("Total");
@@ -183,7 +183,7 @@ public class XTestDynamicLayoutActivity extends AppCompatActivity {
 
         BOSTextView tvHeaderTax=new BOSTextView(this,null);
         TableRow.LayoutParams tvHeaderTaxParams = new TableRow.LayoutParams( 0, TableRow.LayoutParams.WRAP_CONTENT,1.2f);
-        tvHeaderTax.setTextColor(getResources().getColor(R.color.colorFirstPri));
+        tvHeaderTax.setTextColor(getResources().getColor(R.color.colorPrimary));
         tvHeaderTax.setPadding(5,5,5,5);
         tvHeaderTax.setTypeface(Typeface.DEFAULT_BOLD);
         tvHeaderTax.setText("Tax");
@@ -194,7 +194,7 @@ public class XTestDynamicLayoutActivity extends AppCompatActivity {
 
         BOSTextView tvHeaderCharges=new BOSTextView(this,null);
         TableRow.LayoutParams tvHeaderChargesParams = new TableRow.LayoutParams( 0, TableRow.LayoutParams.WRAP_CONTENT,1.2f);
-        tvHeaderCharges.setTextColor(getResources().getColor(R.color.colorFirstPri));
+        tvHeaderCharges.setTextColor(getResources().getColor(R.color.colorPrimary));
         tvHeaderCharges.setPadding(5,5,5,5);
         tvHeaderCharges.setTypeface(Typeface.DEFAULT_BOLD);
         tvHeaderCharges.setText("Charges");
@@ -205,7 +205,7 @@ public class XTestDynamicLayoutActivity extends AppCompatActivity {
 
         BOSTextView tvHeaderDis=new BOSTextView(this,null);
         TableRow.LayoutParams tvHeaderDisParams = new TableRow.LayoutParams( 0, TableRow.LayoutParams.WRAP_CONTENT,1.2f);
-        tvHeaderDis.setTextColor(getResources().getColor(R.color.colorFirstPri));
+        tvHeaderDis.setTextColor(getResources().getColor(R.color.colorPrimary));
         tvHeaderDis.setPadding(5,5,5,5);
         tvHeaderDis.setTypeface(Typeface.DEFAULT_BOLD);
         tvHeaderDis.setText("Dis");
@@ -216,7 +216,7 @@ public class XTestDynamicLayoutActivity extends AppCompatActivity {
 
         BOSTextView tvHeaderNetAmt=new BOSTextView(this,null);
         TableRow.LayoutParams tvHeaderNetAmtParams = new TableRow.LayoutParams( 0, TableRow.LayoutParams.WRAP_CONTENT,1.3f);
-        tvHeaderNetAmt.setTextColor(getResources().getColor(R.color.colorFirstPri));
+        tvHeaderNetAmt.setTextColor(getResources().getColor(R.color.colorPrimary));
         tvHeaderNetAmt.setPadding(5,5,5,5);
         tvHeaderNetAmt.setTypeface(Typeface.DEFAULT_BOLD);
         tvHeaderNetAmt.setText("Net Amt");
@@ -227,7 +227,7 @@ public class XTestDynamicLayoutActivity extends AppCompatActivity {
 
         LinearLayout layoutHeaderBar = new LinearLayout(this);
         LinearLayout.LayoutParams layoutHeaderBarParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 1);
-        layoutHeaderBar.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
+        layoutHeaderBar.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         layoutHeaderBar.setLayoutParams(layoutHeaderBarParams);
 
         LinearLayout layoutPrintList = new LinearLayout(this);
@@ -237,7 +237,7 @@ public class XTestDynamicLayoutActivity extends AppCompatActivity {
 
         LinearLayout layoutFooterBar = new LinearLayout(this);
         LinearLayout.LayoutParams layoutFooterBarParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 1);
-        layoutFooterBar.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
+        layoutFooterBar.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
         layoutFooterBar.setLayoutParams(layoutFooterBarParams);
 
         layoutFooter=new LinearLayout(this);
@@ -251,7 +251,7 @@ public class XTestDynamicLayoutActivity extends AppCompatActivity {
 
         BOSTextView tvTotalAmt=new BOSTextView(this,null);
         TableRow.LayoutParams tvTotalAmtParams = new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1.3f);
-        tvTotalAmt.setTextColor(getResources().getColor(R.color.colorFirstPri));
+        tvTotalAmt.setTextColor(getResources().getColor(R.color.colorPrimary));
         tvTotalAmt.setPadding(5,5,5,5);
         tvTotalAmt.setGravity(Gravity.RIGHT);
         tvTotalAmt.setTypeface(Typeface.DEFAULT_BOLD);
@@ -261,7 +261,7 @@ public class XTestDynamicLayoutActivity extends AppCompatActivity {
 
         BOSTextView tvTax=new BOSTextView(this,null);
         TableRow.LayoutParams tvTaxParams = new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1.2f);
-        tvTax.setTextColor(getResources().getColor(R.color.colorFirstPri));
+        tvTax.setTextColor(getResources().getColor(R.color.colorPrimary));
         tvTax.setPadding(5,5,5,5);
         tvTax.setGravity(Gravity.RIGHT);
         tvTax.setTypeface(Typeface.DEFAULT_BOLD);
@@ -271,7 +271,7 @@ public class XTestDynamicLayoutActivity extends AppCompatActivity {
 
         BOSTextView tvCharges=new BOSTextView(this,null);
         TableRow.LayoutParams tvChargesParams = new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1.2f);
-        tvCharges.setTextColor(getResources().getColor(R.color.colorFirstPri));
+        tvCharges.setTextColor(getResources().getColor(R.color.colorPrimary));
         tvCharges.setPadding(5,5,5,5);
         tvCharges.setGravity(Gravity.RIGHT);
         tvCharges.setTypeface(Typeface.DEFAULT_BOLD);
@@ -281,7 +281,7 @@ public class XTestDynamicLayoutActivity extends AppCompatActivity {
 
         BOSTextView tvDis=new BOSTextView(this,null);
         TableRow.LayoutParams tvDisParams = new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1.2f);
-        tvDis.setTextColor(getResources().getColor(R.color.colorFirstPri));
+        tvDis.setTextColor(getResources().getColor(R.color.colorPrimary));
         tvDis.setPadding(5,5,5,5);
         tvDis.setGravity(Gravity.RIGHT);
         tvDis.setTypeface(Typeface.DEFAULT_BOLD);
@@ -291,7 +291,7 @@ public class XTestDynamicLayoutActivity extends AppCompatActivity {
 
         BOSTextView tvNetAmt=new BOSTextView(this,null);
         TableRow.LayoutParams tvNetAmtParams = new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 1.3f);
-        tvNetAmt.setTextColor(getResources().getColor(R.color.colorFirstPri));
+        tvNetAmt.setTextColor(getResources().getColor(R.color.colorPrimary));
         tvNetAmt.setPadding(5,5,5,5);
         tvNetAmt.setGravity(Gravity.RIGHT);
         tvNetAmt.setTypeface(Typeface.DEFAULT_BOLD);

@@ -9,7 +9,9 @@
     <LinearLayout android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginLeft="10dp">
+        android:layout_marginLeft="10dp"
+        android:paddingTop="5dp"
+        android:gravity="center|left">
 
         <ImageView android:id="@+id/ivItemImage"
             android:layout_width="25dp"
@@ -18,33 +20,35 @@
             android:layout_marginRight="5dp"
             tools:visibility="visible"
             tools:src="@drawable/ic_add_photo"
-            tools:tint="@color/colorFirstPri"/>
+            tools:tint="@color/colorPrimary"/>
 
         <customfont.BOSTextView android:id="@+id/tvItemName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/label_text_size_large"
+            android:textSize="@dimen/large_text_size"
             android:typeface="monospace"
-            android:textColor="@color/colorPrimary"
+            android:textColor="@color/colorBlackLight"
             android:textStyle="bold"
-            tools:text="Item Name"/>
+            tools:text="Item Name"
+            android:background="@color/colorSuccess"
+            android:padding="5dp"/>
 
         <customfont.BOSTextView android:id="@+id/tvItemSub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/label_text_size_small"
-            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/small_text_size"
+            android:textColor="@color/colorBlackLight"
             android:layout_marginLeft="5dp"
             android:textStyle="bold"
             tools:text="Item Sub"
-            android:background="@drawable/blue_button"
+            android:background="@color/colorGray2"
             android:padding="5dp"/>
 
         <customfont.BOSTextView android:id="@+id/tvTaste"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/label_text_size_small"
-            android:textColor="@color/colorFirstPri"
+            android:textSize="@dimen/small_text_size"
+            android:textColor="@color/colorAccent"
             android:layout_marginLeft="5dp"
             android:textStyle="bold"
             tools:text="Taste"/>
@@ -54,24 +58,26 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingLeft="10dp">
 
-    <Button android:id="@+id/btnPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimary"
-        android:text="0"
-        android:textSize="@dimen/button_text_size_small"/>
-
-        <customfont.BOSTextView android:id="@+id/tvTime"
+        <Button android:id="@+id/btnPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/label_text_size_small"
-            android:textColor="@color/colorFirstPri"
+            android:textColor="@color/colorPrimary"
+            android:text="0"
+            android:textSize="@dimen/small_text_size" />
+
+        <TextView android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/small_text_size"
+            android:textColor="@color/colorBlackLight"
             android:layout_marginLeft="10dp"
             android:textStyle="bold"
-            android:text="10:00 AM"
-            android:visibility="gone"/>
+            android:visibility="gone"
+            tools:text="10:00 am"
+            tools:visibility="visible" />
 
     </LinearLayout>
 
@@ -87,52 +93,36 @@
             android:gravity="center|left">
 
             <ImageButton android:id="@+id/imgbtnMinus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/minus"
-                android:background="@drawable/transparent_button"/>
+                style="@style/imageButtonRemove" />
 
-            <customfont.ArialEditText android:id="@+id/etQuantity"
+            <EditText android:id="@+id/etQuantity"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/textbox_text_size"
+                android:textSize="@dimen/regular_text_size"
                 android:text="@string/qty_default_text"
-                android:textColor="@color/colorFirstPri"
+                android:textColor="@color/colorPrimary"
                 android:gravity="center"
                 android:focusable="false"
                 android:textStyle="bold"
                 android:inputType="number"/>
 
             <ImageButton android:id="@+id/imgbtnPlus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/add"
-                android:background="@drawable/transparent_button"/>
+                style="@style/imageButtonAdd"/>
 
             <ImageButton android:id="@+id/imgbtnCalculator"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:background="@drawable/transparent_button"
-                android:src="@mipmap/calculator"/>
+                style="@style/imageButtonNumber"
+                android:layout_marginLeft="50dp"/>
 
             <ImageButton android:id="@+id/imgbtnTaste"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:background="@drawable/transparent_button"
-                android:src="@mipmap/taste"/>
+                style="@style/imageButtonTaste"
+                android:layout_marginLeft="50dp" />
         </LinearLayout>
 
         <ImageButton android:id="@+id/imgbtnCancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/delete"
-            android:background="@drawable/transparent_button"
+            style="@style/styleSetupListImageDeleteButton"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_gravity="center"/>
-
 
     </LinearLayout>
 

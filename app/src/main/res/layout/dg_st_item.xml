@@ -32,7 +32,7 @@
         android:inputType="text"
         android:imeOptions="actionNext"/>
 
-    <customfont.ArialEditText  android:id="@+id/etPrice"
+    <EditText  android:id="@+id/etPrice"
         style="@style/styleSetupDialogEditText"
         android:hint="Price"
         android:inputType="numberDecimal"
@@ -54,7 +54,7 @@
         <ImageView android:id="@+id/ivItemImage"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:background="@color/colorGray"/>
+            android:background="@color/colorGray1"/>
 
             <ImageButton android:id="@+id/btnImageDelete"
                 android:layout_width="wrap_content"
@@ -74,36 +74,32 @@
 
     </LinearLayout>
 
-    <customfont.ArialCheckBox android:id="@+id/chkOutOfOrder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <CheckBox android:id="@+id/chkOutOfOrder"
+        style="@style/checkBox"
         android:layout_marginTop="10dp"
-        android:text="Out of Order"
-        android:textSize="@dimen/label_text_size_large"
-        android:textColor="@color/colorPrimary"
-        android:background="@color/colorWhite"/>
+        android:text="Out of Order" />
 
     <Button android:id="@+id/btnAddItemSub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/add_item_sub"
-        android:textSize="@dimen/button_text_size_small"
-        android:background="@drawable/accent_button"
+        android:textSize="@dimen/small_text_size"
+        android:background="@drawable/bg_gray_5r"
         android:textColor="@color/colorPrimary"
         android:textAllCaps="false"
         android:padding="10dp"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/ic_add_24"
+        android:drawablePadding="5dp"
+        android:drawableTint="@color/colorPrimary"/>
 
-    <LinearLayout android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+    <LinearLayout style="@style/dialogBottom">
 
-        <customfont.ArialButton android:id="@+id/btnSave"
-            style="@style/styleSetupDialogSaveButton"/>
-
-        <customfont.ArialButton android:id="@+id/btnClose"
+        <Button android:id="@+id/btnClose"
             style="@style/styleSetupDialogCloseButton"/>
+
+        <Button android:id="@+id/btnSave"
+            style="@style/styleSetupDialogSaveButton"/>
 
     </LinearLayout>
 </LinearLayout>

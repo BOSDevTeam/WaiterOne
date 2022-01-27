@@ -129,16 +129,12 @@ public class MainActivity extends AppCompatActivity implements PrinterChoiceList
         Button btnConnect=(Button)vi.findViewById(R.id.btnConnect);
 
         tvPrinterMessage.setText(printer_message);
-        if(printer_message.equals("PRINTER ONLINE!")){
-            tvPrinterMessage.setTextColor(Color.GREEN);
-            tvPrinterMessage.setCompoundDrawablesWithIntrinsicBounds( R.mipmap.happy, 0, 0, 0);
-            tvPrinterMessage.setCompoundDrawablePadding(10);
+        if(printer_message.equals("Printer Online!")){
+            tvPrinterMessage.setTextColor(getResources().getColor(R.color.colorSuccess));
             btnConnect.setVisibility(View.INVISIBLE);
         }
         else {
-            tvPrinterMessage.setTextColor(Color.RED);
-            tvPrinterMessage.setCompoundDrawablesWithIntrinsicBounds( R.mipmap.sad, 0, 0, 0);
-            tvPrinterMessage.setCompoundDrawablePadding(10);
+            tvPrinterMessage.setTextColor(getResources().getColor(R.color.colorGray2));
             btnConnect.setVisibility(View.VISIBLE);
         }
         Cursor cur_shop_name=db.getShopName();
@@ -188,13 +184,13 @@ public class MainActivity extends AppCompatActivity implements PrinterChoiceList
         layoutOpenOrder=(LinearLayout)findViewById(R.id.layoutOpenOrder);
 
         layoutSale.setEnabled(false);
-        layoutSale.setBackgroundColor(getResources().getColor(R.color.colorGray));
+        layoutSale.setBackgroundColor(getResources().getColor(R.color.colorGray1));
         layoutReport.setEnabled(false);
-        layoutReport.setBackgroundColor(getResources().getColor(R.color.colorGray));
+        layoutReport.setBackgroundColor(getResources().getColor(R.color.colorGray1));
         layoutSystem.setEnabled(false);
-        layoutSystem.setBackgroundColor(getResources().getColor(R.color.colorGray));
+        layoutSystem.setBackgroundColor(getResources().getColor(R.color.colorGray1));
         layoutOpenOrder.setEnabled(false);
-        layoutOpenOrder.setBackgroundColor(getResources().getColor(R.color.colorGray));
+        layoutOpenOrder.setBackgroundColor(getResources().getColor(R.color.colorGray1));
     }
 
     private void authorizedModule(){
@@ -203,22 +199,19 @@ public class MainActivity extends AppCompatActivity implements PrinterChoiceList
             String name=cur.getString(1);
             if(name.equals("SALE")) {
                 layoutSale.setEnabled(true);
-                layoutSale.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
+                layoutSale.setBackground(getResources().getDrawable(R.drawable.bg_gray_5r));
             }
             else if(name.equals("OPEN ORDER")){
                 layoutOpenOrder.setEnabled(true);
-                layoutOpenOrder.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
-
+                layoutOpenOrder.setBackground(getResources().getDrawable(R.drawable.bg_gray_5r));
             }
             else if(name.equals("REPORT")){
                 layoutReport.setEnabled(true);
-                layoutReport.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
-
+                layoutReport.setBackground(getResources().getDrawable(R.drawable.bg_gray_5r));
             }
             else if(name.equals("SYSTEM")){
                 layoutSystem.setEnabled(true);
-                layoutSystem.setBackgroundColor(getResources().getColor(R.color.colorFirstPri));
-
+                layoutSystem.setBackground(getResources().getDrawable(R.drawable.bg_gray_5r));
             }
         }
     }

@@ -12,21 +12,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:background="@color/colorFirstPri">
+            android:background="@color/colorPrimary">
 
-            <customfont.ArialTextView android:id="@+id/tvFromDate"
+            <TextView android:id="@+id/tvFromDate"
                 style="@style/styleReportDateText"
                 android:text="From Date" />
 
-            <customfont.ArialTextView android:id="@+id/tvToDate"
+            <TextView android:id="@+id/tvToDate"
                 style="@style/styleReportDateText"
                 android:text="To Date" />
 
-            <customfont.ArialTextView android:id="@+id/tvToday"
+            <TextView android:id="@+id/tvToday"
                 style="@style/styleReportTodayLabel"
                 android:text="(Today)"
                 android:visibility="gone">
-            </customfont.ArialTextView>
+            </TextView>
 
         </LinearLayout>
 
@@ -34,14 +34,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:background="@color/colorReportListHeader">
+            android:background="@color/colorPrimary">
 
-            <customfont.ArialTextView android:id="@+id/tvLabelDescription"
+            <TextView android:id="@+id/tvLabelDescription"
                 style="@style/styleReportSaleAmountHeader"
                 android:text="Description"
                 android:layout_gravity="left"/>
 
-            <customfont.ArialTextView android:id="@+id/tvLabelData"
+            <TextView android:id="@+id/tvLabelData"
                 style="@style/styleReportSaleAmountHeader"
                 android:text="Data"
                 android:layout_gravity="right"/>
@@ -58,27 +58,27 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <customfont.ArialTextView android:id="@+id/tvLabelSubTotal"
+                <TextView android:id="@+id/tvLabelSubTotal"
                     style="@style/styleReportSaleAmountList"
                     android:text="Subtotal"
                     android:background="@color/colorWhite"/>
 
-                <customfont.ArialTextView android:id="@+id/tvLabelGrandTotal"
+                <TextView android:id="@+id/tvLabelGrandTotal"
                     style="@style/styleReportSaleAmountList"
                     android:text="Grand Total"
-                    android:background="@color/colorGray"/>
+                    android:background="@color/colorGray1"/>
 
-                <customfont.ArialTextView android:id="@+id/tvLabelTax"
+                <TextView android:id="@+id/tvLabelTax"
                     style="@style/styleReportSaleAmountList"
                     android:text="Tax"
                     android:background="@color/colorWhite"/>
 
-                <customfont.ArialTextView android:id="@+id/tvLabelCharges"
+                <TextView android:id="@+id/tvLabelCharges"
                     style="@style/styleReportSaleAmountList"
                     android:text="Charges"
-                    android:background="@color/colorGray"/>
+                    android:background="@color/colorGray1"/>
 
-                <customfont.ArialTextView android:id="@+id/tvLabelDiscount"
+                <TextView android:id="@+id/tvLabelDiscount"
                     style="@style/styleReportSaleAmountList"
                     android:text="Discount"
                     android:background="@color/colorWhite"/>
@@ -91,23 +91,23 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <customfont.ArialTextView android:id="@+id/tvSubTotal"
+                <TextView android:id="@+id/tvSubTotal"
                     style="@style/styleReportSaleAmountList"
                     android:background="@color/colorWhite"/>
 
-                <customfont.ArialTextView android:id="@+id/tvGrandTotal"
+                <TextView android:id="@+id/tvGrandTotal"
                     style="@style/styleReportSaleAmountList"
-                    android:background="@color/colorGray"/>
+                    android:background="@color/colorGray1"/>
 
-                <customfont.ArialTextView android:id="@+id/tvTax"
+                <TextView android:id="@+id/tvTax"
                     style="@style/styleReportSaleAmountList"
                     android:background="@color/colorWhite"/>
 
-                <customfont.ArialTextView android:id="@+id/tvCharges"
+                <TextView android:id="@+id/tvCharges"
                     style="@style/styleReportSaleAmountList"
-                    android:background="@color/colorGray"/>
+                    android:background="@color/colorGray1"/>
 
-                <customfont.ArialTextView android:id="@+id/tvDiscount"
+                <TextView android:id="@+id/tvDiscount"
                     style="@style/styleReportSaleAmountList"
                     android:background="@color/colorWhite"/>
 

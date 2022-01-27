@@ -12,7 +12,7 @@
         android:id="@+id/tvItemName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/label_text_size_small"
+        android:textSize="@dimen/regular_text_size"
         android:textStyle="bold"
         android:textColor="@color/colorPrimary"
         android:padding="10dp">

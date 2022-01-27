@@ -505,16 +505,12 @@ public class SaleActivity extends AppCompatActivity implements DialogTasteClickL
         Button btnExit=(Button)vi.findViewById(R.id.btnExit);
 
         tvPrinterMessage.setText(printer_message);
-        if(printer_message.equals("PRINTER ONLINE!")){
-            tvPrinterMessage.setTextColor(getResources().getColor(R.color.colorFirstPri));
-            //tvPrinterMessage.setCompoundDrawablesWithIntrinsicBounds( R.mipmap.happy, 0, 0, 0);
-           // tvPrinterMessage.setCompoundDrawablePadding(10);
+        if(printer_message.equals("Printer Online!")){
+            tvPrinterMessage.setTextColor(getResources().getColor(R.color.colorSuccess));
             btnConnect.setVisibility(View.INVISIBLE);
         }
-        else if(printer_message.equals("PRINTER OFFLINE!")) {
-            tvPrinterMessage.setTextColor(getResources().getColor(R.color.colorSecondPri));
-            tvPrinterMessage.setCompoundDrawablesWithIntrinsicBounds( R.mipmap.sad, 0, 0, 0);
-            tvPrinterMessage.setCompoundDrawablePadding(10);
+        else if(printer_message.equals("Printer Offline!")) {
+            tvPrinterMessage.setTextColor(getResources().getColor(R.color.colorGray2));
             btnConnect.setVisibility(View.VISIBLE);
         }
         Cursor cur_shop_name=db.getShopName();
@@ -678,14 +674,14 @@ public class SaleActivity extends AppCompatActivity implements DialogTasteClickL
                 hThread.start();
                 if(dialog.isShowing())
                     dialog.dismiss();
-                printer_message="PRINTER ONLINE!";
+                printer_message="Printer Online!";
                 setTitle("");
             }
             else
             {
                 if(dialog.isShowing())
                     dialog.dismiss();
-                printer_message="PRINTER OFFLINE!";
+                printer_message="Printer Offline!";
                 setTitle("");
                 AlertView.showAlert("Failed", "Check Devices!"+ioException, context);
             }

@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:text="AM"
         android:padding="10dp"
-        android:textSize="@dimen/main_text_size"
+        android:textSize="@dimen/larger_text_size"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold" />
 

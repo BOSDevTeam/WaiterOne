@@ -2,35 +2,41 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:background="@color/colorGray"
+    android:background="@color/colorGray1"
     android:paddingTop="5dp"
-    android:paddingBottom="5dp">
+    android:paddingBottom="5dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center">
+
     <ImageButton android:id="@+id/btnItemDelete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/delete"
-        android:background="@drawable/transparent_button" />
+        style="@style/styleSetupListImageDeleteButton" />
+
     <customfont.BOSTextView android:id="@+id/tvItemDescription"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/list_item_text_size"
-        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/regular_text_size"
+        android:textColor="@color/colorBlackLight"
         android:textStyle="bold"
-        android:layout_marginLeft="30dp"/>
+        android:layout_marginLeft="30dp"
+        tools:text="item"/>
+
     <customfont.BOSTextView android:id="@+id/tvItemQuantity"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/list_item_text_size"
-        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/regular_text_size"
+        android:textColor="@color/colorBlackLight"
         android:gravity="right"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:text="1"/>
+
     <customfont.BOSTextView android:id="@+id/tvItemAmount"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/list_item_text_size"
-        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/regular_text_size"
+        android:textColor="@color/colorBlackLight"
         android:gravity="right"
         android:textStyle="bold"
-        />
+        tools:text="2000"/>
+
 </LinearLayout>

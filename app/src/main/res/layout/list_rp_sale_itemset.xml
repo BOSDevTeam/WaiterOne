@@ -9,7 +9,7 @@
         android:layout_width="0dp"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
-        android:textSize="@dimen/list_item_text_size"
+        android:textSize="@dimen/regular_text_size"
         android:padding="10dp" />
     <customfont.BOSTextView android:id="@+id/tvListPairedEatenTime"
         android:layout_weight="1"
@@ -17,7 +17,7 @@
         android:layout_width="0dp"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
-        android:textSize="@dimen/list_item_text_size"
+        android:textSize="@dimen/regular_text_size"
         android:padding="10dp" />
 
 </LinearLayout>

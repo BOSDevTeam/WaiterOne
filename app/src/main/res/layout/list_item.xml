@@ -3,25 +3,29 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingLeft="5dp">
+    android:paddingLeft="5dp"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <customfont.BOSTextView
         android:id="@+id/tvListItemName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/label_text_size_large"
+        android:textSize="@dimen/large_text_size"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
         android:textColor="@color/colorWhite"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        tools:text="Item1"/>
 
     <customfont.BOSTextView
         android:id="@+id/tvListItemPrice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/label_text_size_small"
-        android:textColor="@color/colorPrimary"
-        android:textStyle="bold"/>
+        android:textSize="@dimen/regular_text_size"
+        android:textColor="@color/colorWarning"
+        android:textStyle="bold"
+        tools:text="1400"/>
+
 </LinearLayout>
 
 

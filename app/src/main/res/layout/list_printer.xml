@@ -5,25 +5,26 @@
     android:orientation="vertical"
     android:paddingLeft="5dp">
 
-    <customfont.ArialTextView
+    <TextView
         android:id="@+id/tvPrinterName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/label_text_size_large"
+        android:textSize="@dimen/large_text_size"
         android:padding="10dp"
-        android:textColor="@color/colorFirstPri"
+        android:textColor="@color/colorPrimary"
         android:textStyle="bold"/>
 
-    <customfont.ArialTextView
+    <TextView
         android:id="@+id/tvModel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/label_text_size_small"
+        android:textSize="@dimen/regular_text_size"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
         android:paddingLeft="10dp"
         android:textColor="#666666"
         android:textStyle="bold"/>
+
 </LinearLayout>
 
 

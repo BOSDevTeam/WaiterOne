@@ -3,11 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.bosictsolution.waiterone.MainActivity"
+    tools:context="com.bosictsolution.waiterone.SystemActivity"
     android:orientation="vertical"
-    android:paddingTop="30dp"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp">
+    android:paddingTop="20dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,68 +13,59 @@
         android:orientation="horizontal"
         android:padding="10dp">
 
-    <customfont.ArialButton android:id="@+id/btnDataSetup"
-        android:text="Data Setup"
+    <Button android:id="@+id/btnDataSetup"
+        android:text="@string/data_setup"
         android:drawableTop="@drawable/ic_data_setting"
-        style="@style/styleRectButton"/>
+        style="@style/styleSystemButton"/>
 
-    <customfont.ArialButton android:id="@+id/btnCSVImportExport"
-        android:text="CSV Import/Export"
-        android:layout_marginLeft="10dp"
+    <Button android:id="@+id/btnCSVImportExport"
+        android:text="@string/csv_import_export"
         android:drawableTop="@drawable/ic_import_export"
-        style="@style/styleRectButton"/>
+        style="@style/styleSystemButton"/>
 
-    <customfont.ArialButton android:id="@+id/btnServerImport"
-        android:text="Server Import"
-        android:layout_marginLeft="10dp"
+    <Button android:id="@+id/btnServerImport"
+        android:text="@string/server_import"
         android:drawableTop="@drawable/ic_file_download"
-        style="@style/styleRectButton"/>
+        style="@style/styleSystemButton"/>
 
-    <customfont.ArialButton android:id="@+id/btnDeleteTran"
-        android:text="Delete Transaction"
-        android:layout_marginLeft="10dp"
+    <Button android:id="@+id/btnDeleteTran"
+        android:text="@string/delete_transaction"
         android:drawableTop="@drawable/ic_delete_sweep"
-        style="@style/styleRectButton"/>
+        style="@style/styleSystemButton"/>
 
-        </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp"
-        android:visibility="visible">
+        android:padding="10dp">
 
-        <customfont.ArialButton android:id="@+id/btnResetSlipId"
-            android:text="Reset SlipID"
+        <Button android:id="@+id/btnResetSlipId"
+            android:text="@string/reset_slipid"
             android:drawableTop="@drawable/ic_refresh"
-            style="@style/styleRectButton"/>
+            style="@style/styleSystemButton"/>
 
-        <customfont.ArialButton android:id="@+id/btnBackupData"
-            android:text="Backup Data"
+        <Button android:id="@+id/btnBackupData"
+            android:text="@string/backup_data"
             android:drawableTop="@drawable/ic_backup"
-            style="@style/styleRectButton"
-            android:visibility="visible"
-            android:layout_marginLeft="10dp"/>
+            style="@style/styleSystemButton"/>
 
-        <customfont.ArialButton android:id="@+id/btnDeleteVoucher"
-            android:text="Delete Voucher"
-            android:layout_marginLeft="10dp"
+        <Button android:id="@+id/btnDeleteVoucher"
+            android:text="@string/delete_voucher"
             android:drawableTop="@drawable/ic_delete_forever"
-            style="@style/styleRectButton"/>
+            style="@style/styleSystemButton"/>
 
-        <customfont.ArialButton android:id="@+id/btnDelExtraTran"
-            android:text="Delete Extra"
-            android:layout_marginLeft="10dp"
+        <Button android:id="@+id/btnDelExtraTran"
+            android:text="@string/delete_extra"
             android:drawableTop="@drawable/ic_delete_forever"
-            style="@style/styleRectButton"/>
+            style="@style/styleSystemButton"/>
 
-        <customfont.ArialButton android:id="@+id/btnCustomBackupData"
-            android:text="Backup Data (Custom Path)"
+        <Button android:id="@+id/btnCustomBackupData"
+            android:text="@string/backup_data_custom_path"
             android:drawableTop="@drawable/ic_backup"
-            style="@style/styleRectButton"
-            android:visibility="gone"
-            android:layout_marginLeft="10dp"/>
+            style="@style/styleSystemButton"
+            android:visibility="gone" />
 
     </LinearLayout>
 

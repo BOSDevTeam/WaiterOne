@@ -3,7 +3,7 @@
     android:id="@+id/tvListRowItem"
     android:layout_width="match_parent"
     android:layout_height="50dp"
-    android:textSize="@dimen/label_text_size_large"
+    android:textSize="@dimen/large_text_size"
     android:textColor="@color/colorWhite"
     android:gravity="left|center_vertical"
     android:paddingLeft="10dip"

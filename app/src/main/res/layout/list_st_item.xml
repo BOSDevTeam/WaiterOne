@@ -11,13 +11,13 @@
         style="@style/styleSetupListTextView"/>
 
     <customfont.BOSTextView android:id="@+id/tvItemName"
-        style="@style/styleSetupListTextView2"/>
+        style="@style/styleSetupListTextView"/>
 
     <customfont.BOSTextView android:id="@+id/tvSubMenuName"
         style="@style/styleSetupListTextView"/>
 
     <customfont.BOSTextView android:id="@+id/tvPrice"
-        style="@style/styleSetupListTextView2"/>
+        style="@style/styleSetupListTextView"/>
 
     <customfont.BOSTextView android:id="@+id/tvOutOfOrder"
         style="@style/styleSetupListTextView"/>

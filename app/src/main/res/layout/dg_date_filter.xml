@@ -5,11 +5,11 @@
     android:padding="10dp"
     android:background="@color/colorWhite">
 
-    <customfont.ArialTextView
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/label_text_size_small"
+        android:textSize="@dimen/regular_text_size"
         android:padding="10dp"
         android:text="Filter Date"/>
 
@@ -25,21 +25,21 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <customfont.ArialTextView
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/label_text_size_small"
+                android:textSize="@dimen/regular_text_size"
                 android:padding="10dp"
                 android:text="From:"/>
 
-            <customfont.ArialButton android:id="@+id/btnFromDate"
+            <Button android:id="@+id/btnFromDate"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:text="From Date"
                 android:background="@drawable/gray_button"
-                android:textColor="@color/colorFirstPri"
-                android:textSize="@dimen/button_text_size_large"/>
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/regular_text_size"/>
 
         </LinearLayout>
 
@@ -49,53 +49,52 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <customfont.ArialTextView
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/label_text_size_small"
+                android:textSize="@dimen/regular_text_size"
                 android:padding="10dp"
                 android:text="To:"/>
 
-            <customfont.ArialButton android:id="@+id/btnToDate"
+            <Button android:id="@+id/btnToDate"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:text="To Date"
                 android:background="@drawable/gray_button"
-                android:textColor="@color/colorFirstPri"
-                android:textSize="@dimen/button_text_size_large"/>
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/regular_text_size"/>
 
         </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="right">
+    <RelativeLayout style="@style/dialogBottom">
 
-        <customfont.ArialButton android:id="@+id/btnExportAll"
+        <Button android:id="@+id/btnExportAll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorFirstPri"
-            android:textSize="@dimen/button_text_size_large"
-            android:text="Export (All)"
-            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/regular_text_size"
+            android:text="Export All"
             android:padding="10dp"
             android:textStyle="bold"
-            android:background="@drawable/transparent_button"/>
+            android:background="@drawable/transparent_button"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
 
-        <customfont.ArialButton android:id="@+id/btnExport"
+        <Button android:id="@+id/btnExport"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorFirstPri"
-            android:textSize="@dimen/button_text_size_large"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/regular_text_size"
             android:text="Export"
             android:layout_marginLeft="10dp"
             style="?android:attr/buttonBarButtonStyle"
             android:padding="10dp"
             android:textStyle="bold"
-            android:background="@drawable/transparent_button"/>
-    </LinearLayout>
+            android:background="@drawable/transparent_button"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
 </LinearLayout>

@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:padding="10dp"
     android:orientation="horizontal">
 
@@ -10,19 +11,11 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <ImageButton android:id="@+id/btnCancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/transparent_button"
-            android:src="@mipmap/delete"/>
-
         <ImageButton android:id="@+id/btnEdit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/edit"
-            android:background="@drawable/transparent_button"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"/>
+            style="@style/styleSetupListImageEditButton"/>
+
+        <ImageButton android:id="@+id/btnCancel"
+            style="@style/styleSetupListImageDeleteButton"/>
 
     </LinearLayout>
 
@@ -36,10 +29,10 @@
             style="@style/styleBookingListText" />
 
         <customfont.BOSTextView android:id="@+id/tvGuestName"
-            style="@style/styleBookingListText"/>
+            style="@style/styleBookingListText" />
 
         <customfont.BOSTextView android:id="@+id/tvBookingDate"
-            style="@style/styleBookingListText"/>
+            style="@style/styleBookingListText" />
 
         <customfont.BOSTextView android:id="@+id/tvBookingTime"
             style="@style/styleBookingListText"/>

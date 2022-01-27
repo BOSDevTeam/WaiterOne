@@ -12,63 +12,63 @@
         android:orientation="horizontal"
         android:padding="10dp">
 
-        <customfont.ArialTextView android:id="@+id/tvLabelFromDate"
+        <TextView android:id="@+id/tvLabelFromDate"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:text="From Date"
             android:gravity="center"
-            android:textSize="@dimen/label_text_size_large"
-            android:textColor="@color/colorFirstPri"
+            android:textSize="@dimen/large_text_size"
+            android:textColor="@color/colorPrimary"
             android:textStyle="bold"/>
 
-        <customfont.ArialButton android:id="@+id/btnFromDate"
+        <Button android:id="@+id/btnFromDate"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:text="From Date"
-            android:background="@drawable/blue_button"
+            android:background="@drawable/primary_button"
             android:textColor="@color/colorWhite"
-            android:textSize="@dimen/button_text_size_large"
+            android:textSize="@dimen/regular_text_size"
             android:visibility="gone"/>
 
-        <customfont.ArialButton android:id="@+id/btnFromDate2"
+        <Button android:id="@+id/btnFromDate2"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:text="From Date"
-            android:background="@drawable/blue_button"
+            android:background="@drawable/primary_button"
             android:textColor="@color/colorWhite"
-            android:textSize="@dimen/button_text_size_large"/>
+            android:textSize="@dimen/regular_text_size"/>
 
-        <customfont.ArialTextView android:id="@+id/tvLabelToDate"
+        <TextView android:id="@+id/tvLabelToDate"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:text="To Date"
             android:gravity="center"
-            android:textSize="@dimen/label_text_size_large"
-            android:textColor="@color/colorFirstPri"
+            android:textSize="@dimen/large_text_size"
+            android:textColor="@color/colorPrimary"
             android:textStyle="bold"/>
 
-        <customfont.ArialButton android:id="@+id/btnToDate"
+        <Button android:id="@+id/btnToDate"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:text="To Date"
-            android:background="@drawable/blue_button"
+            android:background="@drawable/primary_button"
             android:textColor="@color/colorWhite"
-            android:textSize="@dimen/button_text_size_large"
+            android:textSize="@dimen/regular_text_size"
             android:visibility="gone"/>
 
-        <customfont.ArialButton android:id="@+id/btnToDate2"
+        <Button android:id="@+id/btnToDate2"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:text="To Date"
-            android:background="@drawable/blue_button"
+            android:background="@drawable/primary_button"
             android:textColor="@color/colorWhite"
-            android:textSize="@dimen/button_text_size_large" />
+            android:textSize="@dimen/regular_text_size" />
 
 
     </LinearLayout>

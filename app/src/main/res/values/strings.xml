@@ -1,23 +1,17 @@
 <resources>
     <string name="app_name">Waiter One</string>
-
-    <!-- login -->
-    <string name="btnLogin">Log In</string>
+    <string name="login">Log In</string>
     <string name="password_hiht">* * * * *</string>
     <string name="waiter_login">User Login</string>
-    <string name="btnExit">Exit</string>
+    <string name="exit">Exit</string>
     <string name="btnUpdateData">Data Update</string>
-    <string name="copyright">© 2018 Waiter One. [Ver.2.0]</string>
-
-    <!-- main -->
+    <string name="copyright">© 2022 Waiter One.  Version 2.0.1</string>
     <string name="no_items">No Items!</string>
     <string name="label_table">TABLE - </string>
     <string name="button_sendorder">Send Order</string>
     <string name="button_choosetable">Choose Table</string>
     <string name="hint_submenu">Items</string>
     <string name="qty_default_text">1</string>
-
-    <!-- dialog -->
     <string name="ip_address">IP Address</string>
     <string name="user">User</string>
     <string name="password">Password</string>
@@ -34,8 +28,6 @@
     <string name="chk_all">All</string>
     <string name="chk_systemsetting">System Setting</string>
     <string name="chk_featuresetting">Feature Setting</string>
-
-    <!-- view order -->
     <string name="item">Item</string>
     <string name="quantity">Quantity</string>
     <string name="amount">Amount</string>
@@ -44,15 +36,9 @@
     <string name="service_charges">Service</string>
     <string name="grand_total">Grand Total</string>
     <string name="sub_total">Sub Total</string>
-
-    <!-- table -->
     <string name="lbl_using_tables">Occupied Table</string>
     <string name="lbl_free_tables">Empty Table</string>
-
-    <!-- customer entry -->
     <string name="button_edit_customerinfo">Edit Data</string>
-
-    <!-- menu -->
     <string name="menu_admin">Admin</string>
     <string name="menu_export_import">CSV Export/Import</string>
     <string name="menu_server_import">Server Import</string>
@@ -67,17 +53,47 @@
     <string name="menu_report">Report</string>
     <string name="menu_change_table">Change Table</string>
     <string name="menu_print">Print</string>
-
-    <!-- start -->
     <string name="button_import">Import Data</string>
-
-    <!-- splash -->
-    <string name="label_company_name">[V2.0] Developed by Blue Ocean Strategy Co.Ltd</string>
-
+    <string name="label_company_name">Developed by Blue Ocean Strategy Co.Ltd</string>
     <string name="place_continue">Place &amp; Continue</string>
-
     <string name="check_type">Check Type</string>
     <string name="allow_single">Allow Single Check</string>
     <string name="allow_multi">Allow Multi Check</string>
     <string name="add_item_sub">Add Item Sub</string>
+    <string name="table_type">Table Type</string>
+    <string name="table">Table</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="sub_menu">Sub Menu</string>
+    <string name="item_type">Item Type</string>
+    <string name="item_sub_group">Item Sub Group</string>
+    <string name="item_sub">Item Sub</string>
+    <string name="taste">Taste</string>
+    <string name="company">Company</string>
+    <string name="system_setting">System Setting</string>
+    <string name="voucher_setting">Voucher Setting</string>
+    <string name="data_setup">Data Setup</string>
+    <string name="csv_import_export">CSV Import/Export</string>
+    <string name="server_import">Server Import</string>
+    <string name="delete_transaction">Delete Transaction</string>
+    <string name="reset_slipid">Reset SlipID</string>
+    <string name="backup_data">Backup Data</string>
+    <string name="delete_voucher">Delete Voucher</string>
+    <string name="delete_extra">Delete Extra</string>
+    <string name="backup_data_custom_path">Backup Data (Custom Path)</string>
+    <string name="import_data_from_csv">Import Data From CSV</string>
+    <string name="export_data_to_csv">Export Data To CSV</string>
+    <string name="import_tran_from_csv">Import Tran From CSV</string>
+    <string name="export_tran_to_csv">Export Tran To CSV</string>
+    <string name="search">Search</string>
+    <string name="add">Add</string>
+    <string name="save">Save</string>
+    <string name="close">Close</string>
+    <string name="choose_module">Choose Module</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="clear">Clear</string>
+    <string name="sale">SALE</string>
+    <string name="report">REPORT</string>
+    <string name="system">SYSTEM</string>
+    <string name="open_order">OPEN ORDER</string>
 </resources>

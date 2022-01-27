@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item android:drawable="@color/colorTransparent" android:state_focused="true" android:state_pressed="false"></item>
-    <item android:drawable="@drawable/accent_button_pressed" android:state_pressed="true"></item>
-    <item android:drawable="@drawable/accent_button_default"></item>
-
+<selector  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true"
+        android:drawable="@color/colorBlackLight"></item>
+    <item android:drawable="@color/colorAccent"></item>
 </selector>

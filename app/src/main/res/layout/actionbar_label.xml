@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<customfont.ArialTextView xmlns:android="http://schemas.android.com/apk/res/android"
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/tvActionBarText"
     android:layout_width="wrap_content"
@@ -8,5 +8,5 @@
     android:paddingLeft="10dp"
     android:gravity="center"
     android:textStyle="bold"
-    android:textSize="@dimen/label_text_size_large"
+    android:textSize="@dimen/large_text_size"
     android:background="@color/colorTransparent"/>

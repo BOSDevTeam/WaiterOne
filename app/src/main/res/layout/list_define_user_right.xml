@@ -5,13 +5,13 @@
     <customfont.BOSTextView android:id="@+id/tvName"
         style="@style/styleSetupListTextView"/>
 
-    <customfont.ArialButton android:id="@+id/btnDefine"
+    <Button android:id="@+id/btnDefine"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:background="@drawable/gray_button"
         android:text="DEFINE"
-        android:textSize="@dimen/button_text_size_small"
-        android:textColor="@color/colorFirstPri"
+        android:textSize="@dimen/small_text_size"
+        android:textColor="@color/colorPrimary"
         android:textStyle="bold"/>
 
 </LinearLayout>

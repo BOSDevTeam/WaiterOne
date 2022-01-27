@@ -8,7 +8,7 @@
 
     <LinearLayout android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:background="@color/colorSecondPri">
+        android:background="@color/colorAccent">
     </LinearLayout>
 
     <LinearLayout
@@ -27,8 +27,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Table A1 - Order #"
-            android:textSize="@dimen/title_text_size_large"
-            android:textColor="@color/colorFirstPri"
+            android:textSize="@dimen/regular_text_size"
+            android:textColor="@color/colorPrimary"
             android:layout_gravity="center"
             android:textStyle="bold"/>
 
@@ -37,31 +37,31 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="10dp"
-            android:background="@color/colorFirstPri"
+            android:background="@color/colorPrimary"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp">
 
-            <customfont.ArialTextView android:id="@+id/tvHeaderItemName"
+            <TextView android:id="@+id/tvHeaderItemName"
                 style="@style/styleBillListHeader"
                 android:text="Item"
                 android:layout_width="0dp"
                 android:layout_weight="1"/>
 
-            <customfont.ArialTextView android:id="@+id/tvHeaderQuantity"
+            <TextView android:id="@+id/tvHeaderQuantity"
                 style="@style/styleBillListHeader"
                 android:text="Qty"
                 android:gravity="right"
                 android:layout_width="50dp"/>
 
-            <customfont.ArialTextView android:id="@+id/tvHeaderPrice"
+            <TextView android:id="@+id/tvHeaderPrice"
                 style="@style/styleBillListHeader"
                 android:text="Price"
                 android:gravity="right"
                 android:layout_width="150dp"/>
 
-            <customfont.ArialTextView android:id="@+id/tvHeaderAmount"
+            <TextView android:id="@+id/tvHeaderAmount"
                 style="@style/styleBillListHeader"
                 android:text="Amount"
                 android:gravity="right"
@@ -73,9 +73,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="15dp"
-            android:background="@color/colorGray"
-            android:divider="@color/colorGray"
-            android:dividerHeight="10dp"></ListView>
+            android:background="@color/colorGray1"
+            android:divider="@color/colorGray1"
+            android:dividerHeight="10dp"
+            tools:listitem="@layout/list_bill"></ListView>
 
     </LinearLayout>
 
@@ -83,7 +84,7 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="match_parent"
-        android:background="@color/colorGray"
+        android:background="@color/colorGray1"
         android:orientation="vertical">
 
         <ScrollView
@@ -97,85 +98,83 @@
             android:gravity="center"
             android:padding="5dp">
 
-            <TableRow android:layout_gravity="center"
-                android:padding="20dp">
+            <TableRow android:layout_gravity="center">
                 <Switch android:id="@+id/swtChargesOff"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Charges (OFF)"
-                    android:textColor="@color/colorFirstPri"
-                    android:textSize="@dimen/label_text_size_small"
-                    android:gravity="center"
+                    android:textColor="@color/colorBlackLight"
+                    android:textSize="@dimen/small_text_size"
                     android:checked="true"/>
             </TableRow>
 
             <TableRow>
-                <customfont.ArialTextView android:id="@+id/tvDiscountPercent"
+                <TextView android:id="@+id/tvDiscountPercent"
                     style="@style/styleBillPaymentLabel"
                     android:text="Dis (%)"/>
 
-                <customfont.ArialEditText android:id="@+id/etDiscountPercent"
+                <EditText android:id="@+id/etDiscountPercent"
                     android:layout_height="wrap_content"
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:background="@color/colorDarkGray"
-                    android:textColor="@color/colorFirstPri"
-                    android:textSize="@dimen/textbox_text_size"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/small_text_size"
                     android:padding="5dp"
                     android:inputType="number"
-                    android:textStyle="bold"/>
+                    android:imeOptions="actionDone" />
             </TableRow>
 
             <TableRow android:layout_marginTop="5dp">
-                <customfont.ArialTextView android:id="@+id/tvDiscountAmount"
+                <TextView android:id="@+id/tvDiscountAmount"
                     style="@style/styleBillPaymentLabel"
                     android:text="Dis Amt"/>
 
-                <customfont.ArialEditText android:id="@+id/etDiscountAmount"
+                <EditText android:id="@+id/etDiscountAmount"
                     android:layout_height="wrap_content"
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:background="@color/colorDarkGray"
-                    android:textColor="@color/colorFirstPri"
-                    android:textSize="@dimen/textbox_text_size"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/small_text_size"
                     android:padding="5dp"
                     android:inputType="numberDecimal"
-                    android:textStyle="bold"/>
+                    android:imeOptions="actionDone"/>
             </TableRow>
 
             <TableRow android:layout_marginTop="5dp">
-                <customfont.ArialTextView style="@style/styleBillPaymentLabel"/>
+                <TextView style="@style/styleBillPaymentLabel"/>
 
-                <customfont.ArialButton android:id="@+id/btnDiscountCalculate"
+                <Button android:id="@+id/btnDiscountCalculate"
                     android:layout_height="wrap_content"
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:textColor="@color/colorFirstPri"
-                    android:textSize="@dimen/button_text_size_large"
-                    android:text="OK"/>
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/small_text_size"
+                    android:text="OK" />
+
             </TableRow>
 
             <TableRow android:layout_marginTop="5dp">
 
-            <customfont.ArialTextView android:id="@+id/tvLabelSubTotal"
+            <TextView android:id="@+id/tvLabelSubTotal"
                 style="@style/styleBillPaymentLabel"
                 android:text="Sub Total"/>
 
-            <customfont.ArialTextView android:id="@+id/tvAmountSubTotal"
-                style="@style/styleBillPaymentLabel"
+            <TextView android:id="@+id/tvAmountSubTotal"
+                style="@style/styleBillPaymentValue"
                 android:gravity="right"
-                android:layout_marginRight="10dp"/>
+                android:layout_marginRight="10dp"
+                tools:text="5000"/>
 
             </TableRow>
 
             <TableRow android:layout_marginTop="5dp">
 
-                <customfont.ArialTextView android:id="@+id/tvLabelCharges"
+                <TextView android:id="@+id/tvLabelCharges"
                     style="@style/styleBillPaymentLabel"
                     android:text="Charges"/>
 
-                <customfont.ArialTextView android:id="@+id/tvAmountCharges"
-                    style="@style/styleBillPaymentLabel"
+                <TextView android:id="@+id/tvAmountCharges"
+                    style="@style/styleBillPaymentValue"
                     android:gravity="right"
                     android:layout_marginRight="10dp"/>
 
@@ -183,12 +182,12 @@
 
             <TableRow android:layout_marginTop="5dp">
 
-                <customfont.ArialTextView android:id="@+id/tvLabelTax"
+                <TextView android:id="@+id/tvLabelTax"
                     style="@style/styleBillPaymentLabel"
                     android:text="Tax"/>
 
-                <customfont.ArialTextView android:id="@+id/tvAmountTax"
-                    style="@style/styleBillPaymentLabel"
+                <TextView android:id="@+id/tvAmountTax"
+                    style="@style/styleBillPaymentValue"
                     android:gravity="right"
                     android:layout_marginRight="10dp"/>
 
@@ -196,12 +195,12 @@
 
             <TableRow android:layout_marginTop="5dp">
 
-                <customfont.ArialTextView android:id="@+id/tvLabelDiscount"
+                <TextView android:id="@+id/tvLabelDiscount"
                     style="@style/styleBillPaymentLabel"
                     android:text="Discount"/>
 
-                <customfont.ArialTextView android:id="@+id/tvAmountDiscount"
-                    style="@style/styleBillPaymentLabel"
+                <TextView android:id="@+id/tvAmountDiscount"
+                    style="@style/styleBillPaymentValue"
                     android:text="0"
                     android:gravity="right"
                     android:layout_marginRight="10dp"/>
@@ -210,59 +209,57 @@
 
             <TableRow android:layout_marginTop="5dp">
 
-                <customfont.ArialTextView android:id="@+id/tvLabelGrandTotal"
+                <TextView android:id="@+id/tvLabelGrandTotal"
                     style="@style/styleBillPaymentLabel"
                     android:text="Grand Total"
-                    android:textSize="@dimen/grand_total_text_size"
-                    android:textColor="@color/colorFirstPri"
-                    android:textStyle="bold"/>
+                    android:textSize="@dimen/regular_text_size"
+                    android:textColor="@color/colorBlack" />
 
-                <customfont.ArialTextView android:id="@+id/tvAmountGrandTotal"
+                <TextView android:id="@+id/tvAmountGrandTotal"
                     style="@style/styleBillPaymentLabel"
-                    android:textSize="@dimen/grand_total_text_size"
-                    android:textColor="@color/colorFirstPri"
-                    android:textStyle="bold"
+                    android:textSize="@dimen/regular_text_size"
+                    android:textColor="@color/colorRed"
                     android:gravity="right"
-                    android:layout_marginRight="10dp"/>
+                    android:layout_marginRight="10dp"
+                    tools:text="20000"/>
 
             </TableRow>
             <TableRow android:layout_marginTop="5dp">
 
-                <customfont.ArialTextView android:id="@+id/tvLabelPaidTotal"
+                <TextView android:id="@+id/tvLabelPaidTotal"
                     style="@style/styleBillPaymentLabel"
                     android:text="Paid" />
 
-                <customfont.ArialEditText android:id="@+id/etAmountPaidTotal"
+                <EditText android:id="@+id/etAmountPaidTotal"
                     android:layout_height="wrap_content"
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:background="@color/colorDarkGray"
-                    android:textColor="@color/colorFirstPri"
-                    android:textSize="@dimen/textbox_text_size"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/small_text_size"
                     android:padding="5dp"
                     android:inputType="numberDecimal"
-                    android:textStyle="bold"/>
+                    android:imeOptions="actionDone"/>
 
             </TableRow>
             <TableRow android:layout_marginTop="5dp">
                 <TextView style="@style/styleBillPaymentLabel"/>
 
-                <customfont.ArialButton android:id="@+id/btnPaidCalculate"
+                <Button android:id="@+id/btnPaidCalculate"
                     android:layout_height="wrap_content"
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:textColor="@color/colorFirstPri"
-                    android:textSize="@dimen/button_text_size_large"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/small_text_size"
                     android:text="OK"/>
             </TableRow>
             <TableRow android:layout_marginTop="5dp">
 
-                <customfont.ArialTextView android:id="@+id/tvLabelChangeTotal"
+                <TextView android:id="@+id/tvLabelChangeTotal"
                     style="@style/styleBillPaymentLabel"
                     android:text="Change" />
 
-                <customfont.ArialTextView android:id="@+id/tvAmountChangeTotal"
-                    style="@style/styleBillPaymentLabel"
+                <TextView android:id="@+id/tvAmountChangeTotal"
+                    style="@style/styleBillPaymentValue"
                     android:text="0"
                     android:gravity="right"
                     android:layout_marginRight="10dp"/>
@@ -272,16 +269,15 @@
 
         </ScrollView>
 
-        <customfont.ArialButton android:id="@+id/btnPay"
+        <Button android:id="@+id/btnPay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorWhite"
+            android:textColor="@color/colorSuccess"
             android:text="Pay"
-            android:textSize="@dimen/button_text_size_large"
+            android:textSize="@dimen/regular_text_size"
             android:padding="10dp"
-            android:background="@drawable/blue_button"
-            android:layout_marginTop="5dp"
-            android:drawableLeft="@mipmap/pay"/>
+            android:background="@drawable/primary_button"
+            android:layout_marginTop="5dp" />
 
     </LinearLayout>
 

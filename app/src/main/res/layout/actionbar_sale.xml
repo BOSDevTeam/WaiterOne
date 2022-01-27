@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -7,71 +8,71 @@
     <customfont.BOSTextView android:id="@+id/tvShopName"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text="Shop Name"
-        android:textSize="@dimen/label_text_size_large"
-        android:textColor="@color/colorWhite"
+        tools:text="Shop Name"
+        android:textSize="@dimen/large_text_size"
+        android:textColor="@color/colorAccent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginLeft="10dp"
         android:gravity="center"/>
 
-    <customfont.ArialTextView android:id="@+id/tvPrinterMessage"
+    <TextView android:id="@+id/tvPrinterMessage"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:textSize="@dimen/label_text_size_small"
-        android:textColor="@color/colorFirstPri"
+        android:textSize="@dimen/regular_text_size"
+        android:textColor="@color/colorWarning"
         android:gravity="center"
         android:text="message"
         android:layout_toLeftOf="@+id/btnConnect"/>
 
-    <customfont.ArialButton android:id="@+id/btnConnect"
+    <Button android:id="@+id/btnConnect"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:textSize="@dimen/button_text_size_small"
-        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/small_text_size"
+        android:textColor="@color/colorBlackLight"
         android:gravity="center"
         android:text="Connect"
-        android:textStyle="bold"
-        android:background="@drawable/black_button"
+        android:background="@drawable/gray_button"
         android:layout_marginLeft="10dp"
         android:layout_toLeftOf="@+id/btnCustomerEntry"
-        android:visibility="gone"/>
+        android:visibility="gone"
+        android:textAllCaps="false"/>
 
     <ImageButton android:id="@+id/btnCustomerEntry"
-        android:src="@mipmap/people"
+        android:src="@drawable/ic_person_add_24"
         style="@style/styleMainActionBarButton"
         android:layout_toLeftOf="@+id/btnBooking"/>
 
     <ImageButton android:id="@+id/btnBooking"
-        android:src="@mipmap/booking"
+        android:src="@drawable/ic_book_24"
         style="@style/styleMainActionBarButton"
         android:layout_toLeftOf="@+id/btnChangeTable"/>
 
     <ImageButton android:id="@+id/btnChangeTable"
-        android:src="@mipmap/table"
+        android:src="@drawable/ic_table_chart_24"
         style="@style/styleMainActionBarButton"
         android:layout_toLeftOf="@+id/btnViewOrder"/>
 
     <ImageButton android:id="@+id/btnViewOrder"
-        android:src="@mipmap/view_order"
+        android:src="@drawable/ic_preview_24"
         style="@style/styleMainActionBarButton"
         android:layout_toLeftOf="@+id/btnGetBill"/>
 
     <ImageButton android:id="@+id/btnGetBill"
-        android:src="@mipmap/get_bill"
+        android:src="@drawable/ic_bill_24"
         style="@style/styleMainActionBarButton"
         android:layout_toLeftOf="@+id/btnExit"/>
 
-    <customfont.ArialButton android:id="@+id/btnExit"
+    <Button android:id="@+id/btnExit"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:textSize="@dimen/button_text_size_small"
-        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/small_text_size"
+        android:textColor="@color/colorGray3"
         android:gravity="center"
         android:text="Exit"
-        android:textStyle="bold"
         android:background="@drawable/transparent_button"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"/>
+        android:layout_alignParentRight="true"
+        android:textAllCaps="false"/>
 
 </RelativeLayout>

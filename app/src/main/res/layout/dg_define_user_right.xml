@@ -9,16 +9,16 @@
     <customfont.BOSTextView  android:id="@+id/tvUserName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/colorFirstPri"
+        android:textColor="@color/colorPrimary"
         android:padding="10dp"
-        android:textSize="@dimen/label_text_size_large"/>
+        android:textSize="@dimen/large_text_size"/>
 
-    <customfont.ArialTextView android:id="@+id/tvLabelAllowRight"
+    <TextView android:id="@+id/tvLabelAllowRight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Check Allow Module"
-        android:textSize="@dimen/label_text_size_large"
-        android:textColor="@color/colorFirstPri"
+        android:textSize="@dimen/large_text_size"
+        android:textColor="@color/colorPrimary"
         android:layout_marginTop="10dp"
         android:padding="10dp"/>
 
@@ -27,16 +27,13 @@
         android:layout_height="0dp"
         android:layout_weight="1"></ListView>
 
-    <LinearLayout android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+    <LinearLayout style="@style/dialogBottom">
 
-        <customfont.ArialButton android:id="@+id/btnSave"
-            style="@style/styleSetupDialogSaveButton"/>
-
-        <customfont.ArialButton android:id="@+id/btnClose"
+        <Button android:id="@+id/btnClose"
             style="@style/styleSetupDialogCloseButton"/>
+
+        <Button android:id="@+id/btnSave"
+            style="@style/styleSetupDialogSaveButton"/>
 
     </LinearLayout>
 </LinearLayout>

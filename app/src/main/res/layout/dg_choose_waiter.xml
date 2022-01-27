@@ -9,16 +9,16 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp">
 
-            <customfont.ArialTextView android:id="@+id/tvLabelChooseWaiter"
+            <TextView android:id="@+id/tvLabelChooseWaiter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:textColor="@color/colorFirstPri"
+                android:textColor="@color/colorPrimary"
                 android:padding="5dp"
                 android:text="Choose Waiter"
-                android:textSize="@dimen/label_text_size_large" />
+                android:textSize="@dimen/large_text_size" />
 
-            <customfont.ArialCheckBox android:id="@+id/chkAll"
+            <CheckBox android:id="@+id/chkAll"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="All"
@@ -26,14 +26,14 @@
                 android:textColor="@color/colorPrimary"
                 android:layout_alignParentRight="true"
                 android:padding="10dp"
-                android:textSize="@dimen/label_text_size_large"></customfont.ArialCheckBox>
+                android:textSize="@dimen/large_text_size"></CheckBox>
 
         </RelativeLayout>
 
         <LinearLayout  android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="5dp"
-            android:background="@color/colorFirstPri">
+            android:background="@color/colorPrimary">
         </LinearLayout>
 
         <LinearLayout  android:layout_width="match_parent"
@@ -46,14 +46,14 @@
                android:layout_weight="1"
                android:layout_width="match_parent"></ListView>
 
-            <customfont.ArialButton android:id="@+id/btnOk"
+            <Button android:id="@+id/btnOk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/blue_button"
+                android:background="@drawable/primary_button"
                 android:text="View All"
                 android:textColor="@color/colorWhite"
                 android:textStyle="bold"
-                android:textSize="@dimen/button_text_size_large"
+                android:textSize="@dimen/regular_text_size"
                 android:padding="10dp"
                 android:textAllCaps="false"/>
 

@@ -12,8 +12,7 @@
 
         <LinearLayout android:layout_width="match_parent"
             android:layout_height="3dp"
-            android:background="@color/colorSecondPri">
-        </LinearLayout>
+            android:background="@color/colorAccent"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,9 +23,8 @@
             <customfont.BOSTextView android:id="@+id/tvTable"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/title_text_size_large"
-                android:typeface="monospace"
-                android:textColor="@color/colorFirstPri"
+                android:textSize="@dimen/regular_text_size"
+                android:textColor="@color/colorPrimary"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:layout_gravity="center"/>
@@ -35,109 +33,115 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:background="@color/colorFirstPri"
+                android:background="@color/colorPrimary"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:layout_marginTop="10dp">
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
                 <ImageButton android:id="@+id/btnItemDelete"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/delete"
-                    android:background="@drawable/transparent_button"
+                    style="@style/styleSetupListImageDeleteButton"
                     android:visibility="invisible"/>
-                <customfont.ArialTextView android:id="@+id/tvHeaderItem"
+
+                <TextView android:id="@+id/tvHeaderItem"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/list_header_text_size"
+                    android:textSize="@dimen/small_text_size"
                     android:textColor="@color/colorWhite"
                     android:text="@string/item"
                     android:textStyle="bold"
                     android:layout_marginLeft="30dp"/>
-                <customfont.ArialTextView android:id="@+id/tvHeaderQuantity"
+
+                <TextView android:id="@+id/tvHeaderQuantity"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/list_header_text_size"
+                    android:textSize="@dimen/small_text_size"
                     android:textColor="@color/colorWhite"
                     android:text="@string/quantity"
                     android:gravity="right"
                     android:textStyle="bold"/>
-                <customfont.ArialTextView android:id="@+id/tvHeaderAmount"
+
+                <TextView android:id="@+id/tvHeaderAmount"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/list_header_text_size"
+                    android:textSize="@dimen/small_text_size"
                     android:textColor="@color/colorWhite"
                     android:text="@string/amount"
                     android:gravity="right"
                     android:textStyle="bold"/>
+
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
             <ListView android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/lvViewOrder"
-                android:background="@color/colorGray"
+                android:background="@color/colorGray1"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:scrollbars="none"
-                android:divider="@color/colorGray"
-                android:dividerHeight="1dp"></ListView>
+                android:divider="@color/colorGray1"
+                android:dividerHeight="1dp"
+                tools:listitem="@layout/list_view_order"/>
 
             </LinearLayout>
 
             <TableLayout android:id="@+id/layoutAmount"
                 android:layout_width="430dp"
                 android:layout_height="wrap_content"
-                android:background="@color/colorDarkGray"
+                android:background="@color/colorGray1"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="right"
                 android:padding="15dp">
 
                 <TableRow >
-                    <customfont.ArialTextView android:id="@+id/tvLabelSubTotal"
+                    <TextView android:id="@+id/tvLabelSubTotal"
                         android:layout_width="200dp"
                         style="@style/styleViewOrderText"
                         android:text="@string/sub_total"/>
-                    <customfont.ArialTextView android:id="@+id/tvSubTotal"
+                    <TextView android:id="@+id/tvSubTotal"
                         android:layout_width="200dp"
                         style="@style/styleViewOrderText"/>
                 </TableRow>
 
                 <TableRow >
-                    <customfont.ArialTextView android:id="@+id/tvLabelCharges"
+                    <TextView android:id="@+id/tvLabelCharges"
                         android:layout_width="200dp"
                         style="@style/styleViewOrderText"
                         android:text="@string/service_charges"/>
-                    <customfont.ArialTextView android:id="@+id/tvCharges"
+                    <TextView android:id="@+id/tvCharges"
                         android:layout_width="200dp"
                         style="@style/styleViewOrderText"/>
                 </TableRow>
 
                 <TableRow  >
-                    <customfont.ArialTextView android:id="@+id/tvLabelTax"
+                    <TextView android:id="@+id/tvLabelTax"
                         android:layout_width="200dp"
                         style="@style/styleViewOrderText"
                         android:text="@string/tax"/>
-                    <customfont.ArialTextView android:id="@+id/tvTax"
+                    <TextView android:id="@+id/tvTax"
                         android:layout_width="200dp"
                         style="@style/styleViewOrderText"/>
                 </TableRow>
 
                 <TableRow  >
-                    <customfont.ArialTextView android:id="@+id/tvLabelGrandTotal"
+                    <TextView android:id="@+id/tvLabelGrandTotal"
                         android:layout_width="200dp"
                         style="@style/styleViewOrderText"
                         android:text="@string/grand_total"
-                        android:textSize="@dimen/grand_total_text_size"/>
-                    <customfont.ArialTextView android:id="@+id/tvGrandTotal"
+                        android:textSize="@dimen/large_text_size"/>
+                    <TextView android:id="@+id/tvGrandTotal"
                         android:layout_width="200dp"
                         style="@style/styleViewOrderText"
-                        android:textSize="@dimen/grand_total_text_size"/>
+                        android:textSize="@dimen/large_text_size"/>
                 </TableRow>
 
             </TableLayout>

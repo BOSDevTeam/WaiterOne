@@ -10,10 +10,10 @@
         android:layout_height="wrap_content"
         android:text="Set time"
         android:padding="20dp"
-        android:textSize="@dimen/main_text_size"
+        android:textSize="@dimen/larger_text_size"
         android:textColor="@color/colorWhite"
         android:textStyle="bold"
-        android:background="@color/colorFirstPri"/>
+        android:background="@color/colorPrimary"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:text="Type in time"
             android:padding="10dp"
-            android:textSize="@dimen/label_text_size_large"
+            android:textSize="@dimen/large_text_size"
             android:textColor="@color/colorPrimary"
             android:textStyle="bold" />
 
@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:text="12"
                 android:padding="10dp"
-                android:textSize="@dimen/main_text_size"
+                android:textSize="@dimen/larger_text_size"
                 android:textColor="@color/colorPrimary"
                 android:textStyle="bold"
                 android:inputType="number"
@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:text=":"
                 android:padding="10dp"
-                android:textSize="@dimen/main_text_size"
+                android:textSize="@dimen/larger_text_size"
                 android:textColor="@color/colorPrimary"
                 android:textStyle="bold" />
 
@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:text="00"
                 android:padding="10dp"
-                android:textSize="@dimen/main_text_size"
+                android:textSize="@dimen/larger_text_size"
                 android:textColor="@color/colorPrimary"
                 android:textStyle="bold"
                 android:inputType="number"
@@ -82,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:text="hour"
                 android:padding="10dp"
-                android:textSize="@dimen/label_text_size_small"
+                android:textSize="@dimen/regular_text_size"
                 android:textColor="@color/colorPrimary"/>
 
             <TextView
@@ -90,37 +90,22 @@
                 android:layout_height="wrap_content"
                 android:text="minute"
                 android:padding="10dp"
-                android:textSize="@dimen/label_text_size_small"
+                android:textSize="@dimen/regular_text_size"
                 android:textColor="@color/colorPrimary"/>
 
         </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp"
-        android:gravity="right">
+    <LinearLayout style="@style/dialogBottom">
 
         <Button android:id="@+id/btnCancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/transparent_button"
-            android:text="CANCEL"
-            android:textColor="@color/colorFirstPri"
-            android:textSize="@dimen/button_text_size_large"
-            android:layout_marginRight="15dp"
-            android:padding="10dp"/>
+            style="@style/styleSetupDialogCloseButton"
+            android:text="@string/cancel"/>
 
         <Button android:id="@+id/btnOK"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/transparent_button"
-            android:text="OK"
-            android:textColor="@color/colorFirstPri"
-            android:textSize="@dimen/button_text_size_large"
-            android:padding="10dp"/>
+            style="@style/styleSetupDialogSaveButton"
+            android:text="@string/ok"/>
 
     </LinearLayout>
 

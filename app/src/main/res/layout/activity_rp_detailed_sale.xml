@@ -10,31 +10,31 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/colorFirstPri">
+        android:background="@color/colorPrimary">
 
-        <customfont.ArialTextView android:id="@+id/tvFromDate"
+        <TextView android:id="@+id/tvFromDate"
             style="@style/styleReportDateText"
             android:text="From Date" />
 
-        <customfont.ArialTextView android:id="@+id/tvToDate"
+        <TextView android:id="@+id/tvToDate"
             style="@style/styleReportDateText"
             android:text="To Date" />
 
-        <customfont.ArialTextView android:id="@+id/tvToday"
+        <TextView android:id="@+id/tvToday"
             style="@style/styleReportTodayLabel"
             android:text="(Today)"
             android:visibility="gone">
-        </customfont.ArialTextView>
+        </TextView>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <customfont.ArialTextView android:id="@+id/tvNumberOFSaledTable"
+        <TextView android:id="@+id/tvNumberOFSaledTable"
             style="@style/styleSummaryItemTotal"
             android:text="Total Sale Table"/>
-        <customfont.ArialTextView android:id="@+id/tvTotalCustomer"
+        <TextView android:id="@+id/tvTotalCustomer"
             style="@style/styleSummaryItemTotal"
             android:text="Total Customer" />
     </LinearLayout>
@@ -48,47 +48,47 @@
         android:paddingRight="10dp">
 
         <LinearLayout style="@style/styleReportTotalLayout"
-            android:background="@color/colorSecondPri">
-            <customfont.ArialTextView android:id="@+id/tvTotalLabelSubTotal"
+            android:background="@color/colorAccent">
+            <TextView android:id="@+id/tvTotalLabelSubTotal"
                 style="@style/styleReportTotalLabel"
                 android:text="Sub Total: "/>
-            <customfont.ArialTextView android:id="@+id/tvTotalSubTotal"
+            <TextView android:id="@+id/tvTotalSubTotal"
                 style="@style/styleReportTotalTextView"/>
         </LinearLayout>
         <LinearLayout style="@style/styleReportTotalLayout"
             android:layout_marginLeft="10dp"
-            android:background="@color/colorSecondPri">
-            <customfont.ArialTextView android:id="@+id/tvTotalLabelTax"
+            android:background="@color/colorAccent">
+            <TextView android:id="@+id/tvTotalLabelTax"
                 style="@style/styleReportTotalLabel"
                 android:text="Tax: "/>
-            <customfont.ArialTextView android:id="@+id/tvTotalTax"
+            <TextView android:id="@+id/tvTotalTax"
                 style="@style/styleReportTotalTextView" />
         </LinearLayout>
         <LinearLayout style="@style/styleReportTotalLayout"
             android:layout_marginLeft="10dp"
-            android:background="@color/colorSecondPri">
-            <customfont.ArialTextView android:id="@+id/tvTotalLabelCharges"
+            android:background="@color/colorAccent">
+            <TextView android:id="@+id/tvTotalLabelCharges"
                 style="@style/styleReportTotalLabel"
                 android:text="Charges: "/>
-            <customfont.ArialTextView android:id="@+id/tvTotalCharges"
+            <TextView android:id="@+id/tvTotalCharges"
                 style="@style/styleReportTotalTextView" />
         </LinearLayout>
         <LinearLayout style="@style/styleReportTotalLayout"
             android:layout_marginLeft="10dp"
-            android:background="@color/colorSecondPri">
-            <customfont.ArialTextView android:id="@+id/tvTotalLabelDiscount"
+            android:background="@color/colorAccent">
+            <TextView android:id="@+id/tvTotalLabelDiscount"
                 style="@style/styleReportTotalLabel"
                 android:text="Discount: "/>
-            <customfont.ArialTextView android:id="@+id/tvTotalDiscount"
+            <TextView android:id="@+id/tvTotalDiscount"
                 style="@style/styleReportTotalTextView" />
         </LinearLayout>
         <LinearLayout style="@style/styleReportTotalLayout"
             android:layout_marginLeft="10dp"
-            android:background="@color/colorSecondPri">
-            <customfont.ArialTextView android:id="@+id/tvTotalLabelGrandTotal"
+            android:background="@color/colorAccent">
+            <TextView android:id="@+id/tvTotalLabelGrandTotal"
                 style="@style/styleReportTotalLabel"
                 android:text="Grand Total: "/>
-            <customfont.ArialTextView android:id="@+id/tvTotalGrandTotal"
+            <TextView android:id="@+id/tvTotalGrandTotal"
                 style="@style/styleReportTotalTextView" />
         </LinearLayout>
 
@@ -107,34 +107,34 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:background="@color/colorReportListHeader"
+                android:background="@color/colorPrimary"
                 android:layout_marginTop="5dp">
 
-                <customfont.ArialTextView android:id="@+id/tvHeaderDate"
+                <TextView android:id="@+id/tvHeaderDate"
                     style="@style/styleReportHeaderTextView"
                     android:text="Date" />
-                <customfont.ArialTextView android:id="@+id/tvHeaderWaiter"
+                <TextView android:id="@+id/tvHeaderWaiter"
                     style="@style/styleReportHeaderTextView"
                     android:text="Waiter" />
-                <customfont.ArialTextView android:id="@+id/tvHeaderTable"
+                <TextView android:id="@+id/tvHeaderTable"
                     style="@style/styleReportHeaderTextView"
                     android:text="Table" />
-                <customfont.ArialTextView android:id="@+id/tvHeaderCustomerNumber"
+                <TextView android:id="@+id/tvHeaderCustomerNumber"
                     style="@style/styleReportHeaderTextView"
                     android:text="Customer" />
-                <customfont.ArialTextView android:id="@+id/tvHeaderSubTotal"
+                <TextView android:id="@+id/tvHeaderSubTotal"
                     style="@style/styleReportHeaderTextView"
                     android:text="Sub Total" />
-                <customfont.ArialTextView android:id="@+id/tvHeaderTax"
+                <TextView android:id="@+id/tvHeaderTax"
                     style="@style/styleReportHeaderTextView"
                     android:text="Tax" />
-                <customfont.ArialTextView android:id="@+id/tvHeaderCharges"
+                <TextView android:id="@+id/tvHeaderCharges"
                     style="@style/styleReportHeaderTextView"
                     android:text="Charges" />
-                <customfont.ArialTextView android:id="@+id/tvHeaderDiscount"
+                <TextView android:id="@+id/tvHeaderDiscount"
                     style="@style/styleReportHeaderTextView"
                     android:text="Discount" />
-                <customfont.ArialTextView android:id="@+id/tvHeaderGrandTotal"
+                <TextView android:id="@+id/tvHeaderGrandTotal"
                     style="@style/styleReportHeaderTextView"
                     android:text="Grand Total"/>
 

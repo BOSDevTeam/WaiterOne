@@ -3,7 +3,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-    <dimen name="splash_app_label">60sp</dimen>
+    <dimen name="splash_app_label">40sp</dimen>
 
     <dimen name="print_main_menu_8">14sp</dimen>
     <dimen name="print_sub_menu_8">13sp</dimen>
@@ -26,18 +26,11 @@
 
     <dimen name="print_page_number">11sp</dimen>
 
-    <dimen name="main_text_size">20sp</dimen>
-    <dimen name="button_text_size_large">17sp</dimen>
-    <dimen name="button_text_size_small">13sp</dimen>
-    <dimen name="list_header_text_size">16sp</dimen>
-    <dimen name="list_item_text_size">16sp</dimen>
-    <dimen name="amount_group_text_size">16sp</dimen>
-    <dimen name="grand_total_text_size">17sp</dimen>
-    <dimen name="textbox_text_size">16sp</dimen>
-    <dimen name="title_text_size_large">16sp</dimen>
-    <dimen name="title_text_size_small">15sp</dimen>
-    <dimen name="label_text_size_large">18sp</dimen>
-    <dimen name="label_text_size_small">16sp</dimen>
-
     <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="small_text_size">14sp</dimen>
+    <dimen name="regular_text_size">16sp</dimen>
+    <dimen name="large_text_size">18sp</dimen>
+    <dimen name="larger_text_size">20sp</dimen>
+
 </resources>
