@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/styleSetupListLayout">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <customfont.BOSTextView android:id="@+id/tvGroupName"
+            style="@style/styleSetupListTextView"
+            android:layout_width="match_parent"
+            tools:text="Group name"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <customfont.BOSTextView android:id="@+id/tvSubTitle"
+                style="@style/styleSetupListTextView"
+                android:textColor="@color/colorBlackLight"
+                tools:text="Title"/>
+
+            <customfont.BOSTextView android:id="@+id/tvCheckType"
+                style="@style/styleSetupListTextView"
+                android:textColor="@color/colorBlackLight"
+                tools:text="Single"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp">
+
+    <ImageButton android:id="@+id/btnEdit"
+        style="@style/styleSetupListImageEditButton"/>
+
+    <ImageButton android:id="@+id/btnDelete"
+        style="@style/styleSetupListImageDeleteButton"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</LinearLayout>

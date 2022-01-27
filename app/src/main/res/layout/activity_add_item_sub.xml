@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddItemSubActivity"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        android:gravity="center">
+
+        <TextView android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:text="Group Name"
+            android:textColor="@color/colorGray2"
+            android:textSize="@dimen/regular_text_size" />
+
+        <TextView android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:text="Sub Title"
+            android:textColor="@color/colorGray2"
+            android:textSize="@dimen/regular_text_size" />
+
+        <TextView android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Check Type"
+            android:textColor="@color/colorGray2"
+            android:textSize="@dimen/regular_text_size" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvItemSubGroup"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="10dp"
+        tools:listitem="@layout/list_add_item_sub"/>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="right"
+        android:padding="10dp">
+
+        <Button android:id="@+id/btnCancel"
+            android:text="Cancel"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/regular_text_size"
+            android:background="@drawable/gray_button"
+            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:textAllCaps="false"/>
+
+        <Button android:id="@+id/btnOk"
+            android:text="OK"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/regular_text_size"
+            android:background="@drawable/primary_button"
+            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
