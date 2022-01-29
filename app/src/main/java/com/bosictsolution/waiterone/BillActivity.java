@@ -110,15 +110,14 @@ public class BillActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View arg0) {
-                /*try {
+                try {
                     wifiDisConn();
                 } catch (IOException e) {
                     Log.e(TAG, e.getMessage(), e);
                 } catch (InterruptedException e) {
                     Log.e(TAG, e.getMessage(), e);
                 }
-                connectPrinter();*/
-                payAndPreparePrint("");
+                connectPrinter();
             }
         });
         btnPaidCalculate.setOnClickListener(new View.OnClickListener() {

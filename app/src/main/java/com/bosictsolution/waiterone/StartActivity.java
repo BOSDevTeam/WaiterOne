@@ -255,14 +255,14 @@ public class StartActivity extends AppCompatActivity implements SetupEditDeleteB
             systemSetting.showMessage(SystemSetting.ERROR,"Not Found MAC Address!",context,getLayoutInflater());
             return;
         }
-        /*else if(registerKey.length()==0){
+        else if(registerKey.length()==0){
             systemSetting.showMessage(SystemSetting.INFO,"Enter Register Key",context,getLayoutInflater());
             return;
         }
         else if(!generateKey.equals(registerKey)){
             systemSetting.showMessage(SystemSetting.ERROR,"Invalid Register Key!",context,getLayoutInflater());
             return;
-        }*/
+        }
         else{
             db.deleteRegister();
             if (db.insertRegister(macAddress, registerKey)) {
