@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Workspace/1-Restaurant System/WaiterOne Project/WaiterOne/app/src/main/res/layout/activity_print_bill.xml" value="0.14739583333333334" />
+        <entry key="..\:/Workspace/1-Restaurant System/WaiterOne Project/WaiterOne/app/src/main/res/layout/activity_report_list.xml" value="0.20416666666666666" />
+        <entry key="..\:/Workspace/1-Restaurant System/WaiterOne Project/WaiterOne/app/src/main/res/layout/activity_rp_day_end.xml" value="0.33" />
+        <entry key="..\:/Workspace/1-Restaurant System/WaiterOne Project/WaiterOne/app/src/main/res/layout/activity_sale.xml" value="0.1" />
+        <entry key="..\:/Workspace/1-Restaurant System/WaiterOne Project/WaiterOne/app/src/main/res/layout/list_print.xml" value="0.14739583333333334" />
+        <entry key="..\:/Workspace/1-Restaurant System/WaiterOne Project/WaiterOne/app/src/main/res/layout/list_print_bill_parent.xml" value="0.25" />
         <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/drawable/accent_button.xml" value="0.19427083333333334" />
         <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/drawable/accent_button_default.xml" value="0.19427083333333334" />
         <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/drawable/accent_button_pressed.xml" value="0.19427083333333334" />
@@ -26,19 +32,21 @@
         <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/actionbar_main.xml" value="0.16666666666666666" />
         <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/actionbar_sale.xml" value="0.16666666666666666" />
         <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/actionbar_setup.xml" value="0.16302083333333334" />
-        <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/activity_add_item_sub.xml" value="0.26066350710900477" />
+        <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/activity_add_item_sub.xml" value="0.1" />
         <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/activity_admin.xml" value="0.33" />
         <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/activity_bill.xml" value="0.296998420221169" />
+        <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/activity_bond_bt.xml" value="0.20416666666666666" />
         <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/activity_change_table.xml" value="0.33" />
         <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/activity_customer_entry.xml" value="0.31437598736176936" />
         <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/activity_export_import.xml" value="0.5" />
         <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/activity_multi_printer_setting.xml" value="0.20416666666666666" />
         <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/activity_print_bill.xml" value="0.16666666666666666" />
         <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/activity_rp_top_sale_item.xml" value="0.17864583333333334" />
         <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/activity_rp_top_sale_menu.xml" value="0.17864583333333334" />
         <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/activity_rp_waiter_performance.xml" value="0.17864583333333334" />
-        <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/activity_sale.xml" value="0.33" />
+        <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/activity_sale.xml" value="0.1" />
         <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/activity_setup.xml" value="0.25" />
         <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/activity_splash.xml" value="0.25" />
         <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/activity_start.xml" value="0.33" />
