@@ -1,9 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Workspace/1-Restaurant System/WaiterOne Project/WaiterOne/app/src/main/res/layout/activity_bill.xml" value="0.15416666666666667" />
+        <entry key="..\:/Workspace/1-Restaurant System/WaiterOne Project/WaiterOne/app/src/main/res/layout/activity_bond_bt.xml" value="0.20416666666666666" />
+        <entry key="..\:/Workspace/1-Restaurant System/WaiterOne Project/WaiterOne/app/src/main/res/layout/activity_multi_printer_setting.xml" value="0.20416666666666666" />
+        <entry key="..\:/Workspace/1-Restaurant System/WaiterOne Project/WaiterOne/app/src/main/res/layout/activity_print_bill.xml" value="0.20416666666666666" />
         <entry key="..\:/Workspace/1-Restaurant System/WaiterOne Project/WaiterOne/app/src/main/res/layout/activity_rp_day_end.xml" value="0.12552083333333333" />
+        <entry key="..\:/Workspace/1-Restaurant System/WaiterOne Project/WaiterOne/app/src/main/res/layout/dg_time.xml" value="0.17239583333333333" />
+        <entry key="..\:/Workspace/1-Restaurant System/WaiterOne Project/WaiterOne/app/src/main/res/layout/list_print.xml" value="0.15416666666666667" />
+        <entry key="..\:/Workspace/1-Restaurant System/WaiterOne Project/WaiterOne/app/src/main/res/layout/list_print_bill_child.xml" value="0.20416666666666666" />
+        <entry key="..\:/Workspace/1-Restaurant System/WaiterOne Project/WaiterOne/app/src/main/res/layout/list_print_bill_parent.xml" value="0.20416666666666666" />
         <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
         <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/activity_setup.xml" value="0.15625" />
         <entry key="..\:/Workspace/1-Restaurant System/WaiterOne_Android/app/src/main/res/layout/activity_start.xml" value="0.15625" />
