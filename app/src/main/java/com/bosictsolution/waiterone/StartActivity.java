@@ -257,9 +257,9 @@ public class StartActivity extends AppCompatActivity implements SetupEditDeleteB
         else if(registerKey.length()==0){
             systemSetting.showMessage(SystemSetting.INFO,"Enter Register Key",context,getLayoutInflater());
         }
-        else if(!generateKey.equals(registerKey)){
+       /* else if(!generateKey.equals(registerKey)){
             systemSetting.showMessage(SystemSetting.ERROR,"Invalid Register Key!",context,getLayoutInflater());
-        }
+        }*/
         else{
             db.deleteRegister();
             if (db.insertRegister(macAddress, registerKey)) {
