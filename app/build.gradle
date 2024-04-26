@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 33
 //    buildToolsVersion '27.0.3'
 
     defaultConfig {
         applicationId "com.bosictsolution.waiterone"
         minSdkVersion 24
-        targetSdkVersion 30
+        targetSdkVersion 33
         versionCode 2
         versionName "2.0"
     }
@@ -27,10 +27,10 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation 'junit:junit:4.12'
-    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation files('libs/root/opencsv-2.4.jar')
     implementation files('libs/root/AndroidLib_1070.jar')
     implementation files('libs/root/jtds-1.2.7.jar')

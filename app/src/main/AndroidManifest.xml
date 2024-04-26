@@ -16,7 +16,8 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".SplashActivity"
-            android:screenOrientation="landscape">
+            android:screenOrientation="landscape"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -88,7 +89,8 @@
         <activity
             android:name=".RpSearchSummaryItemActivity"
             android:screenOrientation="landscape"
-            android:theme="@style/Theme.MyCompatTheme">
+            android:theme="@style/Theme.MyCompatTheme"
+            android:exported="true">
 
             <!-- to identify this activity as "searchable" -->
             <intent-filter>
