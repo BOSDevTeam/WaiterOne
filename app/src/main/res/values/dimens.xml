@@ -10,8 +10,8 @@
     <dimen name="print_main_menu_10">21sp</dimen>
     <dimen name="print_sub_menu_10">20sp</dimen>
 
-    <dimen name="print_title_8">15sp</dimen>
-    <dimen name="print_label_8">12sp</dimen>
+    <dimen name="print_title_8">16sp</dimen>
+    <dimen name="print_label_8">13sp</dimen>
     <dimen name="print_label_header_8">11sp</dimen>
     <dimen name="print_grand_amount_8">13sp</dimen>
     <dimen name="print_item_8">14sp</dimen>

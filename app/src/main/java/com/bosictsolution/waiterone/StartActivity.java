@@ -205,7 +205,7 @@ public class StartActivity extends AppCompatActivity implements SetupEditDeleteB
 
                 byte[] macBytes = nif.getHardwareAddress();
                 if (macBytes == null) {
-                    return "";
+                    return "02:00:00:00:00:00";
                 }
 
                 StringBuilder res1 = new StringBuilder();

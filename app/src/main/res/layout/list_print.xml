@@ -9,7 +9,6 @@
         android:layout_height="wrap_content"
         android:text="Item"
         android:textColor="@color/colorPrimaryDark"
-        android:padding="5dp"
         android:textStyle="bold" />
     <customfont.BOSTextView android:id="@+id/tvPrintListQty"
         android:layout_width="0dp"
@@ -17,7 +16,6 @@
         android:layout_height="wrap_content"
         android:text="Qty"
         android:textColor="@color/colorPrimaryDark"
-        android:padding="5dp"
         android:gravity="right"
         android:textStyle="bold"/>
     <customfont.BOSTextView android:id="@+id/tvPrintListPrice"
@@ -26,7 +24,6 @@
         android:layout_height="wrap_content"
         android:text="Price"
         android:textColor="@color/colorPrimaryDark"
-        android:padding="5dp"
         android:gravity="right"
         android:textStyle="bold"/>
     <customfont.BOSTextView android:id="@+id/tvPrintListAmount"
@@ -35,7 +32,6 @@
         android:layout_height="wrap_content"
         android:text="Amount"
         android:textColor="@color/colorPrimaryDark"
-        android:padding="5dp"
         android:gravity="right"
         android:textStyle="bold"/>
 

@@ -74,7 +74,7 @@ public class PrintBillParentListAdapter extends BaseAdapter {
                 tvHeaderItem,tvHeaderQty,tvHeaderPrice,tvHeaderAmount,tvStartTime,tvEndTime,tvOrderNumber,tvLabelOrderNumber;
         //ListView lvPrintList;
         ImageView imgLogo;
-        LinearLayout layoutPrintList;
+        LinearLayout layoutPrintList,layoutOrderNumber,layoutStartEndTime;
     }
 
     @Override
@@ -121,8 +121,10 @@ public class PrintBillParentListAdapter extends BaseAdapter {
             holder.tvEndTime = (TextView) row.findViewById(R.id.tvEndTime);
             holder.tvOrderNumber = (TextView) row.findViewById(R.id.tvOrderNumber);
             holder.tvLabelOrderNumber = (TextView) row.findViewById(R.id.tvLabelOrderNumber);
+            holder.layoutOrderNumber = row.findViewById(R.id.layoutOrderNumber);
+            holder.layoutStartEndTime = row.findViewById(R.id.layoutStartEndTime);
 
-            if(tabletSize==10){
+            if(tabletSize==10 && db.getFeatureResult(FeatureList.fPaperConstrict)!=1){
                 holder.tvShopName.setTextSize(context.getResources().getDimensionPixelSize(R.dimen.print_title_10));
                 holder.tvShopDesc.setTextSize(context.getResources().getDimensionPixelSize(R.dimen.print_label_10));
                 holder.tvAddress.setTextSize(context.getResources().getDimensionPixelSize(R.dimen.print_label_10));
@@ -191,7 +193,7 @@ public class PrintBillParentListAdapter extends BaseAdapter {
             }
 
                 if(db.getFeatureResult(FeatureList.fPaperConstrict)==1 ) {
-                    holder.tvShopName.setPadding(2, 2, 2, 2);
+                    /*holder.tvShopName.setPadding(2, 2, 2, 2);
                     holder.tvShopDesc.setPadding(2, 2, 2, 2);
                     holder.tvAddress.setPadding(2, 2, 2, 2);
                     holder.tvPhone.setPadding(2, 2, 2, 2);
@@ -219,8 +221,12 @@ public class PrintBillParentListAdapter extends BaseAdapter {
                     holder.tvOtherMessage.setPadding(2, 2, 2, 2);
                     holder.tvGrandTotal.setPadding(2, 2, 2, 2);
                     holder.tvGrandTotalAmt.setPadding(2, 2, 2, 2);
+                    holder.tvOrderNumber.setPadding(2, 2, 2, 2);
+                    holder.tvLabelOrderNumber.setPadding(2, 2, 2, 2);
+                    holder.tvStartTime.setPadding(2, 2, 2, 2);
+                    holder.tvEndTime.setPadding(2, 2, 2, 2);*/
                     LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                    params.setMargins(0, 10, 0, 0);
+                    params.setMargins(0, 2, 0, 0);
                     holder.tvMessage.setLayoutParams(params);
                 }
 
@@ -283,14 +289,16 @@ public class PrintBillParentListAdapter extends BaseAdapter {
 
         if(lstPrintBillData.get(position).getOrderNumber()!=null) {
             if (lstPrintBillData.get(position).getOrderNumber().trim().length() == 0) {
-                holder.tvOrderNumber.setVisibility(View.GONE);
-                holder.tvLabelOrderNumber.setVisibility(View.GONE);
+                holder.layoutOrderNumber.setVisibility(View.GONE);
+               /* holder.tvOrderNumber.setVisibility(View.GONE);
+                holder.tvLabelOrderNumber.setVisibility(View.GONE);*/
             } else {
                 holder.tvOrderNumber.setText("# "+lstPrintBillData.get(position).getOrderNumber());
             }
         }else{
-            holder.tvLabelOrderNumber.setVisibility(View.GONE);
-            holder.tvOrderNumber.setVisibility(View.GONE);
+            holder.layoutOrderNumber.setVisibility(View.GONE);
+            /*holder.tvLabelOrderNumber.setVisibility(View.GONE);
+            holder.tvOrderNumber.setVisibility(View.GONE);*/
         }
 
         if(db.getFeatureResult(FeatureList.fStartEndTime)==1){
@@ -307,8 +315,9 @@ public class PrintBillParentListAdapter extends BaseAdapter {
                     holder.tvEndTime.setText("End Time - "+lstPrintBillData.get(position).getEndTime());
             }
         }else{
-            holder.tvStartTime.setVisibility(View.GONE);
-            holder.tvEndTime.setVisibility(View.GONE);
+            holder.layoutStartEndTime.setVisibility(View.GONE);
+           /* holder.tvStartTime.setVisibility(View.GONE);
+            holder.tvEndTime.setVisibility(View.GONE);*/
         }
 
         if(lstPrintBillData.get(position).getMessage1()!=null) {
@@ -388,7 +397,7 @@ public class PrintBillParentListAdapter extends BaseAdapter {
             TextView tvPrice =(TextView) row1.findViewById(R.id.tvPrintListPrice);
             TextView tvAmount =(TextView) row1.findViewById(R.id.tvPrintListAmount);
 
-            if(tabletSize==10) {
+            if(tabletSize==10 && db.getFeatureResult(FeatureList.fPaperConstrict)!=1) {
                 tvItemName.setTextSize(context.getResources().getDimensionPixelSize(R.dimen.print_label_10));
                 tvQuantity.setTextSize(context.getResources().getDimensionPixelSize(R.dimen.print_label_10));
                 tvPrice.setTextSize(context.getResources().getDimensionPixelSize(R.dimen.print_label_10));

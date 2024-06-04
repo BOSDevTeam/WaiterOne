@@ -26,35 +26,30 @@
                 android:layout_height="wrap_content"
                 android:text="Shop Name"
                 android:textColor="@color/colorPrimaryDark"
-                android:padding="5dp"
                 android:textStyle="bold"/>
             <customfont.BOSTextView android:id="@+id/tvShopDesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Description"
                 android:textColor="@color/colorPrimaryDark"
-                android:padding="5dp"
                 android:textStyle="bold"/>
             <customfont.BOSTextView android:id="@+id/tvAddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Address"
                 android:textColor="@color/colorPrimaryDark"
-                android:padding="5dp"
                 android:textStyle="bold"/>
             <customfont.BOSTextView android:id="@+id/tvPhone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Phone"
                 android:textColor="@color/colorPrimaryDark"
-                android:padding="5dp"
                 android:textStyle="bold"/>
             <customfont.BOSTextView android:id="@+id/tvPrintNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Page : "
                 android:textColor="@color/colorPrimaryDark"
-                android:padding="5dp"
                 android:textStyle="bold"
                 android:textSize="11sp"
                 android:visibility="gone"/>
@@ -68,14 +63,12 @@
                     android:layout_height="wrap_content"
                     android:text="SlipID"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
                     android:textStyle="bold"/>
                 <customfont.BOSTextView android:id="@+id/tvDateTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="DataTime"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
                     android:gravity="right"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -88,7 +81,6 @@
                     android:layout_height="wrap_content"
                     android:text="Table"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
                     android:textStyle="bold"/>
                 <customfont.BOSTextView android:id="@+id/tvUser"
                     android:layout_width="0dp"
@@ -96,7 +88,6 @@
                     android:layout_height="wrap_content"
                     android:text="User"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
                     android:gravity="right"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -109,7 +100,6 @@
                     android:layout_height="wrap_content"
                     android:text="Item"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
                     android:textStyle="bold"/>
                 <customfont.BOSTextView android:id="@+id/tvHeaderQty"
                     android:layout_width="0dp"
@@ -117,7 +107,6 @@
                     android:layout_height="wrap_content"
                     android:text="Qty"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
                     android:gravity="right"
                     android:textStyle="bold"/>
                 <customfont.BOSTextView android:id="@+id/tvHeaderPrice"
@@ -126,7 +115,7 @@
                     android:layout_height="wrap_content"
                     android:text="Price"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
+                    android:padding="2dp"
                     android:gravity="right"
                     android:textStyle="bold"/>
                 <customfont.BOSTextView android:id="@+id/tvHeaderAmount"
@@ -135,7 +124,7 @@
                     android:layout_height="wrap_content"
                     android:text="Amount"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
+                    android:padding="2dp"
                     android:gravity="right"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -166,7 +155,6 @@
                     android:layout_height="wrap_content"
                     android:text="Sub Total"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
                     android:textStyle="bold"/>
                 <customfont.BOSTextView android:id="@+id/tvSubTotalAmt"
                     android:layout_width="0dp"
@@ -174,7 +162,6 @@
                     android:layout_height="wrap_content"
                     android:text="Sub Total"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
                     android:gravity="right"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -187,7 +174,6 @@
                     android:layout_height="wrap_content"
                     android:text="Service Charges"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
                     android:textStyle="bold"/>
                 <customfont.BOSTextView android:id="@+id/tvServiceChargesAmt"
                     android:layout_width="0dp"
@@ -195,7 +181,6 @@
                     android:layout_height="wrap_content"
                     android:text="Service Charges"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
                     android:gravity="right"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -208,7 +193,6 @@
                     android:layout_height="wrap_content"
                     android:text="Commercial Tax"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
                     android:textStyle="bold"/>
                 <customfont.BOSTextView android:id="@+id/tvCommercialTaxAmt"
                     android:layout_width="0dp"
@@ -216,7 +200,6 @@
                     android:layout_height="wrap_content"
                     android:text="Commercial Tax"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
                     android:gravity="right"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -229,7 +212,6 @@
                     android:layout_height="wrap_content"
                     android:text="Discount"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
                     android:textStyle="bold"/>
                 <customfont.BOSTextView android:id="@+id/tvDiscountAmt"
                     android:layout_width="0dp"
@@ -237,7 +219,6 @@
                     android:layout_height="wrap_content"
                     android:text="Discount"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
                     android:gravity="right"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -255,7 +236,6 @@
                     android:layout_height="wrap_content"
                     android:text="Grand Total"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
                     android:textStyle="bold"/>
                 <customfont.BOSTextView android:id="@+id/tvGrandTotalAmt"
                     android:layout_width="0dp"
@@ -263,7 +243,6 @@
                     android:layout_height="wrap_content"
                     android:text="Grand Total"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
                     android:gravity="right"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -276,7 +255,6 @@
                     android:layout_height="wrap_content"
                     android:text="Paid"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
                     android:textStyle="bold"/>
                 <customfont.BOSTextView android:id="@+id/tvPaidAmt"
                     android:layout_width="0dp"
@@ -284,7 +262,6 @@
                     android:layout_height="wrap_content"
                     android:text="Paid"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
                     android:gravity="right"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -297,7 +274,6 @@
                     android:layout_height="wrap_content"
                     android:text="Change"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
                     android:textStyle="bold"/>
                 <customfont.BOSTextView android:id="@+id/tvChangeAmt"
                     android:layout_width="0dp"
@@ -305,12 +281,11 @@
                     android:layout_height="wrap_content"
                     android:text="Change"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
                     android:gravity="right"
                     android:textStyle="bold"/>
             </LinearLayout>
 
-            <LinearLayout
+            <LinearLayout android:id="@+id/layoutOrderNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -321,7 +296,6 @@
                     android:layout_height="wrap_content"
                     android:text="Order Number"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
                     android:textStyle="bold"/>
                 <customfont.BOSTextView android:id="@+id/tvOrderNumber"
                     android:layout_width="0dp"
@@ -329,12 +303,11 @@
                     android:layout_height="wrap_content"
                     android:text="Order Number"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
                     android:gravity="right"
                     android:textStyle="bold"/>
             </LinearLayout>
 
-            <LinearLayout
+            <LinearLayout android:id="@+id/layoutStartEndTime"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp">
@@ -343,14 +316,12 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
                     android:textStyle="bold"/>
                 <customfont.BOSTextView android:id="@+id/tvEndTime"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorPrimaryDark"
-                    android:padding="5dp"
                     android:gravity="right"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -360,7 +331,6 @@
                 android:layout_height="wrap_content"
                 android:text="Thank You!"
                 android:textColor="@color/colorPrimaryDark"
-                android:padding="5dp"
                 android:textStyle="bold"
                 android:layout_marginTop="120dp"/>
 
@@ -369,7 +339,6 @@
                 android:layout_height="wrap_content"
                 android:text="Thank You!"
                 android:textColor="@color/colorPrimaryDark"
-                android:padding="5dp"
                 android:textStyle="bold"/>
 
         </LinearLayout>
